@@ -1,0 +1,30 @@
+{
+   "cards" : [
+        {
+            "name": "microctopus",
+            "extension": "starter kit",
+            "type" : "creature",
+            "mana" : "2",
+            "attack" : "5",
+            "hp" : "1",
+            "cs" : []
+        },
+        {
+            "name": "parasite",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "4",
+            "attack" : "1",
+            "hp" : "1",
+            "cs" : ["rage","splash","perforation","berserk"]
+        },
+        {
+            "name": "boom!",
+            "extension": "starter kit",
+            "type": "incantation",
+            "mana" : "1",
+            "attack" : "1",
+            "cs" : []
+        }
+   ]
+}

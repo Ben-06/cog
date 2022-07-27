@@ -1,0 +1,26 @@
+{
+  "name": "cog",
+  "version": "1.0.0",
+  "description": "Clash of Guess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ben-06/cog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ben-06/cog/issues"
+  },
+  "homepage": "https://github.com/Ben-06/cog#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}
