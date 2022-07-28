@@ -1,11 +1,11 @@
-const {turns} = require('../config/config.js');
-const Card = require('./src/Card.js');
+const {turns} = require('../config/config.json');
+const Card = require('./Card.js');
 
 class Game {
 
     constructor() {
         this.turn = 1;
-        this.scores = new Array();
+        this.scores = {};
         this.crd = new Card();
         this.indice=1;
     }
@@ -30,9 +30,10 @@ class Game {
 
             let cs_nb = this.indice-5-1;
             if(this.crd.cs[cs_nb])
-            message = "** "+(cs_nb+1)+" : ** je possède la CS  " + this.crd.cs[cs_nb];   
+            message = "** "+(this.indice)+"e indice : ** je possède la CS  " + this.crd.cs[cs_nb];   
         }
-        return game.crd.extension
+        this.indice = this.indice +1;
+        return message;
     }
 
     checkResponse(response){
@@ -40,15 +41,38 @@ class Game {
     }
 
     goodResponse(winner){
-
-        this.scores[winner] = this.scores[winner] + this.indice;
+        
+        this.scores[winner] = (this.scores[winner] ? Number(this.scores[winner]) : 0) + 8 - this.indice;
 
         if(this.turn < turns) {
             //next turn
             this.indice=1;
             this.crd=new Card();
             this.turn=this.turn + 1;
+        } else {
+            this.turn = -1;
         }
+    }
+
+    getScores(){
+
+        const sorted = Object.entries(this.scores)
+        .sort(([, v1], [, v2]) => v2 - v1)
+        .reduce((obj, [k, v]) => ({
+            ...obj,
+            [k]: v
+        }), {})
+
+        let fields = new Array();
+        for (var key in sorted) {
+            fields.push(
+                {
+                    name: key,
+                    value: sorted[key]
+                }
+            );
+        }        
+        return fields;
     }
 
 }
