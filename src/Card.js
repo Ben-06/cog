@@ -2,7 +2,7 @@ const {cards} = require('./../config/cards.json');
 
 class Card {
     constructor() {
-        let rand = Math.floor(Math.random() * (cards.length-1));
+        let rand = Math.floor(Math.random() * (cards.length));
 
         Object.assign(this, cards[rand]);
     }
