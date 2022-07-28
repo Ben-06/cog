@@ -1,4 +1,4 @@
-const {turns} = require('../config/config.json');
+const {turns, maxPoints} = require('../config/config.json');
 const Card = require('./Card.js');
 
 class Game {
@@ -8,52 +8,89 @@ class Game {
         this.scores = {};
         this.crd = new Card();
         this.indice=1;
+        this.wrong = {};
     }
 
+    //build the next tip for the current card
     newIndice(){
         let message  = null;
 
         if (this.indice == 1)
-            message = "** 1er indice : ** je fais partie de l'extension " + this.crd.extension;
+            message = { name : "** 1er indice : **", value : " je fais partie de l'extension " + this.crd.extension };
         else if (this.indice == 2)
-            message = "** 2e indice : ** je suis de type " + this.crd.type;
+            message = { name :"** 2e indice : ** ", value : "je suis de type " + this.crd.type};
         else if (this.indice == 3)
-            message = "** 3e indice : ** je coûte " + this.crd.mana +" mana";
+            message = { name : "** 3e indice : ** ", value : "je coûte " + this.crd.mana +" mana"};
         else if (this.indice == 4)
-            message = "** 4e indice : ** mon attaque est de " + this.crd.attack;
-        else if (this.indice == 5)
-            message = "** 5e indice : ** mes points de vie sont de  " + this.crd.hp;
-        else if (this.indice > 5)
+            message = { name :"** 4e indice : ** ", value : "mon attaque est de " + this.crd.attack};
+        else if (this.indice == 5 && this.crd.hp)
+            message = { name : "** 5e indice : ** ", value : "mes points de vie sont de  " + this.crd.hp};
+        else
         {
-            if(this.crd.cs.length == 0 && this.indice == 6)
-                message = "** 6e indice : ** je ne possède pas de CS";
+            //if no CS
+            if(this.crd.cs.length == 0 && this.indice == (this.crd.hp ? 6 : 5)){
+                message = { name : "** "+(this.crd.hp ? 6 : 5)+"e indice : **", value : " je ne possède pas de CS"};
+            } else {
+                let cs_nb = this.indice-5-1;
+                if(this.crd.cs[cs_nb])
+                message = { name : "** "+(this.indice)+"e indice : ** ", value : "je possède la CS " + this.crd.cs[cs_nb]};   
+            }
 
-            let cs_nb = this.indice-5-1;
-            if(this.crd.cs[cs_nb])
-            message = "** "+(this.indice)+"e indice : ** je possède la CS  " + this.crd.cs[cs_nb];   
+            //after listing CS, last tip will be 1st and last letter + size (P......E)
+            if(message === null){
+                let name = this.crd.name.substring(0,1);
+
+                for(let i= 0; i < this.crd.name.length -2 ; i++){
+                    name = name += ".";
+                }
+
+                name = name + this.crd.name.substring(this.crd.name.length-1);
+                message = {name : "** dernier indice : ** ", value : "mon nom est "+name};
+
+                //set indice to -1 to stop the loop
+                this.indice = -1;
+                return message;
+            }
         }
         this.indice = this.indice +1;
         return message;
     }
 
-    checkResponse(response){
-        return this.crd.name === response.toLowerCase();
+    //compare given response with the answer. If incorrect, attribute malus point
+    checkResponse(response, author){
+        if(this.crd.name === response.toLowerCase())
+        {
+            return true;
+        } else {
+            //count wrong responses to attribute malus
+            this.wrong[author] = (this.wrong[author] ? Number(this.wrong[author]) : 0) + 1;
+            return false;
+        }
     }
 
+    //function called when someone gave the good answer
     goodResponse(winner){
-        
-        this.scores[winner] = (this.scores[winner] ? Number(this.scores[winner]) : 0) + 8 - this.indice;
+        let points = -1;
+
+        if(winner){
+            points = Math.max(maxPoints - this.indice - (this.wrong[winner] ? Number(this.wrong[winner]) : 0), 0);
+            this.scores[winner] = (this.scores[winner] ? Number(this.scores[winner]) : 0) + points;
+        }
 
         if(this.turn < turns) {
             //next turn
             this.indice=1;
             this.crd=new Card();
             this.turn=this.turn + 1;
+            this.wrong = {};
         } else {
             this.turn = -1;
         }
+
+        return points;
     }
 
+    //build embed with scores sorted
     getScores(){
 
         const sorted = Object.entries(this.scores)
