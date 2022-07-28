@@ -1,9 +1,8 @@
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits, Message } = require('discord.js');
 const { token, channel } = require('./config/secrets.json');
-const Card = require('./src/Card.js');
-var crd;
-var game = false;
+var game = null;
+const Game = require('.src/Game.js');
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
@@ -18,17 +17,17 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
-	if (commandName === 'guess') {
-        game=true;
+	if (game !== null || commandName === 'guess') {
+        game= new Game();
 		await interaction.reply('** Quelle est cette carte ?** ');
-        crd = new Card();
-        client.channels.cache.get(channel).send("** 1er indice : ** je fais partie de l'extension "+ crd.extension)
+
+        client.channels.cache.get(channel).send(game.newIndice());
 	}
 });
 
 //catching response to a question
 client.on('messageCreate', message => {
-    if(!game || message.author.bot) return;
+    if(game === null || message.author.bot) return;
 
     if(message.content.toLowerCase() === crd.name)
     {
