@@ -25,6 +25,119 @@
             "mana" : "1",
             "attack" : "1",
             "cs" : []
+        },
+        {
+            "name": "assassin",
+            "extension": "starter kit",
+            "type": "créature",
+            "mana" : "2",
+            "attack" : "1",
+            "hp":"1",
+            "cs" : ["rage","sprint"]
+        },
+        {
+            "name": "reptile",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "1",
+            "hp" : "3",
+            "cs" : ["rage","splash","perforation","berserk"]
+        },
+        {
+            "name": "aberration",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "7",
+            "attack" : "2",
+            "hp" : "4",
+            "cs" : ["rage","sprint","perforation","berserk","indestructible"]
+        },
+        {
+            "name": "vortex",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "2",
+            "attack" : "0",
+            "hp" : "3",
+            "cs" : ["sprint aura"]
+        },
+        {
+            "name": "annihilation",
+            "extension": "starter kit",
+            "type": "incantation",
+            "mana" : "4",
+            "attack" : "6",
+            "cs" : []
+        },
+        {
+            "name": "combustion",
+            "extension": "starter kit",
+            "type": "incantation",
+            "mana" : "3",
+            "attack" : "2",
+            "cs" : ["splash"]
+        },
+        {
+            "name": "cyclone",
+            "extension": "starter kit",
+            "type": "incantation",
+            "mana" : "5",
+            "attack" : "3",
+            "cs" : ["splash","perforation"]
+        },
+        {
+            "name": "carapace",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "0",
+            "hp" : "3",
+            "cs" : ["protection"]
+        },
+        {
+            "name": "scribe",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "4",
+            "attack" : "3",
+            "hp": "3",
+            "cs" : ["rage","indestructible"]
+        },
+        {
+            "name": "meteorite",
+            "extension": "starter kit",
+            "type": "incantation",
+            "mana" : "5",
+            "attack" : "4",
+            "cs" : ["perforation"]
+        },
+        {
+            "name": "gnome",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "2",
+            "hp": "1",
+            "cs" : ["rage","berserk"]
+        },
+        {
+            "name": "alpha",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "5",
+            "attack" : "4",
+            "hp": "2",
+            "cs" : ["perforation","protection","indestructible"]
+        },
+        {
+            "name": "brute",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "4",
+            "attack" : "5",
+            "hp": "5",
+            "cs" : []
         }
    ]
 }
