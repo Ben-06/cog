@@ -1,6 +1,7 @@
+require('dotenv').config()
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits, EmbedBuilder  } = require('discord.js');
-const { token, channel } = require('./config/secrets.json');
+const channel = process.env.channel;
 const {delay, turns} = require('./config/config.json');
 const Game = require('./src/Game');
 var game = null;
@@ -32,6 +33,10 @@ client.on('interactionCreate', async interaction => {
                 {
                     name: "La configuration de la partie est la suivante :",
                     value: "Tours : "+turns + " - " +"Délai : "+(delay/1000)+"s"
+                },
+                {
+                    name: "pour répondre, placez un ! devant votre proposition",
+                    value: "exemple : !parasite"
                 }
             ]
         };
@@ -117,4 +122,4 @@ client.on('messageCreate', message => {
 
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
