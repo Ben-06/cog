@@ -43,7 +43,7 @@ client.on('interactionCreate', async interaction => {
         
         client.channels.cache.get(channel).send({ embeds: [scoresEmbed] });
 
-		setTimeout(newTurn, delay);
+		setTimeout(newTurn, 1000);
 	}
 });
 
@@ -98,7 +98,7 @@ function newTurn() {
         const currentTurn = game.turn;
         setTimeout(() => {
             indiceLoop(currentTurn, 1);           
-        }, delay);
+        }, 1000);
     }
 }
 
