@@ -1,4 +1,6 @@
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits, EmbedBuilder  } = require('discord.js');
 const channel = process.env.channel;
