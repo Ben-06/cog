@@ -138,6 +138,60 @@
             "attack" : "5",
             "hp": "5",
             "cs" : []
+        },
+        {
+            "name": "brigand",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "4",
+            "attack" : "2",
+            "hp": "6",
+            "cs" : ["splash"]
+        },
+        {
+            "name": "revenant",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "2",
+            "hp": "3",
+            "cs" : ["perforation","indestructible"]
+        },
+        {
+            "name": "ogre",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "4",
+            "attack" : "4",
+            "hp": "4",
+            "cs" : ["berserk"]
+        },
+        {
+            "name": "abomination",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "6",
+            "attack" : "6",
+            "hp": "4",
+            "cs" : ["perforation","splash"]
+        },
+        {
+            "name": "lieutenant",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "3",
+            "hp": "1",
+            "cs" : ["protection"]
+        },
+        {
+            "name": "machine",
+            "extension": "starter kit",
+            "type": "creature",
+            "mana" : "3",
+            "attack" : "0",
+            "hp": "1",
+            "cs" : ["indestructible","aura protection"]
         }
    ]
 }
