@@ -9,6 +9,7 @@ class Game {
         this.crd = new Card();
         this.indice=1;
         this.wrong = {};
+        this.end_turn = false;
     }
 
     //build the next tip for the current card
@@ -47,9 +48,7 @@ class Game {
                 name = name + this.crd.name.substring(this.crd.name.length-1);
                 message = {name : "** dernier indice : ** ", value : "mon nom est "+name};
 
-                //set indice to -1 to stop the loop
-                this.indice = -1;
-                return message;
+                this.end_turn = true;
             }
         }
         this.indice = this.indice +1;
@@ -83,6 +82,7 @@ class Game {
             this.crd=new Card();
             this.turn=this.turn + 1;
             this.wrong = {};
+            this.end_turn = false;
         } else {
             this.turn = -1;
         }
@@ -111,7 +111,6 @@ class Game {
         }        
         return fields;
     }
-
 }
 
 module.exports = Game
