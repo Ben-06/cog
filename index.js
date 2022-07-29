@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Require the necessary discord.js classes
-const { Client, GatewayIntentBits, EmbedBuilder  } = require('discord.js');
+const { Client, GatewayIntentBits} = require('discord.js');
 const channel = process.env.channel;
 const {delay, turns} = require('./config/config.json');
 const Game = require('./src/Game');
@@ -12,6 +12,9 @@ var game = null;
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessageReactions] });
+
+//get game channel
+const chan = client.channels.cache.get(channel);
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -55,8 +58,8 @@ function indiceLoop(turn, counter){
     //1st check if a game is currently playing and if the turn is still the same
     if(game != null && game.turn != -1  && game.turn == turn)
     {
-        //if indice == -1, turn is over
-        if(game.indice === -1){
+        //check if turn is over
+        if(game.end_turn){
             client.channels.cache.get(channel).send("Personne n'a trouvé, dommage ! La réponse était **"+game.crd.name+"**");
             game.goodResponse();
             
