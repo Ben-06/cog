@@ -41,8 +41,8 @@ class Game {
             if(message === null){
                 let name = this.crd.name.substring(0,1);
 
-                for(let i= 0; i < this.crd.name.length -2 ; i++){
-                    name = name += ".";
+                for(let i= 1; i < this.crd.name.length -1 ; i++){
+                    name = name += (this.crd.name[i] != " " ? "." : " ");
                 }
 
                 name = name + this.crd.name.substring(this.crd.name.length-1);
