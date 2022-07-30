@@ -1,12 +1,15 @@
-const {turns, maxPoints} = require('../config/config.json');
+const {maxPoints} = require('../config/config.json');
 const Card = require('./Card.js');
 
 class Game {
 
-    constructor() {
+    constructor(extension, speed, duree) {
         this.turn = 1;
+        this.max_turn = duree;
+        this.speed=speed;
         this.scores = {};
-        this.crd = new Card();
+        this.crd = new Card(extension);
+        this.extension = extension;
         this.indice=1;
         this.wrong = {};
         this.end_turn = false;
@@ -76,10 +79,10 @@ class Game {
             this.scores[winner] = (this.scores[winner] ? Number(this.scores[winner]) : 0) + points;
         }
 
-        if(this.turn < turns) {
+        if(this.turn < this.max_turn) {
             //next turn
             this.indice=1;
-            this.crd=new Card();
+            this.crd=new Card(this.extension);
             this.turn=this.turn + 1;
             this.wrong = {};
             this.end_turn = false;

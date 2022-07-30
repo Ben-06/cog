@@ -4,17 +4,28 @@ const {types, extensions, CS} = require('./../config/types.json');
 class Card {
 
 
-    /*[00-19][0-1] le premier si c'est 0 c'est aucune capacité 
+    /*
+    @param extension si renseigné, id de l'extension avec laquelle jouer uniquement
+    [00-19][0-1] le premier si c'est 0 c'est aucune capacité 
     sinon c'est son numéro sur une liste 
     ensuite le 0 ou 1 c'est si c'est aura ou pas
     ex: lieutenant : 1140000000000000313
     */
-    constructor() {
-        let rand = Math.floor(Math.random() * (cards.length));
+    constructor(extension) {
 
-        this.name = cards[rand].name;
+        let cards_list = new Array();
+        Object.assign(cards_list, cards);
 
-        this.buildCard(cards[rand].id);
+        if(extension){
+            cards_list = cards.filter(obj => {
+                return obj.id.startsWith(extension);
+              })
+        }
+        let rand = Math.floor(Math.random() * (cards_list.length));
+
+        this.name = cards_list[rand].name;
+
+        this.buildCard(cards_list[rand].id);
     }
 
 

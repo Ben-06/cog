@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 const { Client, GatewayIntentBits} = require('discord.js');
 const channel = process.env.channel;
 const {delay, turns} = require('./config/config.json');
+const {extensions} = require('./config/types.json');
 const Game = require('./src/Game');
 var game = null;
 
@@ -24,10 +25,27 @@ client.once('ready', () => {
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
-	const { commandName } = interaction;
+	const { commandName, options } = interaction;
+
+    // retrieve potential options : extension, speed, duration
+    
+    let extension_param = options.data.find(obj => {
+        return obj.name === "extension"
+    });
+    let speed_param = options.data.find(obj => {
+    return obj.name === "vitesse"
+    });
+    let duration_param = options.data.find(obj => {
+    return obj.name === "durée"
+    });
+
+    const extension = extension_param ? extension_param.value : null;
+    const speed = speed_param ? speed_param.value : delay;
+    const duration =duration_param ? duration_param.value : turns;
+    
 
 	if (commandName === 'guess' && (game === null || game.turn === -1)) {
-        game= new Game();
+        game= new Game(extension, speed, duration);
         const scoresEmbed = {
             color: 0x0099ff,
             title: 'Nouvelle partie ! ',
@@ -38,7 +56,7 @@ client.on('interactionCreate', async interaction => {
                 },
                 {
                     name: "La configuration de la partie est la suivante :",
-                    value: "Tours : "+turns + " - " +"Délai : "+(delay/1000)+"s"
+                    value: (game.extension ? "Extension : "+extensions[game.extension]+ " - " : "") + "Tours : "+game.max_turn + " - " +"Délai : "+(game.speed/1000)+"s"
                 },
                 {
                     name: "pour répondre, placez un ! devant votre proposition",
@@ -54,7 +72,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 //tips loop managing for a given turn
-function indiceLoop(turn, counter){
+function indiceLoop(turn){
     //1st check if a game is currently playing and if the turn is still the same
     if(game != null && game.turn != -1  && game.turn == turn)
     {
@@ -64,7 +82,7 @@ function indiceLoop(turn, counter){
             game.goodResponse();
             
             //launch a new turn
-            setTimeout(newTurn, delay);
+            setTimeout(newTurn, game.speed);
 
         } else {
             const scoresEmbed = {
@@ -78,8 +96,8 @@ function indiceLoop(turn, counter){
 
             const currentTurn = game.turn;
             setTimeout(() => {
-                indiceLoop(currentTurn, counter);           
-            }, delay);
+                indiceLoop(currentTurn);           
+            }, game.speed);
         }
     }
 }
@@ -121,7 +139,7 @@ client.on('messageCreate', message => {
         client.channels.cache.get(channel).send('**'+message.author.username + '** remporte **'+points+'** points grâce à cette bonne réponse !');
 
         //launch a new turn
-        setTimeout(newTurn, delay);
+        setTimeout(newTurn, game.speed);
         
         
     } else message.react('👎');
