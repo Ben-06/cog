@@ -44,7 +44,7 @@ class Card {
         //CS list building
         const cs_list = [id.substring(2,5),id.substring(5,7),id.substring(7,9),id.substring(9,11),id.substring(11,13)];
         if(cs_list[0].substring(0,2) != "00") {
-            this.cs.push((cs_list[0][2] ? "aura " : "") + CS[cs_list[0].substring(0,2)]);
+            this.cs.push((cs_list[0][2] == '1'? "aura " : "") + CS[cs_list[0].substring(0,2)]);
         }
         for(let i = 1; i< cs_list.length; i++){
             if(cs_list[i] != "00"){
