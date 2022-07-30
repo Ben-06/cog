@@ -10,51 +10,59 @@ class Game {
         this.scores = {};
         this.crd = new Card(extension);
         this.extension = extension;
-        this.indice=1;
         this.wrong = {};
         this.end_turn = false;
+        this.buildIndicesList();
+    }
+
+    //build the liste of tips in random order (exept the last one)
+    buildIndicesList = function(){
+        let sortedIndices = new Array();
+
+        if(! this.extension) 
+            sortedIndices.push(" je fais partie de l'extension " + this.crd.extension);
+        sortedIndices.push("je suis de type " + this.crd.type);
+        sortedIndices.push("je coûte " + this.crd.mana +" mana");
+        sortedIndices.push("mon attaque est de " + this.crd.attack);
+        if (this.crd.hp)
+            sortedIndices.push("mes points de vie sont de " + this.crd.hp);
+        
+        //if no CS
+        if(this.crd.cs.length == 0){
+            sortedIndices.push(" je ne possède pas de CS");
+        } else {
+            this.crd.cs.forEach(cs => {
+                sortedIndices.push("je possède la CS " + cs);
+            });
+        }
+
+        this.indices = sortedIndices.sort((a, b) => 0.5 - Math.random());
+
+        //last tip will be 1st and last letter + size (P......E)
+        let name = this.crd.name.substring(0,1);
+
+        for(let i= 1; i < this.crd.name.length -1 ; i++){
+            name = name += (this.crd.name[i] != " " ? " - " : "   ");
+        }
+        name = name + this.crd.name.substring(this.crd.name.length-1);
+        
+        this.indices.push("mon nom est "+name);
+
+        this.nbIndices=this.indices.length;
     }
 
     //build the next tip for the current card
     newIndice(){
         let message  = null;
+        const tip = this.indices.shift();
+        const tipNumber = this.nbIndices - this.indices.length;
+        const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
-        if (this.indice == 1)
-            message = { name : "** 1er indice : **", value : " je fais partie de l'extension " + this.crd.extension };
-        else if (this.indice == 2)
-            message = { name :"** 2e indice : ** ", value : "je suis de type " + this.crd.type};
-        else if (this.indice == 3)
-            message = { name : "** 3e indice : ** ", value : "je coûte " + this.crd.mana +" mana"};
-        else if (this.indice == 4)
-            message = { name :"** 4e indice : ** ", value : "mon attaque est de " + this.crd.attack};
-        else if (this.indice == 5 && this.crd.hp)
-            message = { name : "** 5e indice : ** ", value : "mes points de vie sont de  " + this.crd.hp};
-        else
-        {
-            //if no CS
-            if(this.crd.cs.length == 0 && this.indice == (this.crd.hp ? 6 : 5)){
-                message = { name : "** "+(this.crd.hp ? 6 : 5)+"e indice : **", value : " je ne possède pas de CS"};
-            } else {
-                let cs_nb = this.indice-5-1;
-                if(this.crd.cs[cs_nb])
-                message = { name : "** "+(this.indice)+"e indice : ** ", value : "je possède la CS " + this.crd.cs[cs_nb]};   
-            }
+        message = { name : tipName, value : tip };
 
-            //after listing CS, last tip will be 1st and last letter + size (P......E)
-            if(message === null){
-                let name = this.crd.name.substring(0,1);
+        if(this.indices.length == 0)
+            this.end_turn = true;
 
-                for(let i= 1; i < this.crd.name.length -1 ; i++){
-                    name = name += (this.crd.name[i] != " " ? " - " : "   ");
-                }
-
-                name = name + this.crd.name.substring(this.crd.name.length-1);
-                message = {name : "** dernier indice : ** ", value : "mon nom est "+name};
-
-                this.end_turn = true;
-            }
-        }
-        this.indice = this.indice +1;
         return message;
     }
 
@@ -81,11 +89,11 @@ class Game {
 
         if(this.turn < this.max_turn) {
             //next turn
-            this.indice=1;
             this.crd=new Card(this.extension);
             this.turn=this.turn + 1;
             this.wrong = {};
             this.end_turn = false;
+            this.buildIndicesList();
         } else {
             this.turn = -1;
         }
