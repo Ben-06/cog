@@ -83,7 +83,7 @@ class Game {
         let points = -1;
 
         if(winner){
-            points = Math.max(maxPoints - this.indice - (this.wrong[winner] ? Number(this.wrong[winner]) : 0), 0);
+            points = Math.max(maxPoints - this.nbIndices + this.indices.length - (this.wrong[winner] ? Number(this.wrong[winner]) : 0), 0);
             this.scores[winner] = (this.scores[winner] ? Number(this.scores[winner]) : 0) + points;
         }
 
