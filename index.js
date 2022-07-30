@@ -136,7 +136,7 @@ client.on('messageCreate', message => {
         
         //attribute & display earned points
         const points = game.goodResponse(message.author.username);
-        client.channels.cache.get(channel).send('**'+message.author.username + '** remporte **'+points+'** points grâce à cette bonne réponse !');
+        client.channels.cache.get(channel).send('** <@'+message.author.id+'>** remporte **'+points+'** points grâce à cette bonne réponse !');
 
         //launch a new turn
         setTimeout(newTurn, game.speed);
