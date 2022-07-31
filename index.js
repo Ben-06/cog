@@ -134,6 +134,7 @@ client.on('messageCreate', message => {
     if(game.checkResponse(message.content.substring(1).toLowerCase(), message.author.username))
     {
         message.reply('Bravo, bonne réponse !!');
+        client.channels.cache.get(channel).send("/card "+game.crd.name);
         
         //attribute & display earned points
         const points = game.goodResponse(message.author.username);

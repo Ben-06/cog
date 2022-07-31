@@ -40,14 +40,20 @@ class Game {
         this.indices = sortedIndices.sort((a, b) => 0.5 - Math.random());
 
         //last tip will be 1st and last letter + size (P......E)
-        let name = this.crd.name.substring(0,1);
+        let tip = "";
+        let words = this.crd.name.split(' ');
+        words.forEach(word => {
+            tip = tip + word.substring(0,1);
 
-        for(let i= 1; i < this.crd.name.length -1 ; i++){
-            name = name += (this.crd.name[i] != " " ? " - " : "   ");
-        }
-        name = name + this.crd.name.substring(this.crd.name.length-1);
+            for(let i= 1; i < word.length -1 ; i++){
+                tip = tip += (word[i] != " " ? " - " : "   ");
+            }
+            tip = tip + word.substring(word.length-1)+' ';
+
+        });
         
-        this.indices.push("mon nom est "+name);
+        
+        this.indices.push("mon nom est "+tip.toUpperCase());
 
         this.nbIndices=this.indices.length;
     }
