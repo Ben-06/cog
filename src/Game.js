@@ -9,6 +9,7 @@ class Game {
         this.speed=speed;
         this.scores = {};
         this.crd = new Card(extension);
+        this.crd.pickCard();
         this.extension = extension;
         this.wrong = {};
         this.end_turn = false;
@@ -89,7 +90,7 @@ class Game {
 
         if(this.turn < this.max_turn) {
             //next turn
-            this.crd=new Card(this.extension);
+            this.crd.pickCard();
             this.turn=this.turn + 1;
             this.wrong = {};
             this.end_turn = false;

@@ -79,6 +79,7 @@ function indiceLoop(turn){
         //check if turn is over
         if(game.end_turn){
             client.channels.cache.get(channel).send("Personne n'a trouvé, dommage ! La réponse était **"+game.crd.name+"**");
+            client.channels.cache.get(channel).send("/card "+game.crd.name);
             game.goodResponse();
             
             //launch a new turn

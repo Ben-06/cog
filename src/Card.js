@@ -1,6 +1,6 @@
 const {cards} = require('./../config/cards.json');
 const {types, extensions, CS} = require('./../config/types.json');
-
+var cards_list = new Array();
 class Card {
 
 
@@ -13,7 +13,6 @@ class Card {
     */
     constructor(extension) {
 
-        let cards_list = new Array();
         Object.assign(cards_list, cards);
 
         if(extension){
@@ -21,11 +20,18 @@ class Card {
                 return obj.id.startsWith(extension);
               })
         }
+
+    }
+
+    pickCard(){
+
         let rand = Math.floor(Math.random() * (cards_list.length));
 
         this.name = cards_list[rand].name;
 
         this.buildCard(cards_list[rand].id);
+
+        cards_list.splice(rand,1);
     }
 
 
