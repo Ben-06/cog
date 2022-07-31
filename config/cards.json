@@ -166,7 +166,7 @@
     },
     {
         "name": "b\u00eate de guerre",
-        "id": "110000000000845"
+        "id": "1100000000000845"
     },
     {
         "name": "spectre",
@@ -174,7 +174,7 @@
     },
     {
         "name": "titan",
-        "id": "110000000000887"
+        "id": "1100000000000887"
     },
     {
         "name": "dragonnet",
@@ -242,7 +242,7 @@
     },
     {
         "name": "poisson-loupiote",
-        "id": "110000000000221"
+        "id": "1100000000000221"
     },
     {
         "name": "bouch\u00e9e maudite",
@@ -298,11 +298,11 @@
     },
     {
         "name": "groin terrestre",
-        "id": "210000000000242"
+        "id": "2100000000000242"
     },
     {
         "name": "chef de clan",
-        "id": "210000000000443"
+        "id": "2100000000000443"
     },
     {
         "name": "hydre",
@@ -405,7 +405,7 @@
     },
     {
         "name": "tr\u00e9ant",
-        "id": "310000000000332"
+        "id": "3100000000000332"
     },
     {
         "name": "shaman en transe",
@@ -429,7 +429,7 @@
     },
     {
         "name": "\u00e9l\u00e9mentaire de feu",
-        "id": "310000000000644"
+        "id": "3100000000000644"
     },
     {
         "name": "grrr abyssal",
@@ -473,7 +473,7 @@
     },
     {
         "name": "g\u00e9ant",
-        "id": "310000000000485"
+        "id": "3100000000000485"
     },
     {
         "name": "d\u00e9serteur",
@@ -545,7 +545,7 @@
     },
     {
         "name": "golem d'onyx",
-        "id": "410000000000284"
+        "id": "4100000000000284"
     },
     {
         "name": "forgeron",
@@ -561,7 +561,7 @@
     },
     {
         "name": "liche",
-        "id": "410000000000623"
+        "id": "4100000000000623"
     },
     {
         "name": "chuchoteur abyssal",
@@ -581,7 +581,7 @@
     },
     {
         "name": "djinn",
-        "id": "410000000000686"
+        "id": "4100000000000686"
     },
     {
         "name": "apothicaire",
@@ -589,7 +589,7 @@
     },
     {
         "name": "nouvelle recrue",
-        "id": "410000000000131"
+        "id": "4100000000000131"
     },
     {
         "name": "golem friable",
@@ -641,7 +641,7 @@
     },
     {
         "name": "cong\u00e9lation",
-        "id": "4210000000000703"
+        "id": "42100000000000703"
     },
     {
         "name": "capitaine",
@@ -677,7 +677,7 @@
     },
     {
         "name": "noble guerri\u00e8re",
-        "id": "510000000000665"
+        "id": "5100000000000665"
     },
     {
         "name": "ignominie purulente",
@@ -725,7 +725,7 @@
     },
     {
         "name": "sorcier primitif",
-        "id": "510000000000533"
+        "id": "5100000000000533"
     },
     {
         "name": "goule",
@@ -745,7 +745,7 @@
     },
     {
         "name": "dresseur de cauchemar",
-        "id": "510000000000374"
+        "id": "5100000000000374"
     },
     {
         "name": "cauchemar insaisissable",
@@ -797,11 +797,11 @@
     },
     {
         "name": "matriarachnides",
-        "id": "610000000000755"
+        "id": "6100000000000755"
     },
     {
         "name": "bedonnant primitif",
-        "id": "610000000000464"
+        "id": "6100000000000464"
     },
     {
         "name": "phoenix en d\u00e9clin",
@@ -833,7 +833,7 @@
     },
     {
         "name": "f\u00e9tiche maya",
-        "id": "610000000000263"
+        "id": "6100000000000263"
     },
     {
         "name": "druide pacifique",
@@ -861,7 +861,7 @@
     },
     {
         "name": "oeuf de phoenix",
-        "id": "610000000000422"
+        "id": "6100000000000422"
     },
     {
         "name": "monture nomade",
