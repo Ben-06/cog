@@ -86,12 +86,7 @@ function indiceLoop(turn){
             setTimeout(newTurn, game.speed);
 
         } else {
-            const scoresEmbed = {
-                color: 0x0099ff,
-                fields: [
-                    game.newIndice()
-                ]
-            };
+            const scoresEmbed = game.newIndice();
             
             client.channels.cache.get(channel).send({ embeds: [scoresEmbed] });
 

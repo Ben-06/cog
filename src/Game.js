@@ -1,5 +1,32 @@
 const {maxPoints} = require('../config/config.json');
 const Card = require('./Card.js');
+const MESSAGE_COLORS = new Array(0xff0000,0xDD521E,0xDD781E,0xDDC01E,0xDDD41E,0xD4DD1E,0xC6DA21,0xAADA21,0x9CDA21,0x91DA21,0x00FF00);
+
+const levenshteinDistance = (str1 = '', str2 = '') => {
+    
+    str1 = str1.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    str2 = str2.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+
+    const track = Array(str2.length + 1).fill(null).map(() =>
+    Array(str1.length + 1).fill(null));
+    for (let i = 0; i <= str1.length; i += 1) {
+       track[0][i] = i;
+    }
+    for (let j = 0; j <= str2.length; j += 1) {
+       track[j][0] = j;
+    }
+    for (let j = 1; j <= str2.length; j += 1) {
+       for (let i = 1; i <= str1.length; i += 1) {
+          const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+          track[j][i] = Math.min(
+             track[j][i - 1] + 1, // deletion
+             track[j - 1][i] + 1, // insertion
+             track[j - 1][i - 1] + indicator, // substitution
+          );
+       }
+    }
+    return track[str2.length][str1.length];
+ };
 
 class Game {
 
@@ -39,20 +66,19 @@ class Game {
 
         this.indices = sortedIndices.sort((a, b) => 0.5 - Math.random());
 
-        //last tip will be 1st and last letter + size (P......E)
+        //last tip will be 1st and last letter + size (P _ _ _ _ _ _ E)
         let tip = "";
         let words = this.crd.name.split(' ');
         words.forEach(word => {
             tip = tip + word.substring(0,1);
 
             for(let i= 1; i < word.length -1 ; i++){
-                tip = tip += (word[i] != " " ? " - " : "   ");
+                tip = tip += (word[i] != " " ? " \\_ " : "   ");
             }
             tip = tip + word.substring(word.length-1)+' ';
 
         });
-        
-        
+
         this.indices.push("mon nom est "+tip.toUpperCase());
 
         this.nbIndices=this.indices.length;
@@ -65,7 +91,13 @@ class Game {
         const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
-        message = { name : tipName, value : tip };
+        message = 
+        {
+            color: MESSAGE_COLORS[this.indices.length],
+            fields: [
+                { name : tipName, value : tip }
+            ]
+        };
 
         if(this.indices.length == 0)
             this.end_turn = true;
@@ -75,7 +107,9 @@ class Game {
 
     //compare given response with the answer. If incorrect, attribute malus point
     checkResponse(response, author){
-        if(this.crd.name === response.toLowerCase())
+
+        const dist = levenshteinDistance(response.toLowerCase(),this.crd.name );
+        if(dist <= 2)
         {
             return true;
         } else {

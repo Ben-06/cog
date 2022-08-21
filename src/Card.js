@@ -43,7 +43,7 @@ class Card {
         this.extension= extensions[id[0]];
         this.type = types[id[1]];
         this.attack = id[13];
-        if(id[14] != 0) this.hp = id[14];
+        this.hp = id[14] != 0 ? id[14] : 0; 
         this.mana = id[15];
         this.cs = new Array();
         
