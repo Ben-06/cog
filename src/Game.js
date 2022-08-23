@@ -90,7 +90,7 @@ class Game {
 
         sharp(this.crd.image).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(outputImage)
         .then(function(new_file_info) {
-            this.indices.push(outputImage);
+            sortedIndices.push(outputImage);
         })
         .catch( err => { console.log(err) });
 
@@ -101,7 +101,7 @@ class Game {
     newIndice(){
         let message  = null;
         const tip = this.indices.shift();
-        const tipNumber = this.nbIndices - this.indices.length;
+        const tipNumber = this.nbIndices - this.indices.length+1;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
         if(tip === 'croppedImage.jpg'){
