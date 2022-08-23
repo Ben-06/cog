@@ -90,7 +90,7 @@ class Game {
 
         sharp(this.crd.image).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(outputImage)
         .then(function(new_file_info) {
-            sortedIndices.push(outputImage);
+            this.indices.push(outputImage);
         })
         .catch( err => { console.log(err) });
 
