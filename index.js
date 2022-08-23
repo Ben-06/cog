@@ -3,13 +3,12 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Require the necessary discord.js classes
-const { Client, GatewayIntentBits} = require('discord.js');
+const { Client, GatewayIntentBits, AttachmentBuilder} = require('discord.js');
 const channel = process.env.channel;
 const {delay, turns} = require('./config/config.json');
 const {extensions} = require('./config/types.json');
 const Game = require('./src/Game');
 var game = null;
-
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessageReactions] });
@@ -43,7 +42,6 @@ client.on('interactionCreate', async interaction => {
     const speed = speed_param ? speed_param.value : delay;
     const duration =duration_param ? duration_param.value : turns;
     
-
 	if (commandName === 'guess' && (game === null || game.turn === -1)) {
         game= new Game(extension, speed, duration);
         const scoresEmbed = {
@@ -79,20 +77,16 @@ function indiceLoop(turn){
         //check if turn is over
         if(game.end_turn){
             client.channels.cache.get(channel).send("Personne n'a trouvé, dommage ! La réponse était **"+game.crd.name+"**");
-            client.channels.cache.get(channel).send("/card "+game.crd.name);
+            var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
+            client.channels.cache.get(channel).send({ files: [file] });
             game.goodResponse();
             
             //launch a new turn
             setTimeout(newTurn, game.speed);
 
         } else {
-            const tip = game.newIndice();
             
-            //if image crop, don't embed it
-            if(typeof tip === 'string')
-                client.channels.cache.get(channel).send(tip);
-            else
-                client.channels.cache.get(channel).send({ embeds: [tip] });
+            client.channels.cache.get(channel).send(game.newIndice());
 
             const currentTurn = game.turn;
             setTimeout(() => {

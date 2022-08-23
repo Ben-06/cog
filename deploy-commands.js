@@ -25,7 +25,7 @@ const commands = [
 			.addChoices(
 				{ name: "lente", value: '20000' },
 				{ name: 'normale', value: '10000' },
-				{ name: 'rapide', value: '7000' }
+				{ name: 'rapide', value: process.env.NODE_ENV !== 'production' ? '2500' : '7000' }
 	))
 	.addStringOption(option =>
 		option.setName('durée')

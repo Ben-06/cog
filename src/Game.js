@@ -1,3 +1,5 @@
+const sharp = require('sharp');
+const { AttachmentBuilder } = require('discord.js');
 const {maxPoints} = require('../config/config.json');
 const Card = require('./Card.js');
 const MESSAGE_COLORS = new Array(0xff0000,0xDD521E,0xDD781E,0xDDC01E,0xDDD41E,0xD4DD1E,0xC6DA21,0xAADA21,0x9CDA21,0x91DA21,0x00FF00);
@@ -63,10 +65,6 @@ class Game {
                 sortedIndices.push("je possède la CS " + cs);
             });
         }
-
-        //image crop
-        sortedIndices.push("/card "+this.crd.name+" crop");
-
         this.indices = sortedIndices.sort((a, b) => 0.5 - Math.random());
 
         //last tip will be 1st and last letter + size (P _ _ _ _ _ _ E)
@@ -84,6 +82,18 @@ class Game {
 
         this.indices.push("mon nom est "+tip.toUpperCase());
 
+
+        //and VERY last tip, image crop
+
+        // file name for cropped image
+        let outputImage = 'croppedImage.jpg';
+
+        sharp(this.crd.image).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(outputImage)
+        .then(function(new_file_info) {
+            sortedIndices.push(outputImage);
+        })
+        .catch( err => { console.log(err) });
+
         this.nbIndices=this.indices.length;
     }
 
@@ -92,21 +102,39 @@ class Game {
         let message  = null;
         const tip = this.indices.shift();
         const tipNumber = this.nbIndices - this.indices.length;
-        const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices) ? 'dernier' : tipNumber+'e' )+' indice : **';
+        const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
-        //if tip is image crop, don't embed it
-        if(tip.startsWith('/card')){
-            //no need to manage end turn, last tip is about card name
-            return tip;
+        if(tip === 'croppedImage.jpg'){
+            const file = new AttachmentBuilder(tip);
+            message = 
+            {
+                embeds : [
+                    {
+                        color: MESSAGE_COLORS[this.indices.length],
+                        fields: [
+                            { name : 'Toujours pas ?', value :  'Allez, un dernier ... '  }
+                        ],
+                        image: {
+                            url: 'attachment://croppedImage.jpg',
+                        }
+                    }
+                    
+                ],
+                files : [file]
+            };
+        } else {
+            message = 
+            {
+                embeds : [
+                    {
+                        color: MESSAGE_COLORS[this.indices.length],
+                        fields: [
+                            { name : tipName, value : tip }
+                        ]
+                    }
+                ]
+            };
         }
-
-        message = 
-        {
-            color: MESSAGE_COLORS[this.indices.length],
-            fields: [
-                { name : tipName, value : tip }
-            ]
-        };
 
         if(this.indices.length == 0)
             this.end_turn = true;
