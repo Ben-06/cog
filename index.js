@@ -127,7 +127,8 @@ client.on('messageCreate', message => {
     if(game.checkResponse(message.content.substring(1).toLowerCase(), message.author.username))
     {
         message.reply('Bravo, bonne réponse !!');
-        client.channels.cache.get(channel).send("/card "+game.crd.name);
+        var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
+        client.channels.cache.get(channel).send({ files: [file] });
         
         //attribute & display earned points
         const points = game.goodResponse(message.author.username);
