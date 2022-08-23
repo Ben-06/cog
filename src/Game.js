@@ -64,6 +64,9 @@ class Game {
             });
         }
 
+        //image crop
+        sortedIndices.push("/card "+this.crd.name+" crop");
+
         this.indices = sortedIndices.sort((a, b) => 0.5 - Math.random());
 
         //last tip will be 1st and last letter + size (P _ _ _ _ _ _ E)
@@ -90,6 +93,12 @@ class Game {
         const tip = this.indices.shift();
         const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices) ? 'dernier' : tipNumber+'e' )+' indice : **';
+
+        //if tip is image crop, don't embed it
+        if(tip.startsWith('/card')){
+            //no need to manage end turn, last tip is about card name
+            return tip;
+        }
 
         message = 
         {

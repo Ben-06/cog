@@ -86,9 +86,13 @@ function indiceLoop(turn){
             setTimeout(newTurn, game.speed);
 
         } else {
-            const scoresEmbed = game.newIndice();
+            const tip = game.newIndice();
             
-            client.channels.cache.get(channel).send({ embeds: [scoresEmbed] });
+            //if image crop, don't embed it
+            if(typeof tip === 'string')
+                client.channels.cache.get(channel).send(tip);
+            else
+                client.channels.cache.get(channel).send({ embeds: [tip] });
 
             const currentTurn = game.turn;
             setTimeout(() => {
