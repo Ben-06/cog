@@ -44,6 +44,7 @@ client.on('interactionCreate', async interaction => {
     
 	if (commandName === 'guess' && (game === null || game.turn === -1)) {
         game= new Game(extension, speed, duration);
+        await game.buildIndicesList();
         const scoresEmbed = {
             color: 0x0099ff,
             title: 'Nouvelle partie ! ',
@@ -70,7 +71,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 //tips loop managing for a given turn
-function indiceLoop(turn){
+indiceLoop = async(turn) =>{
     //1st check if a game is currently playing and if the turn is still the same
     if(game != null && game.turn != -1  && game.turn == turn)
     {
@@ -79,7 +80,7 @@ function indiceLoop(turn){
             client.channels.cache.get(channel).send("Personne n'a trouvé, dommage ! La réponse était **"+game.crd.name+"**");
             var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
             client.channels.cache.get(channel).send({ files: [file] });
-            game.goodResponse();
+            await game.goodResponse();
             
             //launch a new turn
             setTimeout(newTurn, game.speed);
@@ -121,7 +122,7 @@ function newTurn() {
 }
 
 //catching response to a question
-client.on('messageCreate', message => {
+client.on('messageCreate', async(message) => {
     if(game === null || game.turn === -1 || message.author.bot || message.content.substring(0,1) != "!") return;
 
     if(game.checkResponse(message.content.substring(1).toLowerCase(), message.author.username))
@@ -131,7 +132,7 @@ client.on('messageCreate', message => {
         client.channels.cache.get(channel).send({ files: [file] });
         
         //attribute & display earned points
-        const points = game.goodResponse(message.author.username);
+        const points = await game.goodResponse(message.author.username);
         client.channels.cache.get(channel).send('** <@'+message.author.id+'>** remporte **'+points+'** points grâce à cette bonne réponse !');
 
         //launch a new turn

@@ -30,6 +30,14 @@ const levenshteinDistance = (str1 = '', str2 = '') => {
     return track[str2.length][str1.length];
  };
 
+ const cropImage = async(img, dest) => {
+        try{
+            const crop = await sharp(img).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(dest)
+            return dest;
+        }
+        catch(err) { return null; };
+ }
+
 class Game {
 
     constructor(extension, speed, duree) {
@@ -42,11 +50,10 @@ class Game {
         this.extension = extension;
         this.wrong = {};
         this.end_turn = false;
-        this.buildIndicesList();
     }
 
     //build the liste of tips in random order (exept the last one)
-    buildIndicesList = function(){
+    buildIndicesList = async() => {
         let sortedIndices = new Array();
 
         if(! this.extension) 
@@ -88,13 +95,12 @@ class Game {
         // file name for cropped image
         let outputImage = 'croppedImage.jpg';
 
-        sharp(this.crd.image).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(outputImage)
-        .then(function(new_file_info) {
-            sortedIndices.push(outputImage);
-        })
-        .catch( err => { console.log(err) });
 
-        this.nbIndices=this.indices.length;
+        const cropped = await cropImage(this.crd.image, outputImage);
+        if(cropped !== null){
+            this.indices.push(cropped);
+            this.nbIndices=this.indices.length;
+        }
     }
 
     //build the next tip for the current card
@@ -157,7 +163,7 @@ class Game {
     }
 
     //function called when someone gave the good answer
-    goodResponse(winner){
+    goodResponse = async(winner) => {
         let points = -1;
 
         if(winner){
@@ -171,7 +177,7 @@ class Game {
             this.turn=this.turn + 1;
             this.wrong = {};
             this.end_turn = false;
-            this.buildIndicesList();
+            await this.buildIndicesList();
         } else {
             this.turn = -1;
         }
