@@ -64,7 +64,7 @@ client.on('interactionCreate', async interaction => {
             ]
         };
         
-        client.channels.cache.get(channel).send({ embeds: [scoresEmbed] });
+        interaction.reply({ embeds: [scoresEmbed] });
 
 		setTimeout(newTurn, 1000);
 	}
