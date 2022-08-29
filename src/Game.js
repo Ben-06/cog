@@ -81,7 +81,7 @@ class Game {
             tip = tip + word.substring(0,1);
 
             for(let i= 1; i < word.length -1 ; i++){
-                tip = tip += (word[i] != " " ? " \\_ " : "   ");
+                tip = tip += (word[i] != " " && word[i] != "-"? " \\_ " : word[i]);
             }
             tip = tip + word.substring(word.length-1)+' ';
 
