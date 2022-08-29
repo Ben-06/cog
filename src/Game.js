@@ -107,7 +107,7 @@ class Game {
     newIndice(){
         let message  = null;
         const tip = this.indices.shift();
-        const tipNumber = this.nbIndices - this.indices.length+1;
+        const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
         if(tip === 'croppedImage.jpg'){
