@@ -81,7 +81,7 @@ class Game {
             tip = tip + word.substring(0,1);
 
             for(let i= 1; i < word.length -1 ; i++){
-                tip = tip += (word[i] != " " ? " \\_ " : "   ");
+                tip = tip += (word[i] != " " && word[i] != "-"? " \\_ " : word[i]);
             }
             tip = tip + word.substring(word.length-1)+' ';
 
@@ -107,7 +107,7 @@ class Game {
     newIndice(){
         let message  = null;
         const tip = this.indices.shift();
-        const tipNumber = this.nbIndices - this.indices.length+1;
+        const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
 
         if(tip === 'croppedImage.jpg'){
