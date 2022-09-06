@@ -34,7 +34,30 @@ const commands = [
 				{ name: "courte", value: '3' },
 				{ name: 'normale', value: '5' },
 				{ name: 'longue', value: '8' }
-	))
+	)),
+	new SlashCommandBuilder().setName('add-faq').setDescription('Ajouter une question à la FAQ')
+    .addStringOption(option =>
+        option.setName('question')
+        .setDescription('question à ajouter à la FAQ')
+        .setRequired(true)
+    )
+    .addStringOption(option =>
+        option.setName('réponse')
+        .setDescription('réponse à la question')
+        .setRequired(true)
+    ),
+    new SlashCommandBuilder().setName('card').setDescription('Afficher une carte')
+    .addStringOption(option =>
+        option.setName('carte')
+        .setDescription('carte à afficher')
+        .setRequired(true)
+    ),
+    new SlashCommandBuilder().setName('cs').setDescription('Afficher une Capacité Spéciale')
+    .addStringOption(option =>
+        option.setName('cs')
+        .setDescription('capacité spéciale à afficher')
+        .setRequired(true)
+    )
 	]
 	.map(command => command.toJSON());
 
