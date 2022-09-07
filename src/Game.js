@@ -1,4 +1,5 @@
 const sharp = require('sharp');
+const fs = require('fs');
 const { AttachmentBuilder } = require('discord.js');
 const {maxPoints} = require('../config/config.json');
 const Card = require('./Card.js');
@@ -95,11 +96,12 @@ class Game {
         // file name for cropped image
         let outputImage = 'croppedImage.jpg';
 
-
-        const cropped = await cropImage(this.crd.image, outputImage);
-        if(cropped !== null){
-            this.indices.push(cropped);
-            this.nbIndices=this.indices.length;
+        if(fs.existsSync(this.crd.image)){
+            const cropped = await cropImage(this.crd.image, outputImage);
+            if(cropped !== null){
+                this.indices.push(cropped);
+                this.nbIndices=this.indices.length;
+            }
         }
     }
 

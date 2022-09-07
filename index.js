@@ -10,6 +10,7 @@ const {extensions} = require('./config/types.json');
 const {cards} = require ('./config/cards.json');
 const Game = require('./src/Game');
 const {abilitiesFunc} = require('./src/abilities.js');
+const fs = require('fs');
 var game = null;
 
 
@@ -131,8 +132,14 @@ client.on('interactionCreate', async interaction => {
             await interaction.reply("Cette carte n'existe pas.");
             return;
         }
-        var file = new AttachmentBuilder(`./card_img/${cardToSearch}.png`, { name: `${cardToSearch}.png` });
-        await interaction.reply({ files: [file] });
+        try{
+            var file = new AttachmentBuilder(`./card_img/${cardToSearch}.png`, { name: `${cardToSearch}.png` });
+            await interaction.reply({ files: [file] });
+        }
+        catch(e){
+            await interaction.reply('oups, impossible de trouver l\'image');
+        }
+
     }
     else if (commandName === 'cs') {
 
@@ -170,8 +177,12 @@ indiceLoop = async(turn) =>{
         //check if turn is over
         if(game.end_turn){
             client.channels.cache.get(channel).send("Personne n'a trouvé, dommage ! La réponse était **"+game.crd.name+"**");
-            var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
-            client.channels.cache.get(channel).send({ files: [file] });
+            
+            if(fs.existsSync(game.crd.image)){
+                var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
+                client.channels.cache.get(channel).send({ files: [file] });
+            }
+        
             await game.goodResponse();
             
             //launch a new turn
@@ -220,9 +231,11 @@ client.on('messageCreate', async(message) => {
     if(game.checkResponse(message.content.substring(1).toLowerCase(), message.author.username))
     {
         message.reply('Bravo, bonne réponse !!');
-        var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
-        client.channels.cache.get(channel).send({ files: [file] });
-        
+        if(fs.existsSync(game.crd.image)){
+            var file = new AttachmentBuilder(game.crd.image, { name: `${game.crd.name}.png` });
+            client.channels.cache.get(channel).send({ files: [file] });
+        }
+
         //attribute & display earned points
         const points = await game.goodResponse(message.author.username);
         client.channels.cache.get(channel).send('** <@'+message.author.id+'>** remporte **'+points+'** points grâce à cette bonne réponse !');
