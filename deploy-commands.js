@@ -45,6 +45,11 @@ const commands = [
         option.setName('réponse')
         .setDescription('réponse à la question')
         .setRequired(true)
+    )
+	.addStringOption(option =>
+        option.setName('ia')
+        .setDescription('question spécifique IA ? [oui,vide]')
+        .setRequired(false)
     ),
     new SlashCommandBuilder().setName('card').setDescription('Afficher une carte')
     .addStringOption(option =>

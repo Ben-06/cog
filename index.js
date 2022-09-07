@@ -99,6 +99,9 @@ client.on('interactionCreate', async interaction => {
         let msg_a  = options.data.find(obj => {
           return obj.name === "réponse"
         });
+        let is_IA  = options.data.find(obj => {
+            return obj.name === "ia"
+          });
     
         if(!msg_q || !msg_a) return;
     
@@ -108,7 +111,7 @@ client.on('interactionCreate', async interaction => {
         const embed = new EmbedBuilder()
           .setTitle(question)
           .setDescription(answer)
-          .setColor("0x3482c6")
+          .setColor(is_IA && is_IA.value == 'oui' ? "0xE1DE0D" : "0x3482c6")
         faqChan.send({ embeds: [embed] });
         await interaction.reply("Section de FAQ ajoutée");
         return;
