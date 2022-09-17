@@ -1,4 +1,7 @@
-var path = require('path');
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const {cards} = require('./../config/cards.json');
 const {types, extensions, CS} = require('./../config/types.json');
 var cards_list = new Array();
@@ -28,7 +31,7 @@ class Card {
 
         let rand = Math.floor(Math.random() * (cards_list.length));
 
-        this.name = cards_list[rand].name;
+        this.name = cards_list[rand][process.env.BOT_LANG];
 
         this.buildCard(cards_list[rand].id);
 

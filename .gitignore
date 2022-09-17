@@ -2,3 +2,5 @@
 node_modules
 eslintrc.json
 croppedImage.jpg
+localizer.js
+localisation.json

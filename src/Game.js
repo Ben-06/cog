@@ -77,14 +77,18 @@ class Game {
 
         //last tip will be 1st and last letter + size (P _ _ _ _ _ _ E)
         let tip = "";
-        let words = this.crd.name.split(' ');
+        let words = this.crd.name.split(/( |-)/);
         words.forEach(word => {
-            tip = tip + word.substring(0,1);
+            if(word == ' ' || word == '-'){
+                tip = tip += word;
+            } else {
+                tip = tip + word.substring(0,1);
 
-            for(let i= 1; i < word.length -1 ; i++){
-                tip = tip += (word[i] != " " && word[i] != "-"? " \\_ " : word[i]);
+                for(let i= 1; i < word.length -1 ; i++){
+                    tip = tip += " \\_ ";
+                }
+                tip = tip + word.substring(word.length-1);
             }
-            tip = tip + word.substring(word.length-1)+' ';
 
         });
 

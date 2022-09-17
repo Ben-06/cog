@@ -1,899 +1,1121 @@
 {
-   "cards" : [
-    {
-        "name": "revenant",
-        "id": "0108012000000323"
-    },
-    {
-        "name": "lieutenant",
-        "id": "0114000000000313"
-    },
-    {
-        "name": "mutant",
-        "id": "0115018120000245"
-    },
-    {
-        "name": "baron",
-        "id": "0100000000000353"
-    },
-    {
-        "name": "gnome",
-        "id": "0115004000000213"
-    },
-    {
-        "name": "assassin",
-        "id": "0115018000000112"
-    },
-    {
-        "name": "partisan",
-        "id": "0115000000000323"
-    },
-    {
-        "name": "disciple",
-        "id": "0115012000000224"
-    },
-    {
-        "name": "parasite",
-        "id": "0115017120400114"
-    },
-    {
-        "name": "scribe",
-        "id": "0115008000000334"
-    },
-    {
-        "name": "vortex",
-        "id": "0118100000000032"
-    },
-    {
-        "name": "alpha",
-        "id": "0112008140000425"
-    },
-    {
-        "name": "microctopus",
-        "id": "0100000000000512"
-    },
-    {
-        "name": "zombie",
-        "id": "0100000000000311"
-    },
-    {
-        "name": "abomination",
-        "id": "0117012000000646"
-    },
-    {
-        "name": "martyr",
-        "id": "0114000000000667"
-    },
-    {
-        "name": "aberration",
-        "id": "0118015041208247"
-    },
-    {
-        "name": "brute",
-        "id": "0100000000000554"
-    },
-    {
-        "name": "grrr",
-        "id": "0115000000000132"
-    },
-    {
-        "name": "carnivore",
-        "id": "0115018170000266"
-    },
-    {
-        "name": "ogre",
-        "id": "0104000000000444"
-    },
-    {
-        "name": "shaman",
-        "id": "0115100000000123"
-    },
-    {
-        "name": "troll",
-        "id": "0115004000000366"
-    },
-    {
-        "name": "machine",
-        "id": "0114108000000013"
-    },
-    {
-        "name": "brigand",
-        "id": "0117000000000264"
-    },
-    {
-        "name": "carapace",
-        "id": "0114000000000043"
-    },
-    {
-        "name": "reptile",
-        "id": "0115018000000133"
-    },
-    {
-        "name": "cyclone",
-        "id": "0212017000000305"
-    },
-    {
-        "name": "boom!",
-        "id": "0200000000000101"
-    },
-    {
-        "name": "meteorite",
-        "id": "0212000000000405"
-    },
-    {
-        "name": "annihilation",
-        "id": "0200000000000604"
-    },
-    {
-        "name": "combustion",
-        "id": "0217000000000203"
-    },
-    {
-        "name": "fripon",
-        "id": "1110000000000310"
-    },
-    {
-        "name": "gladiateur",
-        "id": "1106007000000564"
-    },
-    {
-        "name": "cauchemar tenace",
-        "id": "1107014000000113"
-    },
-    {
-        "name": "gang de cr\u00f4a",
-        "id": "1118003070000466"
-    },
-    {
-        "name": "v\u00e9t\u00e9ran",
-        "id": "1106002000000444"
-    },
-    {
-        "name": "naga",
-        "id": "1103014100000466"
-    },
-    {
-        "name": "savant fou",
-        "id": "1116009000000154"
-    },
-    {
-        "name": "infirmier m\u00e9canique",
-        "id": "1116000000000222"
-    },
-    {
-        "name": "b\u00eate de guerre",
-        "id": "1100000000000845"
-    },
-    {
-        "name": "spectre",
-        "id": "1111008000000213"
-    },
-    {
-        "name": "titan",
-        "id": "1100000000000887"
-    },
-    {
-        "name": "dragonnet",
-        "id": "1101014000000213"
-    },
-    {
-        "name": "crocozaure",
-        "id": "1108004100000454"
-    },
-    {
-        "name": "ronge-raison",
-        "id": "1111010000000513"
-    },
-    {
-        "name": "palanain",
-        "id": "1114000000000334"
-    },
-    {
-        "name": "faucheur",
-        "id": "1117000000000423"
-    },
-    {
-        "name": "diablotin provocant",
-        "id": "1108007000000132"
-    },
-    {
-        "name": "puncheur peureux",
-        "id": "1115018070000165"
-    },
-    {
-        "name": "dragon cupide",
-        "id": "1115010000000655"
-    },
-    {
-        "name": "cr\u00f4a solitaire",
-        "id": "1118000000000142"
-    },
-    {
-        "name": "embrocheur",
-        "id": "1115004000000567"
-    },
-    {
-        "name": "gluant rancunier",
-        "id": "1103009000000334"
-    },
-    {
-        "name": "gesticulateur toxique",
-        "id": "1115019180000034"
-    },
-    {
-        "name": "turbo-rafaleur",
-        "id": "1112000000000333"
-    },
-    {
-        "name": "d\u00e9moculaire",
-        "id": "1104100000000313"
-    },
-    {
-        "name": "p\u00e9tocharde",
-        "id": "1107100000000164"
-    },
-    {
-        "name": "grogneur",
-        "id": "1107000000000253"
-    },
-    {
-        "name": "poisson-loupiote",
-        "id": "1100000000000221"
-    },
-    {
-        "name": "bouch\u00e9e maudite",
-        "id": "1210000000000200"
-    },
-    {
-        "name": "d\u00e9sint\u00e9gration",
-        "id": "1212000000000606"
-    },
-    {
-        "name": "destruction",
-        "id": "1200000000000805"
-    },
-    {
-        "name": "fiole de sang de vampire",
-        "id": "1217016000000103"
-    },
-    {
-        "name": "porc-pilleur",
-        "id": "2105007000000143"
-    },
-    {
-        "name": "monstre des douves",
-        "id": "2106003080000412"
-    },
-    {
-        "name": "y\u00e9ti chafouin",
-        "id": "2103004090000446"
-    },
-    {
-        "name": "picoreur de mana",
-        "id": "2105000000000111"
-    },
-    {
-        "name": "protecteur des ruines",
-        "id": "2108000000000364"
-    },
-    {
-        "name": "requinotaure",
-        "id": "2115003000000324"
-    },
-    {
-        "name": "seigneur venimeur",
-        "id": "2119014000000013"
-    },
-    {
-        "name": "scaphandrier",
-        "id": "2103100000000223"
-    },
-    {
-        "name": "mage discret",
-        "id": "2105008000000254"
-    },
-    {
-        "name": "groin terrestre",
-        "id": "2100000000000242"
-    },
-    {
-        "name": "chef de clan",
-        "id": "2100000000000443"
-    },
-    {
-        "name": "hydre",
-        "id": "2115002000000324"
-    },
-    {
-        "name": "dragon \u00e9meraude",
-        "id": "2105016090000356"
-    },
-    {
-        "name": "ritualiste",
-        "id": "2105100000000133"
-    },
-    {
-        "name": "grignoteur",
-        "id": "210000000000734"
-    },
-    {
-        "name": "guerrier abyssal",
-        "id": "2103000000000333"
-    },
-    {
-        "name": "chef cuistot",
-        "id": "2116000000000213"
-    },
-    {
-        "name": "alpha-garou",
-        "id": "2115000000000455"
-    },
-    {
-        "name": "engeance",
-        "id": "2112004000000112"
-    },
-    {
-        "name": "wyrm r\u00e9anim\u00e9e",
-        "id": "2113012080000617"
-    },
-    {
-        "name": "tavernier m\u00e9canique",
-        "id": "2105014000000425"
-    },
-    {
-        "name": "gredin hirsute",
-        "id": "2117000000000222"
-    },
-    {
-        "name": "b\u00eate informe",
-        "id": "2100000000000866"
-    },
-    {
-        "name": "garde royal",
-        "id": "2112000000000354"
-    },
-    {
-        "name": "bondisseur",
-        "id": "2115018000000313"
-    },
-    {
-        "name": "dragon saphir",
-        "id": "2103001000000365"
-    },
-    {
-        "name": "brise-muraille",
-        "id": "2101009000000455"
-    },
-    {
-        "name": "picoreur de murs",
-        "id": "2101000000000211"
-    },{
-        "name": "attaque mentale",
-        "id": "2200000000000302"
-    },
-    {
-        "name": "vision de terreur",
-        "id": "2217000000000404"
-    },
-    {
-        "name": "chope enchant\u00e9e",
-        "id": "2216000000000303"
-    },
-    {
-        "name": "temp\u00eate de lumi\u00e8re",
-        "id": "2212002100000507"
-    },
-    {
-        "name": "garde d\u00e9moniaque",
-        "id": "3101008000000513"
-    },
-    {
-        "name": "gangren\u00e9 de mana",
-        "id": "3105006000000110"
-    },
-    {
-        "name": "forge-mana",
-        "id": "3105014000000113"
-    },
-    {
-        "name": "golem de mana",
-        "id": "3105000000000444"
-    },
-    {
-        "name": "tr\u00e9ant",
-        "id": "3100000000000332"
-    },
-    {
-        "name": "shaman en transe",
-        "id": "3115016060000212"
-    },
-    {
-        "name": "harponneur",
-        "id": "3115012160000325"
-    },
-    {
-        "name": "lac\u00e9rateur orc",
-        "id": "3106002090000667"
-    },
-    {
-        "name": "m\u00e9caff\u00fbteur",
-        "id": "3102100000000134"
-    },
-    {
-        "name": "dryade",
-        "id": "3116000000000243"
-    },
-    {
-        "name": "\u00e9l\u00e9mentaire de feu",
-        "id": "3100000000000644"
-    },
-    {
-        "name": "grrr abyssal",
-        "id": "3102000000000313"
-    },
-    {
-        "name": "archer gobelin",
-        "id": "3115000000000212"
-    },
-    {
-        "name": "ougha",
-        "id": "3118012000000122"
-    },
-    {
-        "name": "seigneur d\u00e9moniaque",
-        "id": "310000000000776"
-    },
-    {
-        "name": "n\u00e9crom\u00e9cano",
-        "id": "3108000000000523"
-    },
-    {
-        "name": "armure hant\u00e9e",
-        "id": "3111002000000114"
-    },
-    {
-        "name": "plante gloutonne",
-        "id": "3116009000000466"
-    },
-    {
-        "name": "pr\u00eatresse",
-        "id": "3116100000000112"
-    },
-    {
-        "name": "coupe-jarret",
-        "id": "3115017000000213"
-    },
-    {
-        "name": "loup de givre",
-        "id": "3115003080000314"
-    },
-    {
-        "name": "g\u00e9ant",
-        "id": "3100000000000485"
-    },
-    {
-        "name": "d\u00e9serteur",
-        "id": "3102004000000446"
-    },
-    {
-        "name": "canid\u00e9 des sommets",
-        "id": "3118000000000253"
-    },
-    {
-        "name": "lutin de la source",
-        "id": "3111003000000113"
-    },
-    {
-        "name": "cracheur d'azote",
-        "id": "3103002000000335"
-    },
-    {
-        "name": "miaou-garou",
-        "id": "3116004000000334"
-    },
-    {
-        "name": "esprit malin",
-        "id": "3111000000000334"
-    },
-    {
-        "name": "dislocation",
-        "id": "3210000000000301"
-    },
-    {
-        "name": "biquette sacrifi\u00e9e",
-        "id": "3202000000000506"
-    },
-    {
-        "name": "liqu\u00e9faction",
-        "id": "3213002100000809"
-    },
-    {
-        "name": "d\u00e9chirure astrale",
-        "id": "3217000000000605"
-    },
-    {
-        "name": "tr\u00e9sor glouton",
-        "id": "4113005000000234"
-    },
-    {
-        "name": "chauve-garou",
-        "id": "4113018000000456"
-    },
-    {
-        "name": "chef de tribu",
-        "id": "4115004000000324"
-    },
-    {
-        "name": "cauchemar suintant",
-        "id": "4119100000000334"
-    },
-    {
-        "name": "d\u00e9moctopus",
-        "id": "4119012170000013"
-    },
-    {
-        "name": "tr\u00e9ant furieux",
-        "id": "4115006000000322"
-    },
-    {
-        "name": "m\u00e8re des couv\u00e9es",
-        "id": "4115018000000334"
-    },
-    {
-        "name": "golem d'onyx",
-        "id": "4100000000000284"
-    },
-    {
-        "name": "forgeron",
-        "id": "4117100000000133"
-    },
-    {
-        "name": "cisailleur",
-        "id": "4112017000000223"
-    },
-    {
-        "name": "l\u00e9chouilleur",
-        "id": "4101010000000342"
-    },
-    {
-        "name": "liche",
-        "id": "4100000000000623"
-    },
-    {
-        "name": "chuchoteur abyssal",
-        "id": "4119003020000056"
-    },
-    {
-        "name": "shaman corrompu",
-        "id": "4113004160000447"
-    },
-    {
-        "name": "parasite d\u00e9moniaque",
-        "id": "4111001190000035"
-    },
-    {
-        "name": "chouineur",
-        "id": "4114000000000112"
-    },
-    {
-        "name": "djinn",
-        "id": "4100000000000686"
-    },
-    {
-        "name": "apothicaire",
-        "id": "4116000000000264"
-    },
-    {
-        "name": "nouvelle recrue",
-        "id": "4100000000000131"
-    },
-    {
-        "name": "golem friable",
-        "id": "4107000000000274"
-    },
-    {
-        "name": "patrouilleur",
-        "id": "4106014000000513"
-    },
-    {
-        "name": "banshee",
-        "id": "4111015000000415"
-    },
-    {
-        "name": "hideux clampant",
-        "id": "4115008120000425"
-    },
-    {
-        "name": "d\u00e9mon-b\u00e9lier",
-        "id": "4113001000000858"
-    },
-    {
-        "name": "gargouille",
-        "id": "4113000000000334"
-    },
-    {
-        "name": "rampignon",
-        "id": "4119000000000032"
-    },
-    {
-        "name": "venimeuse",
-        "id": "4115019180000034"
-    },
-    {
-        "name": "carapique",
-        "id": "4114000000000223"
-    },
-    {
-        "name": "blizzard",
-        "id": "4212000000000204"
-    },
-    {
-        "name": "bombe de mana",
-        "id": "4202010000000907"
-    },
-    {
-        "name": "souffle revigorant",
-        "id": "4216000000000102"
-    },
-    {
-        "name": "cong\u00e9lation",
-        "id": "4210000000000703"
-    },
-    {
-        "name": "capitaine",
-        "id": "5103000000000513"
-    },
-    {
-        "name": "garde du corps",
-        "id": "5111009020000316"
-    },
-    {
-        "name": "familier",
-        "id": "5111000000000112"
-    },
-    {
-        "name": "barde exaltant",
-        "id": "5111012170000114"
-    },
-    {
-        "name": "griffon",
-        "id": "5111004000000113"
-    },
-    {
-        "name": "g\u00e9nie",
-        "id": "5101014100000413"
-    },
-    {
-        "name": "\u00e9l\u00e9mentaire aqueux",
-        "id": "5101003000000455"
-    },
-    {
-        "name": "saigneur",
-        "id": "5101008090000286"
-    },
-    {
-        "name": "noble guerri\u00e8re",
-        "id": "5100000000000665"
-    },
-    {
-        "name": "ignominie purulente",
-        "id": "5113015000000658"
-    },
-    {
-        "name": "autochtone",
-        "id": "5112009000000334"
-    },
-    {
-        "name": "\u00e9frit",
-        "id": "5115018000000424"
-    },
-    {
-        "name": "maitre-chien",
-        "id": "5112100000000223"
-    },
-    {
-        "name": "porte-peste",
-        "id": "5119000000000011"
-    },
-    {
-        "name": "cultivatox",
-        "id": "5119008000000022"
-    },
-    {
-        "name": "sentinelle",
-        "id": "5115016000000435"
-    },
-    {
-        "name": "groin enrag\u00e9",
-        "id": "5115018120000113"
-    },
-    {
-        "name": "nourrice protectrice",
-        "id": "5115006000000211"
-    },
-    {
-        "name": "harceleur",
-        "id": "5101000000000232"
-    },
-    {
-        "name": "bagarreur",
-        "id": "5109000000000666"
-    },
-    {
-        "name": "sorcier primitif",
-        "id": "5100000000000533"
-    },
-    {
-        "name": "goule",
-        "id": "5115008000000313"
-    },
-    {
-        "name": "infanterie naine",
-        "id": "5117000000000354"
-    },
-    {
-        "name": "mineur fr\u00e9n\u00e9tique",
-        "id": "5106005000000242"
-    },
-    {
-        "name": "armure inanim\u00e9e",
-        "id": "5111014080000125"
-    },
-    {
-        "name": "dresseur de cauchemars",
-        "id": "5100000000000374"
-    },
-    {
-        "name": "cauchemar insaisissable",
-        "id": "5101007000000444"
-    },
-    {
-        "name": "groin c\u00e9leste",
-        "id": "5101100000000233"
-    },
-    {
-        "name": "rituel de ratatinage",
-        "id": "5212000000000304"
-    },
-    {
-        "name": "mixture instable",
-        "id": "5210000000000502"
-    },
-    {
-        "name": "invocation de nourriture",
-        "id": "5216000000000504"
-    },
-    {
-        "name": "transformouton",
-        "id": "5219000000000002"
-    },
-    {
-        "name": "arachnide chitineuse",
-        "id": "6114018000000213"
-    },
-    {
-        "name": "monture indompt\u00e9e",
-        "id": "6109000000000333"
-    },
-    {
-        "name": "bourreau sans visage",
-        "id": "6106002100000554"
-    },
-    {
-        "name": "protecteur sylvain",
-        "id": "6106012170409356"
-    },
-    {
-        "name": "centaure",
-        "id": "6106004090000555"
-    },
-    {
-        "name": "machouilleur",
-        "id": "6119018000000043"
-    },
-    {
-        "name": "matriarachnides",
-        "id": "6100000000000755"
-    },
-    {
-        "name": "bedonnant primitif",
-        "id": "6100000000000464"
-    },
-    {
-        "name": "phoenix en d\u00e9clin",
-        "id": "6101000000000253"
-    },
-    {
-        "name": "minotaure",
-        "id": "6104009000000445"
-    },
-    {
-        "name": "gourou m\u00e9canique",
-        "id": "6109100000000334"
-    },
-    {
-        "name": "fl\u00e9au des remparts",
-        "id": "6101008090000937"
-    },
-    {
-        "name": "protecteur contractuel",
-        "id": "6106010000000663"
-    },
-    {
-        "name": "titubeur \u00e9ternel",
-        "id": "6106000000000130"
-    },
-    {
-        "name": "guerri\u00e8re farouche",
-        "id": "6112017090000356"
-    },
-    {
-        "name": "f\u00e9tiche maya",
-        "id": "6100000000000263"
-    },
-    {
-        "name": "druide pacifique",
-        "id": "6108108000000112"
-    },
-    {
-        "name": "fouisseur craintif",
-        "id": "6107018000000132"
-    },
-    {
-        "name": "arbal\u00e9trier rouill\u00e9",
-        "id": "6112007000000344"
-    },
-    {
-        "name": "tr\u00e9ant aigri",
-        "id": "6115000000000233"
-    },
-    {
-        "name": "clampant",
-        "id": "6115017000000133"
-    },
-    {
-        "name": "petite frappe",
-        "id": "6109007000000344"
-    },
-    {
-        "name": "oeuf de phoenix",
-        "id": "6100000000000422"
-    },
-    {
-        "name": "monture nomade",
-        "id": "6111000000000133"
-    },
-    {
-        "name": "grouillant",
-        "id": "6108000000000211"
-    },
-    {
-        "name": "skiwk-skiwk",
-        "id": "6115017000000324"
-    },
-    {
-        "name": "cat'pitaine hydrolphobe",
-        "id": "6115003000000477"
-    },
-    {
-        "name": "gisement vivant",
-        "id": "6105000000000333"
-    },
-    {
-        "name": "butin pi\u00e9g\u00e9",
-        "id": "6217002100000506"
-    },
-    {
-        "name": "sacrifice d\u00e9moniaque",
-        "id": "6210000000000904"
-    },
-    {
-        "name": "net et pr\u00e9cis",
-        "id": "6217000000000102"
-    },
-    {
-        "name": "exc\u00e8s d'adr\u00e9naline",
-        "id": "6212016000000305"
-    }
-   ]
+    "cards": [
+        {
+            "FR": "revenant",
+            "EN": "revenant",
+            "id": "0108012000000323"
+        },
+        {
+            "FR": "lieutenant",
+            "EN": "lieutenant",
+            "id": "0114000000000313"
+        },
+        {
+            "FR": "mutant",
+            "EN": "mutant",
+            "id": "0115018120000245"
+        },
+        {
+            "FR": "baron",
+            "EN": "baron",
+            "id": "0100000000000353"
+        },
+        {
+            "FR": "gnome",
+            "EN": "gnome",
+            "id": "0115004000000213"
+        },
+        {
+            "FR": "assassin",
+            "EN": "assassin",
+            "id": "0115018000000112"
+        },
+        {
+            "FR": "partisan",
+            "EN": "partisan",
+            "id": "0115000000000323"
+        },
+        {
+            "FR": "disciple",
+            "EN": "disciple",
+            "id": "0115012000000224"
+        },
+        {
+            "FR": "parasite",
+            "EN": "parasite",
+            "id": "0115017120400114"
+        },
+        {
+            "FR": "scribe",
+            "EN": "scribe",
+            "id": "0115008000000334"
+        },
+        {
+            "FR": "vortex",
+            "EN": "vortex",
+            "id": "0118100000000032"
+        },
+        {
+            "FR": "alpha",
+            "EN": "alpha",
+            "id": "0112008140000425"
+        },
+        {
+            "FR": "microctopus",
+            "EN": "microctopus",
+            "id": "0100000000000512"
+        },
+        {
+            "FR": "zombie",
+            "EN": "zombie",
+            "id": "0100000000000311"
+        },
+        {
+            "FR": "abomination",
+            "EN": "abomination",
+            "id": "0117012000000646"
+        },
+        {
+            "FR": "martyr",
+            "EN": "martyr",
+            "id": "0114000000000667"
+        },
+        {
+            "FR": "aberration",
+            "EN": "aberration",
+            "id": "0118015041208247"
+        },
+        {
+            "FR": "brute",
+            "EN": "brute",
+            "id": "0100000000000554"
+        },
+        {
+            "FR": "grrr",
+            "EN": "grrr",
+            "id": "0115000000000132"
+        },
+        {
+            "FR": "carnivore",
+            "EN": "carnivore",
+            "id": "0115018170000266"
+        },
+        {
+            "FR": "ogre",
+            "EN": "ogre",
+            "id": "0104000000000444"
+        },
+        {
+            "FR": "shaman",
+            "EN": "shaman",
+            "id": "0115100000000123"
+        },
+        {
+            "FR": "troll",
+            "EN": "troll",
+            "id": "0115004000000366"
+        },
+        {
+            "FR": "machine",
+            "EN": "machine",
+            "id": "0114108000000013"
+        },
+        {
+            "FR": "brigand",
+            "EN": "brigand",
+            "id": "0117000000000264"
+        },
+        {
+            "FR": "carapace",
+            "EN": "carapace",
+            "id": "0114000000000043"
+        },
+        {
+            "FR": "reptile",
+            "EN": "reptile",
+            "id": "0115018000000133"
+        },
+        {
+            "FR": "cyclone",
+            "EN": "cyclone",
+            "id": "0212017000000305"
+        },
+        {
+            "FR": "boom!",
+            "EN": "boom!",
+            "id": "0200000000000101"
+        },
+        {
+            "FR": "meteorite",
+            "EN": "meteorite",
+            "id": "0212000000000405"
+        },
+        {
+            "FR": "annihilation",
+            "EN": "annihilation",
+            "id": "0200000000000604"
+        },
+        {
+            "FR": "combustion",
+            "EN": "combustion",
+            "id": "0217000000000203"
+        },
+        {
+            "FR": "fripon",
+            "EN": "rapscallion",
+            "id": "1110000000000310"
+        },
+        {
+            "FR": "gladiateur",
+            "EN": "gladiator",
+            "id": "1106007000000564"
+        },
+        {
+            "FR": "cauchemar tenace",
+            "EN": "tenacious nightmare",
+            "id": "1107014000000113"
+        },
+        {
+            "FR": "gang de crôa",
+            "EN": "ribbit gang",
+            "id": "1118003070000466"
+        },
+        {
+            "FR": "vétéran",
+            "EN": "veteran",
+            "id": "1106002000000444"
+        },
+        {
+            "FR": "naga",
+            "EN": "naga",
+            "id": "1103014100000466"
+        },
+        {
+            "FR": "savant fou",
+            "EN": "mad scientist",
+            "id": "1116009000000154"
+        },
+        {
+            "FR": "infirmier mécanique",
+            "EN": "mechanical medic",
+            "id": "1116000000000222"
+        },
+        {
+            "FR": "bête de guerre",
+            "EN": "war beast",
+            "id": "1100000000000845"
+        },
+        {
+            "FR": "spectre",
+            "EN": "specter",
+            "id": "1111008000000213"
+        },
+        {
+            "FR": "titan",
+            "EN": "titan",
+            "id": "1100000000000887"
+        },
+        {
+            "FR": "dragonnet",
+            "EN": "dragonet",
+            "id": "1101014000000213"
+        },
+        {
+            "FR": "crocozaure",
+            "EN": "crocosaurus",
+            "id": "1108004100000454"
+        },
+        {
+            "FR": "ronge-raison",
+            "EN": "reason gnawer",
+            "id": "1111010000000513"
+        },
+        {
+            "FR": "palanain",
+            "EN": "paladwarf",
+            "id": "1114000000000334"
+        },
+        {
+            "FR": "faucheur",
+            "EN": "reaper",
+            "id": "1117000000000423"
+        },
+        {
+            "FR": "diablotin provocant",
+            "EN": "taunting imp",
+            "id": "1108007000000132"
+        },
+        {
+            "FR": "puncheur peureux",
+            "EN": "fearful pugilist",
+            "id": "1115018070000165"
+        },
+        {
+            "FR": "dragon cupide",
+            "EN": "covetous dragon",
+            "id": "1115010000000655"
+        },
+        {
+            "FR": "crôa solitaire",
+            "EN": "solitary ribbit",
+            "id": "1118000000000142"
+        },
+        {
+            "FR": "embrocheur",
+            "EN": "skewerer",
+            "id": "1115004000000567"
+        },
+        {
+            "FR": "gluant rancunier",
+            "EN": "grudging slime",
+            "id": "1103009000000334"
+        },
+        {
+            "FR": "gesticulateur toxique",
+            "EN": "toxic thrasher",
+            "id": "1115019180000034"
+        },
+        {
+            "FR": "turbo-rafaleur",
+            "EN": "turbo-burster",
+            "id": "1112000000000333"
+        },
+        {
+            "FR": "démoculaire",
+            "EN": "democular",
+            "id": "1104100000000313"
+        },
+        {
+            "FR": "pétocharde",
+            "EN": "scaredy cat",
+            "id": "1107100000000164"
+        },
+        {
+            "FR": "grogneur",
+            "EN": "growler",
+            "id": "1107000000000253"
+        },
+        {
+            "FR": "poisson-loupiote",
+            "id": "1100000000000221"
+        },
+        {
+            "FR": "bouchée maudite",
+            "EN": "cursed bite",
+            "id": "1210000000000200"
+        },
+        {
+            "FR": "désintégration",
+            "EN": "disintegration",
+            "id": "1212000000000606"
+        },
+        {
+            "FR": "destruction",
+            "EN": "destruction",
+            "id": "1200000000000805"
+        },
+        {
+            "FR": "fiole de sang de vampire",
+            "EN": "vampire's blood vial",
+            "id": "1217016000000103"
+        },
+        {
+            "FR": "porc-pilleur",
+            "EN": "pilfer-swine",
+            "id": "2105007000000143"
+        },
+        {
+            "FR": "monstre des douves",
+            "EN": "moat lurker",
+            "id": "2106003080000412"
+        },
+        {
+            "FR": "yéti chafouin",
+            "EN": "foxy yeti",
+            "id": "2103004090000446"
+        },
+        {
+            "FR": "picoreur de mana",
+            "EN": "mana pecker",
+            "id": "2105000000000111"
+        },
+        {
+            "FR": "protecteur des runes",
+            "EN": "runes protector",
+            "id": "2108000000000364"
+        },
+        {
+            "FR": "requinotaure",
+            "EN": "sharkotaur",
+            "id": "2115003000000324"
+        },
+        {
+            "FR": "seigneur venimeur",
+            "EN": "venenous lord",
+            "id": "2119014000000013"
+        },
+        {
+            "FR": "scaphandrier",
+            "EN": "aquanaut",
+            "id": "2103100000000223"
+        },
+        {
+            "FR": "mage discret",
+            "EN": "discreet mage",
+            "id": "2105008000000254"
+        },
+        {
+            "FR": "groin terrestre",
+            "EN": "terrestrial snout",
+            "id": "2100000000000242"
+        },
+        {
+            "FR": "chef de clan",
+            "EN": "clan leader",
+            "id": "2100000000000443"
+        },
+        {
+            "FR": "hydre",
+            "EN": "hydra",
+            "id": "2115002000000324"
+        },
+        {
+            "FR": "dragon émeraude",
+            "EN": "emerald dragon",
+            "id": "2105016090000356"
+        },
+        {
+            "FR": "ritualiste",
+            "EN": "ritualist",
+            "id": "2105100000000133"
+        },
+        {
+            "FR": "grignoteur",
+            "EN": "nibbler",
+            "id": "210000000000734"
+        },
+        {
+            "FR": "guerrier abyssal",
+            "EN": "abyssal warrior",
+            "id": "2103000000000333"
+        },
+        {
+            "FR": "chef cuistot",
+            "EN": "meowsterchef",
+            "id": "2116000000000213"
+        },
+        {
+            "FR": "alpha-garou",
+            "EN": "were-alpha",
+            "id": "2115000000000455"
+        },
+        {
+            "FR": "engeance",
+            "EN": "brood",
+            "id": "2112004000000112"
+        },
+        {
+            "FR": "wyrm réanimée",
+            "EN": "reanimated wyrm",
+            "id": "2113012080000617"
+        },
+        {
+            "FR": "tavernier mécanique",
+            "EN": "mechanical innkeeper",
+            "id": "2105014000000425"
+        },
+        {
+            "FR": "gredin hirsute",
+            "EN": "shaggy scoundrel",
+            "id": "2117000000000222"
+        },
+        {
+            "FR": "bête informe",
+            "EN": "shapeless beast",
+            "id": "2100000000000866"
+        },
+        {
+            "FR": "garde royal",
+            "EN": "royal guard",
+            "id": "2112000000000354"
+        },
+        {
+            "FR": "bondisseur",
+            "EN": "hopper",
+            "id": "2115018000000313"
+        },
+        {
+            "FR": "dragon saphir",
+            "EN": "sapphire dragon",
+            "id": "2103001000000365"
+        },
+        {
+            "FR": "brise-muraille",
+            "EN": "wall razer",
+            "id": "2101009000000455"
+        },
+        {
+            "FR": "picoreur de murs",
+            "EN": "walls pecker",
+            "id": "2101000000000211"
+        },
+        {
+            "FR": "attaque mentale",
+            "EN": "mental strike",
+            "id": "2200000000000302"
+        },
+        {
+            "FR": "vision de terreur",
+            "EN": "vision of terror",
+            "id": "2217000000000404"
+        },
+        {
+            "FR": "chope enchantée",
+            "EN": "enchanted tankard",
+            "id": "2216000000000303"
+        },
+        {
+            "FR": "tempête de lumière",
+            "EN": "light storm",
+            "id": "2212002100000507"
+        },
+        {
+            "FR": "garde démoniaque",
+            "EN": "demonic guard",
+            "id": "3101008000000513"
+        },
+        {
+            "FR": "gangrené de mana",
+            "EN": "gangrenous with mana",
+            "id": "3105006000000110"
+        },
+        {
+            "FR": "forge-mana",
+            "EN": "mana smithy",
+            "id": "3105014000000113"
+        },
+        {
+            "FR": "golem de mana",
+            "EN": "mana golem",
+            "id": "3105000000000444"
+        },
+        {
+            "FR": "tréant",
+            "EN": "treant",
+            "id": "3100000000000332"
+        },
+        {
+            "FR": "shaman en transe",
+            "EN": "entranced shaman",
+            "id": "3115016060000212"
+        },
+        {
+            "FR": "harponneur",
+            "EN": "harpooner",
+            "id": "3115012160000325"
+        },
+        {
+            "FR": "lacérateur orc",
+            "EN": "orc lacerator",
+            "id": "3106002090000667"
+        },
+        {
+            "FR": "mécaffûteur",
+            "EN": "mechasharpener",
+            "id": "3102100000000134"
+        },
+        {
+            "FR": "dryade",
+            "EN": "dryad",
+            "id": "3116000000000243"
+        },
+        {
+            "FR": "élémentaire de feu",
+            "EN": "fire elementary",
+            "id": "3100000000000644"
+        },
+        {
+            "FR": "grrr abyssal",
+            "EN": "abyssal grrr",
+            "id": "3102000000000313"
+        },
+        {
+            "FR": "archer gobelin",
+            "EN": "goblin archer",
+            "id": "3115000000000212"
+        },
+        {
+            "FR": "ougha",
+            "EN": "oogah",
+            "id": "3118012000000122"
+        },
+        {
+            "FR": "seigneur démoniaque",
+            "EN": "demonic overlord",
+            "id": "310000000000776"
+        },
+        {
+            "FR": "nécromécano",
+            "EN": "mechanecro",
+            "id": "3108000000000523"
+        },
+        {
+            "FR": "armure hantée",
+            "EN": "haunted armor",
+            "id": "3111002000000114"
+        },
+        {
+            "FR": "plante gloutonne",
+            "EN": "gluttonous plant",
+            "id": "3116009000000466"
+        },
+        {
+            "FR": "prêtresse",
+            "EN": "priestess",
+            "id": "3116100000000112"
+        },
+        {
+            "FR": "coupe-jarret",
+            "EN": "hamstringer",
+            "id": "3115017000000213"
+        },
+        {
+            "FR": "loup de givre",
+            "EN": "frost wolf",
+            "id": "3115003080000314"
+        },
+        {
+            "FR": "géant",
+            "EN": "giant",
+            "id": "3100000000000485"
+        },
+        {
+            "FR": "déserteur",
+            "EN": "deserter",
+            "id": "3102004000000446"
+        },
+        {
+            "FR": "canidé des sommets",
+            "EN": "summit canine",
+            "id": "3118000000000253"
+        },
+        {
+            "FR": "lutin de la source",
+            "EN": "spring gnome",
+            "id": "3111003000000113"
+        },
+        {
+            "FR": "cracheur d'azote",
+            "EN": "nitrogen squirter",
+            "id": "3103002000000335"
+        },
+        {
+            "FR": "miaou-garou",
+            "EN": "weremeow",
+            "id": "3116004000000334"
+        },
+        {
+            "FR": "esprit malin",
+            "EN": "cunning spirit",
+            "id": "3111000000000334"
+        },
+        {
+            "FR": "dislocation",
+            "EN": "dislocation",
+            "id": "3210000000000301"
+        },
+        {
+            "FR": "biquette sacrifiée",
+            "EN": "sacrificial goat",
+            "id": "3202000000000506"
+        },
+        {
+            "FR": "liquéfaction",
+            "EN": "liquefaction",
+            "id": "3213002100000809"
+        },
+        {
+            "FR": "déchirure astrale",
+            "EN": "astral tear",
+            "id": "3217000000000605"
+        },
+        {
+            "FR": "trésor glouton",
+            "EN": "gluttonous treasure",
+            "id": "4113005000000234"
+        },
+        {
+            "FR": "chauve-garou",
+            "EN": "werebat",
+            "id": "4113018000000456"
+        },
+        {
+            "FR": "chef de tribu",
+            "EN": "tribe leader",
+            "id": "4115004000000324"
+        },
+        {
+            "FR": "cauchemar suintant",
+            "EN": "dripping nightmare",
+            "id": "4119100000000334"
+        },
+        {
+            "FR": "démoctopus",
+            "EN": "democtopus",
+            "id": "4119012170000013"
+        },
+        {
+            "FR": "tréant furieux",
+            "EN": "furious treant",
+            "id": "4115006000000322"
+        },
+        {
+            "FR": "mère des couvées",
+            "EN": "broodsmother",
+            "id": "4115018000000334"
+        },
+        {
+            "FR": "golem d'onyx",
+            "EN": "onyx golem",
+            "id": "4100000000000284"
+        },
+        {
+            "FR": "forgeron",
+            "EN": "blacksmith",
+            "id": "4117100000000133"
+        },
+        {
+            "FR": "cisailleur",
+            "EN": "shearer",
+            "id": "4112017000000223"
+        },
+        {
+            "FR": "léchouilleur",
+            "EN": "licker",
+            "id": "4101010000000342"
+        },
+        {
+            "FR": "liche",
+            "EN": "lich",
+            "id": "4100000000000623"
+        },
+        {
+            "FR": "chuchoteur abyssal",
+            "EN": "abyssal whisperer",
+            "id": "4119003020000056"
+        },
+        {
+            "FR": "shaman corrompu",
+            "id": "4113004160000447"
+        },
+        {
+            "FR": "parasite démoniaque",
+            "EN": "demonic parasite",
+            "id": "4111001190000035"
+        },
+        {
+            "FR": "chouineur",
+            "EN": "squealer",
+            "id": "4114000000000112"
+        },
+        {
+            "FR": "djinn",
+            "EN": "djinn",
+            "id": "4100000000000686"
+        },
+        {
+            "FR": "apothicaire",
+            "EN": "apothecary",
+            "id": "4116000000000264"
+        },
+        {
+            "FR": "nouvelle recrue",
+            "EN": "fresh recruit",
+            "id": "4100000000000131"
+        },
+        {
+            "FR": "golem friable",
+            "EN": "brittle golem",
+            "id": "4107000000000274"
+        },
+        {
+            "FR": "patrouilleur",
+            "EN": "patroller",
+            "id": "4106014000000513"
+        },
+        {
+            "FR": "banshee",
+            "EN": "banshee",
+            "id": "4111015000000415"
+        },
+        {
+            "FR": "hideux clampant",
+            "EN": "hideous clamper",
+            "id": "4115008120000425"
+        },
+        {
+            "FR": "démon-bélier",
+            "EN": "ram-demon",
+            "id": "4113001000000858"
+        },
+        {
+            "FR": "gargouille",
+            "EN": "gargoyle",
+            "id": "4113000000000334"
+        },
+        {
+            "FR": "rampignon",
+            "EN": "marchroom",
+            "id": "4119000000000032"
+        },
+        {
+            "FR": "venimeuse",
+            "EN": "venenous",
+            "id": "4115019180000034"
+        },
+        {
+            "FR": "carapique",
+            "EN": "thorntle",
+            "id": "4114000000000223"
+        },
+        {
+            "FR": "blizzard",
+            "EN": "blizzard",
+            "id": "4212000000000204"
+        },
+        {
+            "FR": "bombe de mana",
+            "EN": "mana bomb",
+            "id": "4202010000000907"
+        },
+        {
+            "FR": "souffle revigorant",
+            "EN": "invigorating breath",
+            "id": "4216000000000102"
+        },
+        {
+            "FR": "congélation",
+            "EN": "freeze",
+            "id": "4210000000000703"
+        },
+        {
+            "FR": "capitaine",
+            "EN": "captain",
+            "id": "5103000000000513"
+        },
+        {
+            "FR": "garde du corps",
+            "EN": "bodyguard",
+            "id": "5111009020000316"
+        },
+        {
+            "FR": "familier",
+            "EN": "familiar",
+            "id": "5111000000000112"
+        },
+        {
+            "FR": "barde exhaltant",
+            "EN": "exalting bard",
+            "id": "5111012170000114"
+        },
+        {
+            "FR": "griffon",
+            "EN": "griffin",
+            "id": "5111004000000113"
+        },
+        {
+            "FR": "génie",
+            "EN": "genie",
+            "id": "5101014100000413"
+        },
+        {
+            "FR": "élémentaire aqueux",
+            "EN": "aqueous elementary",
+            "id": "5101003000000455"
+        },
+        {
+            "FR": "saigneur",
+            "EN": "vampire",
+            "id": "5101008090000286"
+        },
+        {
+            "FR": "noble guerrière",
+            "EN": "noble warrior",
+            "id": "5100000000000665"
+        },
+        {
+            "FR": "ignominie purulente",
+            "EN": "festering ignominy",
+            "id": "5113015000000658"
+        },
+        {
+            "FR": "autochtone",
+            "EN": "native",
+            "id": "5112009000000334"
+        },
+        {
+            "FR": "éfrit",
+            "EN": "efreet",
+            "id": "5115018000000424"
+        },
+        {
+            "FR": "maitre-chien",
+            "EN": "dog handler",
+            "id": "5112100000000223"
+        },
+        {
+            "FR": "porte-peste",
+            "EN": "plague bearer",
+            "id": "5119000000000011"
+        },
+        {
+            "FR": "cultivatox",
+            "EN": "cultivatox",
+            "id": "5119008000000022"
+        },
+        {
+            "FR": "sentinelle sylvain",
+            "EN": "sylvan sentinel",
+            "id": "5115016000000435"
+        },
+        {
+            "FR": "groin enragé",
+            "EN": "enraged snout",
+            "id": "5115018120000113"
+        },
+        {
+            "FR": "nourrice protectrice",
+            "EN": "protective nurturer",
+            "id": "5115006000000211"
+        },
+        {
+            "FR": "harceleur",
+            "EN": "harasser",
+            "id": "5101000000000232"
+        },
+        {
+            "FR": "bagarreur",
+            "EN": "brawler",
+            "id": "5109000000000666"
+        },
+        {
+            "FR": "sorcier primitif",
+            "EN": "primitive sorcerer",
+            "id": "5100000000000533"
+        },
+        {
+            "FR": "goule",
+            "EN": "ghoul",
+            "id": "5115008000000313"
+        },
+        {
+            "FR": "infanterie naine",
+            "EN": "dwarven infantry",
+            "id": "5117000000000354"
+        },
+        {
+            "FR": "mineur frénétique",
+            "EN": "frantic miner",
+            "id": "5106005000000242"
+        },
+        {
+            "FR": "armure inanimée",
+            "EN": "animated armor",
+            "id": "5111014080000125"
+        },
+        {
+            "FR": "dresseur de cauchemars",
+            "EN": "nightmare tamer",
+            "id": "5100000000000374"
+        },
+        {
+            "FR": "cauchemar insaisissable",
+            "EN": "elusive nightmare",
+            "id": "5101007000000444"
+        },
+        {
+            "FR": "groin céleste",
+            "EN": "celestial snout",
+            "id": "5101100000000233"
+        },
+        {
+            "FR": "rituel de ratatinage",
+            "id": "5212000000000304"
+        },
+        {
+            "FR": "mixture instable",
+            "EN": "unstable mixture",
+            "id": "5210000000000502"
+        },
+        {
+            "FR": "invocation de nourriture",
+            "EN": "food summoning",
+            "id": "5216000000000504"
+        },
+        {
+            "FR": "transformouton",
+            "EN": "transformutton",
+            "id": "5219000000000002"
+        },
+        {
+            "FR": "arachnide chitineuse",
+            "EN": "chitinous arachnid",
+            "id": "6114018000000213"
+        },
+        {
+            "FR": "monture indomptée",
+            "EN": "untamed mount",
+            "id": "6109000000000333"
+        },
+        {
+            "FR": "bourreau sans visage",
+            "EN": "faceless executioner",
+            "id": "6106002100000554"
+        },
+        {
+            "FR": "protecteur sylvain",
+            "EN": "sylvan protector",
+            "id": "6106012170409356"
+        },
+        {
+            "FR": "centaure",
+            "EN": "centaur",
+            "id": "6106004090000555"
+        },
+        {
+            "FR": "machouilleur",
+            "EN": "chewer",
+            "id": "6119018000000043"
+        },
+        {
+            "FR": "matriarachnides",
+            "EN": "matriarachnid",
+            "id": "6100000000000755"
+        },
+        {
+            "FR": "bedonnant primitif",
+            "EN": "primitive potbelly",
+            "id": "6100000000000464"
+        },
+        {
+            "FR": "phoenix en déclin",
+            "EN": "decaying phoenix",
+            "id": "6101000000000253"
+        },
+        {
+            "FR": "minotaure",
+            "EN": "minotaur",
+            "id": "6104009000000445"
+        },
+        {
+            "FR": "gourou mécanique",
+            "EN": "mechanical guru",
+            "id": "6109100000000334"
+        },
+        {
+            "FR": "fléau des remparts",
+            "EN": "scourge of the ramparts",
+            "id": "6101008090000937"
+        },
+        {
+            "FR": "protecteur contractuel",
+            "EN": "contractual protector",
+            "id": "6106010000000663"
+        },
+        {
+            "FR": "titubeur éternel",
+            "EN": "eternal shambler",
+            "id": "6106000000000130"
+        },
+        {
+            "FR": "guerrière farouche",
+            "EN": "fearsome warrior",
+            "id": "6112017090000356"
+        },
+        {
+            "FR": "fétiche maya",
+            "EN": "mayan idol",
+            "id": "6100000000000263"
+        },
+        {
+            "FR": "druide pacifique",
+            "EN": "pacifist druid",
+            "id": "6108108000000112"
+        },
+        {
+            "FR": "fouisseur craintif",
+            "EN": "fearful burrower",
+            "id": "6107018000000132"
+        },
+        {
+            "FR": "arbalétrier rouillé",
+            "EN": "rusted arbalist",
+            "id": "6112007000000344"
+        },
+        {
+            "FR": "tréant aigri",
+            "EN": "bitter treant",
+            "id": "6115000000000233"
+        },
+        {
+            "FR": "clampant",
+            "EN": "clamper",
+            "id": "6115017000000133"
+        },
+        {
+            "FR": "petite frappe",
+            "EN": "small fry",
+            "id": "6109007000000344"
+        },
+        {
+            "FR": "oeuf de phoenix",
+            "EN": "phoenix egg",
+            "id": "6100000000000422"
+        },
+        {
+            "FR": "monture nomade",
+            "EN": "nomadic mount",
+            "id": "6111000000000133"
+        },
+        {
+            "FR": "grouillant",
+            "EN": "swarmer",
+            "id": "6108000000000211"
+        },
+        {
+            "FR": "skiwk-skiwk",
+            "EN": "skiwk-skiwk",
+            "id": "6115017000000324"
+        },
+        {
+            "FR": "cat'pitaine hydrophobe",
+            "EN": "hydrophobic cat'ptain",
+            "id": "6115003000000477"
+        },
+        {
+            "FR": "gisement vivant",
+            "EN": "living deposit",
+            "id": "6105000000000333"
+        },
+        {
+            "FR": "butin piégé",
+            "EN": "trapped loot",
+            "id": "6217002100000506"
+        },
+        {
+            "FR": "sacrifice démoniaque",
+            "EN": "demonic sacrifice",
+            "id": "6210000000000904"
+        },
+        {
+            "FR": "net et précis",
+            "EN": "clean-cut",
+            "id": "6217000000000102"
+        },
+        {
+            "FR": "excès d'adrénaline",
+            "EN": "excess adrenaline",
+            "id": "6212016000000305"
+        }
+    ]
 }

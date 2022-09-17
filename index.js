@@ -8,29 +8,30 @@ const channel = process.env.channel;
 const {delay, turns} = require('./config/config.json');
 const {extensions} = require('./config/types.json');
 const {cards} = require ('./config/cards.json');
+const {abilities} = require ('./config/abilities.json');
+const abilities_loc = abilities[process.env.BOT_LANG];
 const Game = require('./src/Game');
-const {abilitiesFunc} = require('./src/abilities.js');
 const fs = require('fs');
 var game = null;
 
 
 function sansAccent(str) {
     var accent = [
-      /[\300-\306]/g, /[\340-\346]/g, // A, a
-      /[\310-\313]/g, /[\350-\353]/g, // E, e
-      /[\314-\317]/g, /[\354-\357]/g, // I, i
-      /[\322-\330]/g, /[\362-\370]/g, // O, o
-      /[\331-\334]/g, /[\371-\374]/g, // U, u
-      /[\321]/g, /[\361]/g, // N, n
-      /[\307]/g, /[\347]/g, // C, c
+        /[\300-\306]/g, /[\340-\346]/g, // A, a
+        /[\310-\313]/g, /[\350-\353]/g, // E, e
+        /[\314-\317]/g, /[\354-\357]/g, // I, i
+        /[\322-\330]/g, /[\362-\370]/g, // O, o
+        /[\331-\334]/g, /[\371-\374]/g, // U, u
+        /[\321]/g, /[\361]/g, // N, n
+        /[\307]/g, /[\347]/g, // C, c
     ];
     var noaccent = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
     for (var i = 0; i < accent.length; i++) {
-      str = str.replace(accent[i], noaccent[i]);
+        str = str.replace(accent[i], noaccent[i]);
     }
-  
+
     return str;
-  }
+}
 
 
 // Create a new client instance
@@ -125,8 +126,7 @@ client.on('interactionCreate', async interaction => {
         if(!msg) return;
 
         const cardToSearch = msg.value.toLocaleLowerCase();
-        
-        const search = cards.find(card => card.name == cardToSearch);
+        const search = cards.find(card => card[process.env.BOT_LANG] == cardToSearch);
         
         if (search === undefined) {
             await interaction.reply("Cette carte n'existe pas.");
@@ -148,10 +148,9 @@ client.on('interactionCreate', async interaction => {
         });
         if(!msg) return;
 
-        var abilities = abilitiesFunc();
         var abilityToSearch = msg.value.toLocaleLowerCase();
         abilityToSearch = sansAccent(abilityToSearch)
-        var ability = abilities.find(ability => sansAccent(ability.name.toLocaleLowerCase()) == abilityToSearch);
+        var ability = abilities_loc.find(ability => sansAccent(ability.name.toLocaleLowerCase()) == abilityToSearch);
         if (ability === undefined) {
             await interaction.reply("Cette capacité n'existe pas.");
             return;
