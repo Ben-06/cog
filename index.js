@@ -158,12 +158,12 @@ client.on('interactionCreate', async interaction => {
         ability.name = sansAccent(ability.name);
 
         var re = / /gi;
-        const cs_png = new AttachmentBuilder("./cs_img/" + ability.name.toLocaleLowerCase().replace(re,"_") + ".png");
+        const cs_png = new AttachmentBuilder("./cs_img/" + ability.href);
         const CSEmbed = new EmbedBuilder()
             .setTitle(ability.name)
             .setDescription(ability.description)
             .setColor("0x3482c6")
-            .setThumbnail("attachment://" + ability.name.toLocaleLowerCase().replace(re,"_") + ".png")
+            .setThumbnail("attachment://" + ability.href)
         await interaction.reply({ embeds: [CSEmbed], files: [cs_png] });
     }
 });
