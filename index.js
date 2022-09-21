@@ -130,7 +130,7 @@ client.on('interactionCreate', async interaction => {
         const search = cards.find(card => card[process.env.BOT_LANG] == cardToSearch);
         
         if (search === undefined) {
-            await interaction.reply(wording[UNKNOWN_CARD][process.env.BOT_LANG]);
+            await interaction.reply(wording.UNKNOWN_CARD[process.env.BOT_LANG]);
             return;
         }
         try{
@@ -138,7 +138,7 @@ client.on('interactionCreate', async interaction => {
             await interaction.reply({ files: [file] });
         }
         catch(e){
-            await interaction.reply(wording[IMG_NOT_FOUND][process.env.BOT_LANG]);
+            await interaction.reply(wording.IMG_NOT_FOUND[process.env.BOT_LANG]);
         }
 
     }
@@ -153,7 +153,7 @@ client.on('interactionCreate', async interaction => {
         abilityToSearch = sansAccent(abilityToSearch)
         var ability = abilities_loc.find(ability => sansAccent(ability.name.toLocaleLowerCase()) == abilityToSearch);
         if (ability === undefined) {
-            await interaction.reply(wording[UNKNOWN_CS][process.env.BOT_LANG]);
+            await interaction.reply(wording.UNKNOWN_CS[process.env.BOT_LANG]);
             return;
         }
         ability.name = sansAccent(ability.name);
