@@ -12,6 +12,7 @@ const {abilities} = require ('./config/abilities.json');
 const abilities_loc = abilities[process.env.BOT_LANG];
 const Game = require('./src/Game');
 const fs = require('fs');
+const {wording} = require('./config/wording.json');
 var game = null;
 
 
@@ -121,7 +122,7 @@ client.on('interactionCreate', async interaction => {
     else if (commandName === 'card') {
 
         let msg  = options.data.find(obj => {
-            return obj.name === "carte"
+            return obj.name === "carte" || obj.name === "card"
         });
         if(!msg) return;
 
@@ -129,7 +130,7 @@ client.on('interactionCreate', async interaction => {
         const search = cards.find(card => card[process.env.BOT_LANG] == cardToSearch);
         
         if (search === undefined) {
-            await interaction.reply("Cette carte n'existe pas.");
+            await interaction.reply(wording[UNKNOWN_CARD][process.env.BOT_LANG]);
             return;
         }
         try{
@@ -137,14 +138,14 @@ client.on('interactionCreate', async interaction => {
             await interaction.reply({ files: [file] });
         }
         catch(e){
-            await interaction.reply('oups, impossible de trouver l\'image');
+            await interaction.reply(wording[IMG_NOT_FOUND][process.env.BOT_LANG]);
         }
 
     }
-    else if (commandName === 'cs') {
+    else if (commandName === 'cs' || commandName === 'sa') {
 
         let msg  = options.data.find(obj => {
-            return obj.name === "cs"
+            return obj.name === "cs" || obj.name === "sa"
         });
         if(!msg) return;
 
@@ -152,18 +153,18 @@ client.on('interactionCreate', async interaction => {
         abilityToSearch = sansAccent(abilityToSearch)
         var ability = abilities_loc.find(ability => sansAccent(ability.name.toLocaleLowerCase()) == abilityToSearch);
         if (ability === undefined) {
-            await interaction.reply("Cette capacité n'existe pas.");
+            await interaction.reply(wording[UNKNOWN_CS][process.env.BOT_LANG]);
             return;
         }
         ability.name = sansAccent(ability.name);
 
         var re = / /gi;
-        const cs_png = new AttachmentBuilder("./cs_img/" + ability.name.toLocaleLowerCase().replace(re,"_") + ".png");
+        const cs_png = new AttachmentBuilder("./cs_img/" + ability.href);
         const CSEmbed = new EmbedBuilder()
             .setTitle(ability.name)
             .setDescription(ability.description)
             .setColor("0x3482c6")
-            .setThumbnail("attachment://" + ability.name.toLocaleLowerCase().replace(re,"_") + ".png")
+            .setThumbnail("attachment://" + ability.href)
         await interaction.reply({ embeds: [CSEmbed], files: [cs_png] });
     }
 });
