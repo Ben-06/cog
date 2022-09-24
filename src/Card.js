@@ -49,7 +49,7 @@ class Card {
         this.attack = id[13];
         this.hp = id[14] != 0 ? id[14] : 0; 
         this.mana = id[15];
-        this.image = `./card_img/${this.name}.png`;
+        this.image = `./card_img/${process.env.BOT_LANG}/${this.name.replace(' ','-')}.png`;
         this.cs = new Array();
         
         //CS list building
