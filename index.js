@@ -134,7 +134,7 @@ client.on('interactionCreate', async interaction => {
             return;
         }
         try{
-            var file = new AttachmentBuilder(`./card_img/${process.env.BOT_LANG}/${cardToSearch.replace(' ','-')}.png`, { name: `${cardToSearch}.png` });
+            var file = new AttachmentBuilder(`./card_img/${process.env.BOT_LANG}/${cardToSearch.replace(/\s/g,'-')}.png`, { name: `${cardToSearch}.png` });
             await interaction.reply({ files: [file] });
         }
         catch(e){
