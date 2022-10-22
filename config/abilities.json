@@ -65,7 +65,7 @@
             {
                 "name": "Prix du sang",
                 "description": "Si vous n'avez pas assez de Mana pour payer l'intégralité du coût de *possesseur*, dépensez l'intégralité de votre Mana restant, et pour chaque Mana manquant, subissez une Blessure en décalant votre Forteresse d'un emplacement vers la droite dans votre main. Les Blessures ainsi subies sont infligées une à une.",
-                "href": "prix-du-sang.png"
+                "href": "prix_du_sang.png"
             },
             {
                 "name": "Protection",
