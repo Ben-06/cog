@@ -163,7 +163,7 @@
             {
                 "name": "Price of Blood",
                 "description": "If you do not have enough Mana to pay for the *owner*'s full cost, spend all your remaining Mana, then for each missing Mana, suffer one Damage by shifting your Stronghold one position to the right in your hand. Damage suffered this way is dealt in instances of 1.",
-                "href": "prix-du-sang.png"
+                "href": "prix_du_sang.png"
             },
             {
                 "name": "Protection",
