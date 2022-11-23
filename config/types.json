@@ -11,7 +11,11 @@
         "3" : "Ebrèchement",
         "4" : "Déliquescence",
         "5": "Insaisissable",
-        "6": "Résistance"
+        "6": "Résistance",
+        "7" : "Dissension",
+        "8" : "Belligérance",
+        "9" : "Sournoiserie",
+        "10" : "Enlisement"
     },
     "CS" : {
         "01" : "Aérienne",
@@ -32,7 +36,15 @@
         "16" : "Régénération",
         "17" : "Splash",
         "18" : "Sprint",
-        "19" : "Vulnérabilité"
+        "19" : "Vulnérabilité",
+        "20" : "Retour de flammes",
+        "21" : "Maudit",
+        "22" : "Contrordre",
+        "23" : "Repli",
+        "24" : "Chantage",
+        "25" : "Immolation",
+        "26" : "Renfort",
+        "27" : "Enchaîner"
     }
 }
 

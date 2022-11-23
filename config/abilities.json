@@ -96,7 +96,48 @@
                 "name": "Vulnérabilité",
                 "description": "La VA de *possesseur* inflige X Blessures à une Créature adverse ou à la Forteresse adverse, où X est égal aux PV de la cible -1. Si *possesseur* attaque plusieurs cibles (grâce à Splash ou Perforation par exemple), cet effet agit sur toutes les cibles de l'attaque. Cette Capacité spéciale ne détruit pas la cible mais l'affaiblit. Mais associée avec les Capacités spéciales Aquatique ou Sprint, *possesseur* peut détruire n'importe quelle cible en une seule attaque. Si *possesseur* attaque la Forteresse adverse, cela la déplace juste avant la carte à l'extrémité droite de sa main, sans changer son orientation (le Bastion reste orienté en Bastion).",
                 "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Retour de flammes",
+                "description": "Lorsque possesseur est joué, infligez à la créature adverse la plus proche sur la même ligne autant de blessures que le nombre de cartes situées dans votre main à gauche de votre forteresse.",
+                "href": "retour_de_flammes.png"
+            },
+            {
+                "name": "Maudit",
+                "description": "Lorsque possesseur devrait retourner à l'extrémité droite de la main de son propriétaire, à la place il retourne à l'extrémité gauche.",
+                "href": "maudit.png"
+            },
+            {
+                "name": "Contrordre",
+                "description": "Lorsque possesseur est joué, déplacez la carte de créature ou incantation la plus à gauche de la main de son propriétaire à l'extrémité droite.",
+                "href": "contrordre.png"
+            },
+            {
+                "name": "Repli",
+                "description": "Pendant la phase d'incantation, vous pouvez faire remonter possesseur dans la main de son propriétaire afin de gagner immédiatement autant de mana que la moitié de son coût, arrondie à l'inférieur.",
+                "href": "repli.png"
+            },
+            {
+                "name": "Chantage",
+                "description": "Tant que possesseur est en jeu, vous jouez avec 1 carte de moins parmi les 4 cartes les plus à gauche de votre main (jamais moins de 1).",
+                "href": "chantage.png"
+            },
+            {
+                "name": "Immolation",
+                "description": "Tant que possesseur est en jeu, à chaque fois qu'un joueur joue une carte sur la même ligne, il subit 1 blessure sur sa forteresse.",
+                "href": "immolation.png"
+            },
+            {
+                "name": "Renfort",
+                "description": "Lorsque possesseur retourne dans la main de son propriétaire, jouez immédiatement sur la même ligne, sans payer son coût en mana, la première créature disponible de votre main la plus à gauche qui possède un coût de Mana de 4 ou moins et qui ne possède pas la capacité Renfort.",
+                "href": "renfort.png"
+            },
+            {
+                "name": "Enchaîner",
+                "description": "Lorsque possesseur est joué, récupérez la créature ou incantation la plus à gauche de la main de votre adversaire. Révélez-là et placez-la, face cachée, sous possesseur. Lorsque possesseur est détruit, la carte face cachée remonte dans la main de son propriétaire.",
+                "href": "enchainer.png"
             }
+
         ],
         "EN" : 
         [
