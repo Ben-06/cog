@@ -127,14 +127,15 @@ client.on('interactionCreate', async interaction => {
         if(!msg) return;
 
         const cardToSearch = msg.value.toLocaleLowerCase();
-        const search = cards.find(card => card[process.env.BOT_LANG] == cardToSearch);
-        
-        if (search === undefined) {
+        const searchFR = cards.find(card => card['FR'] == cardToSearch);
+        const searchEN = cards.find(card => card['EN'] == cardToSearch);
+
+        if (searchFR === undefined && searchEN === undefined) {
             await interaction.reply(wording.UNKNOWN_CARD[process.env.BOT_LANG]);
             return;
         }
         try{
-            var file = new AttachmentBuilder(`./card_img/${process.env.BOT_LANG}/${cardToSearch.replace(/\s/g,'-')}.png`, { name: `${cardToSearch}.png` });
+            var file = new AttachmentBuilder(`./card_img/${searchFR === undefined ? 'EN' : 'FR'}/${cardToSearch.replace(/\s/g,'-')}.png`, { name: `${cardToSearch}.png` });
             await interaction.reply({ files: [file] });
         }
         catch(e){
