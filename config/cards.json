@@ -1115,644 +1115,644 @@
             "id": "6212016000000305"
         },
         {
-            "FR": "GRRR GIVRÉ",
-            "EN": "FROSTED GRRR",
-            "Id": "1112400000331"
-          },
-          {
-            "FR": "ÉMISSAIRE",
-            "EN": "EMISSARY",
-            "Id": "1212200000211"
-          },
-          {
-            "FR": "LUTINCANDESCENT",
-            "EN": "ELFCANDESCENT",
-            "Id": "1312500000211"
-          },
-          {
-            "FR": "TRICOTUEUSE",
-            "EN": "KNITTERKILLER",
-            "Id": "1412000000111"
-          },
-          {
-            "FR": "MARCHEUR MAUDIT",
-            "EN": "DAMNED WALKEER",
-            "Id": "14128015000111"
-          },
-          {
-            "FR": "MORTCENAIRE",
-            "EN": "MORSELNARY",
-            "Id": "14128010000251"
-          },
-          {
-            "FR": "ALPHA ARDANT",
-            "EN": "ARDENT APLHA",
-            "Id": "1116025000141"
-          },
-          {
-            "FR": "GOINFRE",
-            "EN": "GORGER",
-            "Id": "12127024000111"
-          },
-          {
-            "FR": "CULTISTE",
-            "EN": "CULTIST",
-            "Id": "131230202800122"
-          },
-          {
-            "FR": "GRRR DES DOUVES",
-            "EN": "MOAT GRRR",
-            "Id": "11118032200112"
-          },
-          {
-            "FR": "VIVRES VIVACES",
-            "EN": "PERENNIAL VICTUALS",
-            "Id": "14124026500112"
-          },
-          {
-            "FR": "ADORATEUR DU FEU",
-            "EN": "FIRE WORSHIPPER",
-            "Id": "141230222500112"
-          },
-          {
-            "FR": "DÉMON CHÉTIF",
-            "EN": "PUNY DEMON",
-            "Id": "14120012000112"
-          },
-          {
-            "FR": "SUCCUBE",
-            "EN": "SUCCUBUS",
-            "Id": "1112401000432"
-          },
-          {
-            "FR": "OGRE DOS-ACIER",
-            "EN": "STEELBACK OGRE",
-            "Id": "111406000422"
-          },
-          {
-            "FR": "DÉSERTEUR DAMNÉ",
-            "EN": "DAMNED DESERTER",
-            "Id": "1417028000242"
-          },
-          {
-            "FR": "PAYSAN MECANIQUE",
-            "EN": "MECHANICAL PEASANT",
-            "Id": "1212308000212"
-          },
-          {
-            "FR": "BÊTE INDOMPTABLE",
-            "EN": "INDOMITABLE BEAST",
-            "Id": "1119024000332"
-          },
-          {
-            "FR": "RÉSERVISTE",
-            "EN": "RESERVIST",
-            "Id": "12117022000212"
-          },
-          {
-            "FR": "TAS D'OS INFATIGABLE",
-            "EN": "RELENTLESS BAG OF BONES",
-            "Id": "14128014000212"
-          },
-          {
-            "FR": "LAQUAIS",
-            "EN": "LACKEY",
-            "Id": "1312600000112"
-          },
-          {
-            "FR": "GLUANT MOUVANT",
-            "EN": "MOVING SLIME",
-            "Id": "1312700000112"
-          },
-          {
-            "FR": "SALACENDRE",
-            "EN": "SPARKAMENDER",
-            "Id": "1112500000232"
-          },
-          {
-            "FR": "SAGE DU CONSEIL",
-            "EN": "COUNCIL WISEMAN",
-            "Id": "1212200000142"
-          },
-          {
-            "FR": "FAUCHEUSE",
-            "EN": "RIPPER",
-            "Id": "13128128000553"
-          },
-          {
-            "FR": "PORTE-FLAMME",
-            "EN": "FLAME BEARER",
-            "Id": "1212510000323"
-          },
-          {
-            "FR": "DILIGENCE",
-            "EN": "STAGECOACH",
-            "Id": "1112307600163"
-          },
-          {
-            "FR": "RECRUTEUR",
-            "EN": "RECRUITOR",
-            "Id": "1412610000134"
-          },
-          {
-            "FR": "AGGRIPEUR",
-            "EN": "GRABBER",
-            "Id": "1312700000313"
-          },
-          {
-            "FR": "NÉGOCIATEUR",
-            "EN": "NEGOTIATOR",
-            "Id": "1312600000223"
-          },
-          {
-            "FR": "SHAMAN GOBELIN",
-            "EN": "GOBLIN SHAMAN",
-            "Id": "1412000000423"
-          },
-          {
-            "FR": "RÉGICIDE",
-            "EN": "REGICIDE",
-            "Id": "1311500000413"
-          },
-          {
-            "FR": "MATELOT",
-            "EN": "SAILOR",
-            "Id": "1212200000343"
-          },
-          {
-            "FR": "GLUANT CORROSIF",
-            "EN": "CORROSIVE SLIME",
-            "Id": "1112500000253"
-          },
-          {
-            "FR": "PICOREUR DOMPTÉ",
-            "EN": "TAMED PECKER",
-            "Id": "1111100000223"
-          },
-          {
-            "FR": "CROC-COEUR",
-            "EN": "FANGHEART",
-            "Id": "141100000613"
-          },
-          {
-            "FR": "FAKIR MÉCANIQUE",
-            "EN": "MECHANICAL FAKIR",
-            "Id": "121500000243"
-          },
-          {
-            "FR": "MÉCAGACANT",
-            "EN": "MECHANNOYING",
-            "Id": "1311400000133"
-          },
-          {
-            "FR": "SCORPION GÉANT",
-            "EN": "GIANT SCORPION",
-            "Id": "1411900000053"
-          },
-          {
-            "FR": "DÉVOREUR D'AMES",
-            "EN": "SOUL DEVOURER",
-            "Id": "121200000423"
-          },
-          {
-            "FR": "ELFE CORROMPU",
-            "EN": "CORRUPTED ELF",
-            "Id": "14120017000223"
-          },
-          {
-            "FR": "REJETON D'EN BAS",
-            "EN": "SPAWN FROM BELOW",
-            "Id": "1112003000313"
-          },
-          {
-            "FR": "PRESTIDIGITATEUR",
-            "EN": "PRESTIDIGITATOR",
-            "Id": "14115020000213"
-          },
-          {
-            "FR": "GUERRIER DE L'OUEST",
-            "EN": "WEST WARRIOR",
-            "Id": "12115022000313"
-          },
-          {
-            "FR": "POURFENDEUR",
-            "EN": "SLAYER",
-            "Id": "11115024000433"
-          },
-          {
-            "FR": "HARPIE HARGNEUSE",
-            "EN": "SNARLING HARPY",
-            "Id": "13115018000223"
-          },
-          {
-            "FR": "ANCIEN DU VILLAGE",
-            "EN": "VILLAGE ELDER",
-            "Id": "12123011000113"
-          },
-          {
-            "FR": "SIRÈNE PERFIDE",
-            "EN": "PERFIDIOUS SIREN",
-            "Id": "1312706000333"
-          },
-          {
-            "FR": "RÉPROUVE",
-            "EN": "REPROBATE",
-            "Id": "14128013000413"
-          },
-          {
-            "FR": "ALPHA DÉGÉNÉRÉ",
-            "EN": "DEGENERATE ALPHA",
-            "Id": "14128015000333"
-          },
-          {
-            "FR": "LAME-FLAMME",
-            "EN": "FLAMETHROWER",
-            "Id": "13124025000453"
-          },
-          {
-            "FR": "PERMUTATRICE",
-            "EN": "PERMUTATOR",
-            "Id": "1318026000213"
-          },
-          {
-            "FR": "CRÔARAVANE",
-            "EN": "RIBBITRAVELER",
-            "Id": "13118071600133"
-          },
-          {
-            "FR": "JOUTEUR",
-            "EN": "JOUSTER",
-            "Id": "141150121000323"
-          },
-          {
-            "FR": "PROPAGATEUR",
-            "EN": "PROPAGATOR",
-            "Id": "131200121700113"
-          },
-          {
-            "FR": "YETI DOMESTIQUE",
-            "EN": "DOMESTIC YETI",
-            "Id": "1119042400333"
-          },
-          {
-            "FR": "GARDE DU FORT",
-            "EN": "FORT GUARDIAN",
-            "Id": "1212300000444"
-          },
-          {
-            "FR": "HYPNOTISEUR",
-            "EN": "MESMERIZER",
-            "Id": "1312700000244"
-          },
-          {
-            "FR": "NAGA DES ABYSSES",
-            "EN": "ABYSSAL NAGA",
-            "Id": "1312600000514"
-          },
-          {
-            "FR": "GNOME D'ÉLITE",
-            "EN": "ELITE GNOME",
-            "Id": "1111500000524"
-          },
-          {
-            "FR": "BOURRIN PRIMAIRE",
-            "EN": "PRIMAL BRUTE",
-            "Id": "1211500000434"
-          },
-          {
-            "FR": "RÉPUGNANT A VIF",
-            "EN": "RAW REPULSIVE",
-            "Id": "1112500000544"
-          },
-          {
-            "FR": "MAÎTRE D'ARMES",
-            "EN": "WEAPON MASTER",
-            "Id": "1312600000154"
-          },
-          {
-            "FR": "PACIFICATEUR",
-            "EN": "PACIFIER",
-            "Id": "1112700000334"
-          },
-          {
-            "FR": "HIPPOGRIFFE",
-            "EN": "HIPPOGRIFF",
-            "Id": "12123011000224"
-          },
-          {
-            "FR": "DIABLOTIN CORNU",
-            "EN": "HORNED IMP",
-            "Id": "1311013000324"
-          },
-          {
-            "FR": "RICHE MARCHAND",
-            "EN": "WEALTHY MERCHANT",
-            "Id": "11123026000314"
-          },
-          {
-            "FR": "PYROMAGE",
-            "EN": "PYROMAGUS",
-            "Id": "12125026000324"
-          },
-          {
-            "FR": "SÉQUESTRATEUR",
-            "EN": "SEQUESTRATOR",
-            "Id": "1318027000234"
-          },
-          {
-            "FR": "MÉCAVENTURIER",
-            "EN": "MECHADVENTURER",
-            "Id": "11115024000544"
-          },
-          {
-            "FR": "CONSTRICTEUR",
-            "EN": "CONSTRICTOR",
-            "Id": "12119027000034"
-          },
-          {
-            "FR": "MÉSSSAGER ORC",
-            "EN": "ORC MESSENGER",
-            "Id": "1312209000434"
-          },
-          {
-            "FR": "DÉMONISTE REPENTI",
-            "EN": "REPENTANT WARLOCK",
-            "Id": "121150161000524"
-          },
-          {
-            "FR": "RÉPUGNANT CALCINÉ",
-            "EN": "BURNT REPULSIVE",
-            "Id": "14115042800334"
-          },
-          {
-            "FR": "AGENT INFILTRÉ",
-            "EN": "UNDERCOVER AGENT",
-            "Id": "141200151800224"
-          },
-          {
-            "FR": "SOLDAT DE MANA",
-            "EN": "MANA SOLDIER",
-            "Id": "12114024500424"
-          },
-          {
-            "FR": "SEIGNEUR CRÔA",
-            "EN": "RIBBIT LORD",
-            "Id": "111700000565"
-          },
-          {
-            "FR": "DRAGON D'OBSIDIENNE",
-            "EN": "OBSIDIAN DRAGON",
-            "Id": "1412500000745"
-          },
-          {
-            "FR": "GOLEM DE GLACE",
-            "EN": "ICE GOLEM",
-            "Id": "141300000465"
-          },
-          {
-            "FR": "BÊTE VICIEUSE",
-            "EN": "VICIOUS BEAST",
-            "Id": "1211500000545"
-          },
-          {
-            "FR": "TROLL DES TUNNELS",
-            "EN": "TUNNEL TROLL",
-            "Id": "1212300000555"
-          },
-          {
-            "FR": "MÉGÈRE DE CHAIR",
-            "EN": "FLESH SHREW",
-            "Id": "1311300000625"
-          },
-          {
-            "FR": "MÉCAMIRAL",
-            "EN": "MECHADMIRAL",
-            "Id": "1212200000655"
-          },
-          {
-            "FR": "CHASSEUR DE PRIMES",
-            "EN": "BOUNTY HUNTER",
-            "Id": "1212700000355"
-          },
-          {
-            "FR": "RONGEUR DÉCADENT",
-            "EN": "DECADENT RODENT",
-            "Id": "1112402000645"
-          },
-          {
-            "FR": "RAVISSEUR ORC",
-            "EN": "ORC ABDUCTOR",
-            "Id": "13115027000325"
-          },
-          {
-            "FR": "DRUIDE MÉCANIQUE",
-            "EN": "MECHANICAL DRUID",
-            "Id": "1118016000545"
-          },
-          {
-            "FR": "NAIN CRÊTE-DE-FEU",
-            "EN": "FIRE-CRESTED DWARF",
-            "Id": "14115025000445"
-          },
-          {
-            "FR": "CAMBRIOL'OEUFS",
-            "EN": "EGGNAPPER",
-            "Id": "1317026000345"
-          },
-          {
-            "FR": "CRACHEUR D'ACIDE",
-            "EN": "ACID SPITTER",
-            "Id": "12119013000055"
-          },
-          {
-            "FR": "GRRR RANCUNIER",
-            "EN": "RESENTFUL GRRR",
-            "Id": "14115032000325"
-          },
-          {
-            "FR": "LUTIN DE LA FORÊT",
-            "EN": "FOREST ELF",
-            "Id": "14111016400225"
-          },
-          {
-            "FR": "KIDNAPPEUR",
-            "EN": "KIDNAPPER",
-            "Id": "1412705000314"
-          },
-          {
-            "FR": "PACIFISTE ROUILLÉ",
-            "EN": "RUSTED PACIFIST",
-            "Id": "1312606000465"
-          },
-          {
-            "FR": "GOLEM DE ROCHE",
-            "EN": "ROCK GOLEM",
-            "Id": "1112300000486"
-          },
-          {
-            "FR": "GEÔLIER",
-            "EN": "JAILOR",
-            "Id": "1312700000556"
-          },
-          {
-            "FR": "TROLL DISCIPLINE",
-            "EN": "DISCIPLINED TROLL",
-            "Id": "1412200000766"
-          },
-          {
-            "FR": "MÉCASTROLOGUE",
-            "EN": "MECHASTROLOGER",
-            "Id": "12113020000446"
-          },
-          {
-            "FR": "DRAGON DE JADE",
-            "EN": "JADE DRAGON",
-            "Id": "1212500000856"
-          },
-          {
-            "FR": "DÉMON PRIMORDIAL",
-            "EN": "PRIMORDIAL DEMON",
-            "Id": "1112509000566"
-          },
-          {
-            "FR": "HALBARDIER",
-            "EN": "HALBARDER",
-            "Id": "14115014000546"
-          },
-          {
-            "FR": "GUERRIER ERRANT",
-            "EN": "WANDERING WARRIOR",
-            "Id": "11115017000456"
-          },
-          {
-            "FR": "NERVI ÉNERVÉ",
-            "EN": "ANGRY HENCHMAN",
-            "Id": "141150262200426"
-          },
-          {
-            "FR": "EXPERT EN GALERIES",
-            "EN": "GALLERY EXPERT",
-            "Id": "12123015500436"
-          },
-          {
-            "FR": "BOUCHER RECOUSU",
-            "EN": "STITCHED BUTCHER",
-            "Id": "13120022800546"
-          },
-          {
-            "FR": "DRAGON DE RUBIS",
-            "EN": "RUBY DRAGON",
-            "Id": "11110142500536"
-          },
-          {
-            "FR": "BALIST'ORC",
-            "EN": "BALIST'ORC",
-            "Id": "131130201500527"
-          },
-          {
-            "FR": "SERVITEUR ÉTERNEL",
-            "EN": "ETERNAL SERVANT",
-            "Id": "11113015181928024"
-          },
-          {
-            "FR": "GOLEM DE LAVE",
-            "EN": "LAVA GOLEM",
-            "Id": "11127082500557"
-          },
-          {
-            "FR": "SEIGNEUR VAMPIRE",
-            "EN": "VAMPIRE LORD",
-            "Id": "12123016950468"
-          },
-          {
-            "FR": "FANFARONNEUR",
-            "EN": "BRAGGART",
-            "Id": "111230276288112"
-          },
-          {
-            "FR": "LEPRECHAUN",
-            "EN": "LEPRECHAUN",
-            "Id": "1212406281516110"
-          },
-          {
-            "FR": "QUÊTE ACCEPTEE !",
-            "EN": "QUEST ACCEPTED!",
-            "Id": "1222200000202"
-          },
-          {
-            "FR": "CANALISER LA HAINE",
-            "EN": "CHANNEL HATRED",
-            "Id": "1122000000202"
-          },
-          {
-            "FR": "TOUCHER RÉGÉNÉRANT",
-            "EN": "REGENERATING TOUCH",
-            "Id": "13216022000103"
-          },
-          {
-            "FR": "TAPI DANS L'OMBRE",
-            "EN": "LURKING IN SHADOWS",
-            "Id": "1422800000202"
-          },
-          {
-            "FR": "ASPIRER LA VITALITE",
-            "EN": "VITALITY SYPHON",
-            "Id": "112160281700104"
-          },
-          {
-            "FR": "REGARD DU BASILIC",
-            "EN": "BASILISK'S GAZE",
-            "Id": "1122300000504"
-          },
-          {
-            "FR": "CYCLE DE LA VIE",
-            "EN": "CYCLE OF LIFE",
-            "Id": "13200000000"
-          },
-          {
-            "FR": "MALÉDICTION",
-            "EN": "CURSE",
-            "Id": "1221300000203"
-          },
-          {
-            "FR": "HURLEMENT SINISTRE",
-            "EN": "SINISTER HOWL",
-            "Id": "1222800000504"
-          },
-          {
-            "FR": "BOULE DE GIVRE",
-            "EN": "FROST BALL",
-            "Id": "1422200000605"
-          },
-          {
-            "FR": "NOURRIR LA TERRE",
-            "EN": "FEED THE EARTH",
-            "Id": "142230121600104"
-          },
-          {
-            "FR": "RETOUR DE BALANCIER",
-            "EN": "PENDULUM SWING",
-            "Id": "1422000000504"
-          },
-          {
-            "FR": "GLYPHE RUNIQUE",
-            "EN": "RUNIC GLYPH",
-            "Id": "1122002000607"
-          },
-          {
-            "FR": "LANCER LA FOUDRE",
-            "EN": "THUNDER THROW",
-            "Id": "1322802000406"
-          },
-          {
-            "FR": "DÉFLAGRATION",
-            "EN": "DEFLAGRATION",
-            "Id": "13213020000506"
-          },
-          {
-            "FR": "CHANT DES OS BRISÉS",
-            "EN": "SONG OF BROKEN BONES",
-            "Id": "122130121700609"
-          }
+          "FR": "GRRR GIVRÉ",
+          "EN": "FROSTED GRRR",
+          "Id": "11124000000000030000"
+        },
+        {
+          "FR": "ÉMISSAIRE",
+          "EN": "EMISSARY",
+          "Id": "12122000000000020000"
+        },
+        {
+          "FR": "LUTINCANDESCENT",
+          "EN": "ELFCANDESCENT",
+          "Id": "13125000000000020000"
+        },
+        {
+          "FR": "TRICOTUEUSE",
+          "EN": "KNITTERKILLER",
+          "Id": "14120000000000010000"
+        },
+        {
+          "FR": "MARCHEUR MAUDIT",
+          "EN": "DAMNED WALKEER",
+          "Id": "14128015000000010000"
+        },
+        {
+          "FR": "MORTCENAIRE",
+          "EN": "MORSELNARY",
+          "Id": "14128010000000020000"
+        },
+        {
+          "FR": "ALPHA ARDANT",
+          "EN": "ARDENT APLHA",
+          "Id": "11106025000000010000"
+        },
+        {
+          "FR": "GOINFRE",
+          "EN": "GORGER",
+          "Id": "12127024000000010000"
+        },
+        {
+          "FR": "CULTISTE",
+          "EN": "CULTIST",
+          "Id": "13123020280000010000"
+        },
+        {
+          "FR": "GRRR DES DOUVES",
+          "EN": "MOAT GRRR",
+          "Id": "11118003220000010000"
+        },
+        {
+          "FR": "VIVRES VIVACES",
+          "EN": "PERENNIAL VICTUALS",
+          "Id": "14124026050000010000"
+        },
+        {
+          "FR": "ADORATEUR DU FEU",
+          "EN": "FIRE WORSHIPPER",
+          "Id": "14123022250000010000"
+        },
+        {
+          "FR": "DÉMON CHÉTIF",
+          "EN": "PUNY DEMON",
+          "Id": "14120012000000010000"
+        },
+        {
+          "FR": "SUCCUBE",
+          "EN": "SUCCUBUS",
+          "Id": "11124001000000040000"
+        },
+        {
+          "FR": "OGRE DOS-ACIER",
+          "EN": "STEELBACK OGRE",
+          "Id": "11104006000000040000"
+        },
+        {
+          "FR": "DÉSERTEUR DAMNÉ",
+          "EN": "DAMNED DESERTER",
+          "Id": "14107028000000020000"
+        },
+        {
+          "FR": "PAYSAN MECANIQUE",
+          "EN": "MECHANICAL PEASANT",
+          "Id": "12123008000000020000"
+        },
+        {
+          "FR": "BÊTE INDOMPTABLE",
+          "EN": "INDOMITABLE BEAST",
+          "Id": "11109024000000030000"
+        },
+        {
+          "FR": "RÉSERVISTE",
+          "EN": "RESERVIST",
+          "Id": "12117022000000020000"
+        },
+        {
+          "FR": "TAS D'OS INFATIGABLE",
+          "EN": "RELENTLESS BAG OF BONES",
+          "Id": "14128014000000020000"
+        },
+        {
+          "FR": "LAQUAIS",
+          "EN": "LACKEY",
+          "Id": "13126000000000010000"
+        },
+        {
+          "FR": "GLUANT MOUVANT",
+          "EN": "MOVING SLIME",
+          "Id": "13127000000000010000"
+        },
+        {
+          "FR": "SALACENDRE",
+          "EN": "SPARKAMENDER",
+          "Id": "11125000000000020000"
+        },
+        {
+          "FR": "SAGE DU CONSEIL",
+          "EN": "COUNCIL WISEMAN",
+          "Id": "12122000000000010000"
+        },
+        {
+          "FR": "FAUCHEUSE",
+          "EN": "RIPPER",
+          "Id": "13128128000000051000"
+        },
+        {
+          "FR": "PORTE-FLAMME",
+          "EN": "FLAME BEARER",
+          "Id": "12125100000000030000"
+        },
+        {
+          "FR": "DILIGENCE",
+          "EN": "STAGECOACH",
+          "Id": "11123007060000010000"
+        },
+        {
+          "FR": "RECRUTEUR",
+          "EN": "RECRUITOR",
+          "Id": "14126100000000010000"
+        },
+        {
+          "FR": "AGGRIPEUR",
+          "EN": "GRABBER",
+          "Id": "13127000000000030000"
+        },
+        {
+          "FR": "NÉGOCIATEUR",
+          "EN": "NEGOTIATOR",
+          "Id": "13126000000000020000"
+        },
+        {
+          "FR": "SHAMAN GOBELIN",
+          "EN": "GOBLIN SHAMAN",
+          "Id": "14120000000000040000"
+        },
+        {
+          "FR": "RÉGICIDE",
+          "EN": "REGICIDE",
+          "Id": "13115000000000040000"
+        },
+        {
+          "FR": "MATELOT",
+          "EN": "SAILOR",
+          "Id": "12122000000000030000"
+        },
+        {
+          "FR": "GLUANT CORROSIF",
+          "EN": "CORROSIVE SLIME",
+          "Id": "11125000000000020000"
+        },
+        {
+          "FR": "PICOREUR DOMPTÉ",
+          "EN": "TAMED PECKER",
+          "Id": "11111000000000020000"
+        },
+        {
+          "FR": "CROC-COEUR",
+          "EN": "FANGHEART",
+          "Id": "14101000000000060000"
+        },
+        {
+          "FR": "FAKIR MÉCANIQUE",
+          "EN": "MECHANICAL FAKIR",
+          "Id": "12105000000000020000"
+        },
+        {
+          "FR": "MÉCAGACANT",
+          "EN": "MECHANNOYING",
+          "Id": "13114000000000010000"
+        },
+        {
+          "FR": "SCORPION GÉANT",
+          "EN": "GIANT SCORPION",
+          "Id": "14119000000000000000"
+        },
+        {
+          "FR": "DÉVOREUR D'AMES",
+          "EN": "SOUL DEVOURER",
+          "Id": "12102000000000040000"
+        },
+        {
+          "FR": "ELFE CORROMPU",
+          "EN": "CORRUPTED ELF",
+          "Id": "14120017000000020000"
+        },
+        {
+          "FR": "REJETON D'EN BAS",
+          "EN": "SPAWN FROM BELOW",
+          "Id": "11120003000000030000"
+        },
+        {
+          "FR": "PRESTIDIGITATEUR",
+          "EN": "PRESTIDIGITATOR",
+          "Id": "14115020000000020000"
+        },
+        {
+          "FR": "GUERRIER DE L'OUEST",
+          "EN": "WEST WARRIOR",
+          "Id": "12115022000000030000"
+        },
+        {
+          "FR": "POURFENDEUR",
+          "EN": "SLAYER",
+          "Id": "11115024000000040000"
+        },
+        {
+          "FR": "HARPIE HARGNEUSE",
+          "EN": "SNARLING HARPY",
+          "Id": "13115018000000020000"
+        },
+        {
+          "FR": "ANCIEN DU VILLAGE",
+          "EN": "VILLAGE ELDER",
+          "Id": "12123011000000010000"
+        },
+        {
+          "FR": "SIRÈNE PERFIDE",
+          "EN": "PERFIDIOUS SIREN",
+          "Id": "13127006000000030000"
+        },
+        {
+          "FR": "RÉPROUVE",
+          "EN": "REPROBATE",
+          "Id": "14128013000000040000"
+        },
+        {
+          "FR": "ALPHA DÉGÉNÉRÉ",
+          "EN": "DEGENERATE ALPHA",
+          "Id": "14128015000000030000"
+        },
+        {
+          "FR": "LAME-FLAMME",
+          "EN": "FLAMETHROWER",
+          "Id": "13124025000000040000"
+        },
+        {
+          "FR": "PERMUTATRICE",
+          "EN": "PERMUTATOR",
+          "Id": "13108026000000020000"
+        },
+        {
+          "FR": "CRÔARAVANE",
+          "EN": "RIBBITRAVELER",
+          "Id": "13118007160000010000"
+        },
+        {
+          "FR": "JOUTEUR",
+          "EN": "JOUSTER",
+          "Id": "14115012100000030000"
+        },
+        {
+          "FR": "PROPAGATEUR",
+          "EN": "PROPAGATOR",
+          "Id": "13120012170000010000"
+        },
+        {
+          "FR": "YETI DOMESTIQUE",
+          "EN": "DOMESTIC YETI",
+          "Id": "11109004240000030000"
+        },
+        {
+          "FR": "GARDE DU FORT",
+          "EN": "FORT GUARDIAN",
+          "Id": "12123000000000040000"
+        },
+        {
+          "FR": "HYPNOTISEUR",
+          "EN": "MESMERIZER",
+          "Id": "13127000000000020000"
+        },
+        {
+          "FR": "NAGA DES ABYSSES",
+          "EN": "ABYSSAL NAGA",
+          "Id": "13126000000000050000"
+        },
+        {
+          "FR": "GNOME D'ÉLITE",
+          "EN": "ELITE GNOME",
+          "Id": "11115000000000051000"
+        },
+        {
+          "FR": "BOURRIN PRIMAIRE",
+          "EN": "PRIMAL BRUTE",
+          "Id": "12115000000000040000"
+        },
+        {
+          "FR": "RÉPUGNANT A VIF",
+          "EN": "RAW REPULSIVE",
+          "Id": "11125000000000051000"
+        },
+        {
+          "FR": "MAÎTRE D'ARMES",
+          "EN": "WEAPON MASTER",
+          "Id": "13126000000000010000"
+        },
+        {
+          "FR": "PACIFICATEUR",
+          "EN": "PACIFIER",
+          "Id": "11127000000000030000"
+        },
+        {
+          "FR": "HIPPOGRIFFE",
+          "EN": "HIPPOGRIFF",
+          "Id": "12123011000000020000"
+        },
+        {
+          "FR": "DIABLOTIN CORNU",
+          "EN": "HORNED IMP",
+          "Id": "13101013000000030000"
+        },
+        {
+          "FR": "RICHE MARCHAND",
+          "EN": "WEALTHY MERCHANT",
+          "Id": "11123026000000030000"
+        },
+        {
+          "FR": "PYROMAGE",
+          "EN": "PYROMAGUS",
+          "Id": "12125026000000030000"
+        },
+        {
+          "FR": "SÉQUESTRATEUR",
+          "EN": "SEQUESTRATOR",
+          "Id": "13108027000000020000"
+        },
+        {
+          "FR": "MÉCAVENTURIER",
+          "EN": "MECHADVENTURER",
+          "Id": "11115024000000051000"
+        },
+        {
+          "FR": "CONSTRICTEUR",
+          "EN": "CONSTRICTOR",
+          "Id": "12119027000000000000"
+        },
+        {
+          "FR": "MÉSSSAGER ORC",
+          "EN": "ORC MESSENGER",
+          "Id": "13122009000000040000"
+        },
+        {
+          "FR": "DÉMONISTE REPENTI",
+          "EN": "REPENTANT WARLOCK",
+          "Id": "12115016100000051000"
+        },
+        {
+          "FR": "RÉPUGNANT CALCINÉ",
+          "EN": "BURNT REPULSIVE",
+          "Id": "14115004280000030000"
+        },
+        {
+          "FR": "AGENT INFILTRÉ",
+          "EN": "UNDERCOVER AGENT",
+          "Id": "14120015180000020000"
+        },
+        {
+          "FR": "SOLDAT DE MANA",
+          "EN": "MANA SOLDIER",
+          "Id": "12114024050000040000"
+        },
+        {
+          "FR": "SEIGNEUR CRÔA",
+          "EN": "RIBBIT LORD",
+          "Id": "11107000000000051000"
+        },
+        {
+          "FR": "DRAGON D'OBSIDIENNE",
+          "EN": "OBSIDIAN DRAGON",
+          "Id": "14125000000000070000"
+        },
+        {
+          "FR": "GOLEM DE GLACE",
+          "EN": "ICE GOLEM",
+          "Id": "14103000000000040000"
+        },
+        {
+          "FR": "BÊTE VICIEUSE",
+          "EN": "VICIOUS BEAST",
+          "Id": "12115000000000051000"
+        },
+        {
+          "FR": "TROLL DES TUNNELS",
+          "EN": "TUNNEL TROLL",
+          "Id": "12123000000000051000"
+        },
+        {
+          "FR": "MÉGÈRE DE CHAIR",
+          "EN": "FLESH SHREW",
+          "Id": "13113000000000060000"
+        },
+        {
+          "FR": "MÉCAMIRAL",
+          "EN": "MECHADMIRAL",
+          "Id": "12122000000000061000"
+        },
+        {
+          "FR": "CHASSEUR DE PRIMES",
+          "EN": "BOUNTY HUNTER",
+          "Id": "12127000000000030000"
+        },
+        {
+          "FR": "RONGEUR DÉCADENT",
+          "EN": "DECADENT RODENT",
+          "Id": "11124002000000060000"
+        },
+        {
+          "FR": "RAVISSEUR ORC",
+          "EN": "ORC ABDUCTOR",
+          "Id": "13115027000000030000"
+        },
+        {
+          "FR": "DRUIDE MÉCANIQUE",
+          "EN": "MECHANICAL DRUID",
+          "Id": "11108016000000051000"
+        },
+        {
+          "FR": "NAIN CRÊTE-DE-FEU",
+          "EN": "FIRE-CRESTED DWARF",
+          "Id": "14115025000000040000"
+        },
+        {
+          "FR": "CAMBRIOL'OEUFS",
+          "EN": "EGGNAPPER",
+          "Id": "13107026000000030000"
+        },
+        {
+          "FR": "CRACHEUR D'ACIDE",
+          "EN": "ACID SPITTER",
+          "Id": "12119013000000000000"
+        },
+        {
+          "FR": "GRRR RANCUNIER",
+          "EN": "RESENTFUL GRRR",
+          "Id": "14115003200000030000"
+        },
+        {
+          "FR": "LUTIN DE LA FORÊT",
+          "EN": "FOREST ELF",
+          "Id": "14111016040000020000"
+        },
+        {
+          "FR": "KIDNAPPEUR",
+          "EN": "KIDNAPPER",
+          "Id": "14127005000000030000"
+        },
+        {
+          "FR": "PACIFISTE ROUILLÉ",
+          "EN": "RUSTED PACIFIST",
+          "Id": "13126006000000040000"
+        },
+        {
+          "FR": "GOLEM DE ROCHE",
+          "EN": "ROCK GOLEM",
+          "Id": "11123000000000040000"
+        },
+        {
+          "FR": "GEÔLIER",
+          "EN": "JAILOR",
+          "Id": "13127000000000051000"
+        },
+        {
+          "FR": "TROLL DISCIPLINE",
+          "EN": "DISCIPLINED TROLL",
+          "Id": "14122000000000070000"
+        },
+        {
+          "FR": "MÉCASTROLOGUE",
+          "EN": "MECHASTROLOGER",
+          "Id": "12113020000000040000"
+        },
+        {
+          "FR": "DRAGON DE JADE",
+          "EN": "JADE DRAGON",
+          "Id": "12125000000000080000"
+        },
+        {
+          "FR": "DÉMON PRIMORDIAL",
+          "EN": "PRIMORDIAL DEMON",
+          "Id": "11125009000000051000"
+        },
+        {
+          "FR": "HALBARDIER",
+          "EN": "HALBARDER",
+          "Id": "14115014000000051000"
+        },
+        {
+          "FR": "GUERRIER ERRANT",
+          "EN": "WANDERING WARRIOR",
+          "Id": "11115017000000040000"
+        },
+        {
+          "FR": "NERVI ÉNERVÉ",
+          "EN": "ANGRY HENCHMAN",
+          "Id": "14115026220000040000"
+        },
+        {
+          "FR": "EXPERT EN GALERIES",
+          "EN": "GALLERY EXPERT",
+          "Id": "12123015050000040000"
+        },
+        {
+          "FR": "BOUCHER RECOUSU",
+          "EN": "STITCHED BUTCHER",
+          "Id": "13120002280000051000"
+        },
+        {
+          "FR": "DRAGON DE RUBIS",
+          "EN": "RUBY DRAGON",
+          "Id": "11101014250000050000"
+        },
+        {
+          "FR": "BALIST'ORC",
+          "EN": "BALIST'ORC",
+          "Id": "13113020150000050000"
+        },
+        {
+          "FR": "SERVITEUR ÉTERNEL",
+          "EN": "ETERNAL SERVANT",
+          "Id": "11113015181928000000"
+        },
+        {
+          "FR": "GOLEM DE LAVE",
+          "EN": "LAVA GOLEM",
+          "Id": "11127008250000050000"
+        },
+        {
+          "FR": "SEIGNEUR VAMPIRE",
+          "EN": "VAMPIRE LORD",
+          "Id": "12123016090500040000"
+        },
+        {
+          "FR": "FANFARONNEUR",
+          "EN": "BRAGGART",
+          "Id": "11123027062808010000"
+        },
+        {
+          "FR": "LEPRECHAUN",
+          "EN": "LEPRECHAUN",
+          "Id": "12124006281516010000"
+        },
+        {
+          "FR": "QUÊTE ACCEPTEE !",
+          "EN": "QUEST ACCEPTED!",
+          "Id": "12222000000000020000"
+        },
+        {
+          "FR": "CANALISER LA HAINE",
+          "EN": "CHANNEL HATRED",
+          "Id": "11220000000000020000"
+        },
+        {
+          "FR": "TOUCHER RÉGÉNÉRANT",
+          "EN": "REGENERATING TOUCH",
+          "Id": "13216022000000010000"
+        },
+        {
+          "FR": "TAPI DANS L'OMBRE",
+          "EN": "LURKING IN SHADOWS",
+          "Id": "14228000000000020000"
+        },
+        {
+          "FR": "ASPIRER LA VITALITE",
+          "EN": "VITALITY SYPHON",
+          "Id": "11216028170000010000"
+        },
+        {
+          "FR": "REGARD DU BASILIC",
+          "EN": "BASILISK'S GAZE",
+          "Id": "11223000000000050000"
+        },
+        {
+          "FR": "CYCLE DE LA VIE",
+          "EN": "CYCLE OF LIFE",
+          "Id": "13200000000000000000"
+        },
+        {
+          "FR": "MALÉDICTION",
+          "EN": "CURSE",
+          "Id": "12213000000000020000"
+        },
+        {
+          "FR": "HURLEMENT SINISTRE",
+          "EN": "SINISTER HOWL",
+          "Id": "12228000000000050000"
+        },
+        {
+          "FR": "BOULE DE GIVRE",
+          "EN": "FROST BALL",
+          "Id": "14222000000000060000"
+        },
+        {
+          "FR": "NOURRIR LA TERRE",
+          "EN": "FEED THE EARTH",
+          "Id": "14223012160000010000"
+        },
+        {
+          "FR": "RETOUR DE BALANCIER",
+          "EN": "PENDULUM SWING",
+          "Id": "14220000000000050000"
+        },
+        {
+          "FR": "GLYPHE RUNIQUE",
+          "EN": "RUNIC GLYPH",
+          "Id": "11220002000000060000"
+        },
+        {
+          "FR": "LANCER LA FOUDRE",
+          "EN": "THUNDER THROW",
+          "Id": "13228002000000040000"
+        },
+        {
+          "FR": "DÉFLAGRATION",
+          "EN": "DEFLAGRATION",
+          "Id": "13213020000000050000"
+        },
+        {
+          "FR": "CHANT DES OS BRISÉS",
+          "EN": "SONG OF BROKEN BONES",
+          "Id": "12213012170000060000"
+        }
     ]
 }
