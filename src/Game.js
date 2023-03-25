@@ -93,7 +93,7 @@ class Game {
         });
 
         this.indices.push("mon nom est "+tip.toUpperCase());
-
+        this.nbIndices=this.indices.length;
 
         //and VERY last tip, image crop
 
@@ -112,6 +112,7 @@ class Game {
     //build the next tip for the current card
     newIndice(){
         let message  = null;
+        console.log(this.nbIndices, this.indices);
         const tip = this.indices.shift();
         const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
