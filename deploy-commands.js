@@ -14,13 +14,17 @@ if(process.env.BOT_LANG === 'FR'){
 		option.setName('extension')
 			.setDescription('limiter la partie à une extension donnée')
 			.addChoices(
-				{ name: "Pack d'initiation", value: '0' },
-				{ name: 'Félonie', value: '1' },
-				{ name: 'Submersion', value: '2' },
-				{ name: 'Ebrèchement', value: '3' },
-				{ name: 'Déliquescence', value: '4' },
-				{ name: 'Insaisissable', value: '5' },
-				{ name: 'Résistance', value: '6' }
+				{ name: "Pack d'initiation", value: '00' },
+				{ name: 'Félonie', value: '01' },
+				{ name: 'Submersion', value: '02' },
+				{ name: 'Ebrèchement', value: '03' },
+				{ name: 'Déliquescence', value: '04' },
+				{ name: 'Insaisissable', value: '05' },
+				{ name: 'Résistance', value: '06' },
+				{ name: 'Sournoiserie', value: '11' },
+				{ name: 'Belligérance', value: '12' },
+				{ name: 'Enlisement', value: '13' },
+				{ name: 'Dissension', value: '14' }
 		))
 		.addStringOption(option =>
 			option.setName('vitesse')

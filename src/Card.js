@@ -44,16 +44,16 @@ class Card {
     //format is extension-type-CS-aura?-CS-CS-CS-CS-atq-hp-mana
     buildCard = function(id){
 
-        this.extension= extensions[id[0]];
-        this.type = types[id[1]];
-        this.attack = id[13];
-        this.hp = id[14] != 0 ? id[14] : 0; 
-        this.mana = id[15];
+        this.extension= extensions[id.substring(0,2)];
+        this.type = types[id[2]];
+        this.attack = id[14];
+        this.hp = id[15] != 0 ? id[15] : 0; 
+        this.mana = id[16];
         this.image = `./card_img/${process.env.BOT_LANG}/${this.name.replace(' ','-')}.png`;
         this.cs = new Array();
         
         //CS list building
-        const cs_list = [id.substring(2,5),id.substring(5,7),id.substring(7,9),id.substring(9,11),id.substring(11,13)];
+        const cs_list = [id.substring(3,6),id.substring(6,8),id.substring(8,10),id.substring(10,12),id.substring(12,14)];
         if(cs_list[0].substring(0,2) != "00") {
             this.cs.push((cs_list[0][2] == '1'? "aura " : "") + CS[cs_list[0].substring(0,2)]);
         }
