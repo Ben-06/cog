@@ -15,7 +15,11 @@
         "7" : "Dissension",
         "8" : "Belligérance",
         "9" : "Sournoiserie",
-        "10" : "Enlisement"
+        "10" : "Enlisement",
+        "11" : "Sournoiserie",
+        "12" : "Belligérance",
+        "13" : "Enlisement",
+        "14" : "Dissension"
     },
     "CS" : {
         "01" : "Aérienne",
@@ -40,11 +44,12 @@
         "20" : "Retour de flammes",
         "21" : "Maudit",
         "22" : "Contrordre",
-        "23" : "Repli",
+        "23" : "Lucidité",
         "24" : "Chantage",
         "25" : "Immolation",
         "26" : "Renfort",
-        "27" : "Enchaîner"
+        "27" : "Enchaîner",
+        "28" : "Réanimation"
     }
 }
 
