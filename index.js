@@ -127,8 +127,8 @@ client.on('interactionCreate', async interaction => {
         if(!msg) return;
 
         const cardToSearch = msg.value.toLocaleLowerCase();
-        const searchFR = cards.find(card => card['FR'] == cardToSearch);
-        const searchEN = cards.find(card => card['EN'] == cardToSearch);
+        const searchFR = cards.find(card => card['FR']?.toLocaleLowerCase() == cardToSearch);
+        const searchEN = cards.find(card => card['EN']?.toLocaleLowerCase() == cardToSearch);
 
         if (searchFR === undefined && searchEN === undefined) {
             await interaction.reply(wording.UNKNOWN_CARD[process.env.BOT_LANG]);
