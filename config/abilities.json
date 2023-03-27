@@ -103,7 +103,7 @@
                 "href": "retour_de_flammes.png"
             },
             {
-                "name": "Maudit",
+                "name": "Réanimation",
                 "description": "Lorsque possesseur devrait retourner à l'extrémité droite de la main de son propriétaire, à la place il retourne à l'extrémité gauche.",
                 "href": "maudit.png"
             },
@@ -119,7 +119,7 @@
             },
             {
                 "name": "Chantage",
-                "description": "Tant que possesseur est en jeu, vous jouez avec 1 carte de moins parmi les 4 cartes les plus à gauche de votre main (jamais moins de 1).",
+                "description": " tant que possesseur est en jeu, la carte la plus à droite de vos cartes disponibles en main ne peut plus être jouée (ne peut pas être inférieur à 1)",
                 "href": "chantage.png"
             },
             {
@@ -237,9 +237,9 @@
                 "href": "vulnerabilite.png"
             },
             {
-                "name": "Vulnerability",
-                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
-                "href": "vulnerabilite.png"
+                "name": "Blackmail",
+                "description": "Blackmail: As long as the possessor is in play, the rightmost card of your available cards in hand can no longer be played (cannot be less than 1 card).",
+                "href": "maudit.png"
             },
             {
                 "name": "Vulnerability",
