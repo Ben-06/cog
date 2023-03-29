@@ -392,7 +392,7 @@
   {
       "FR": "grignoteur",
       "EN": "nibbler",
-      "id": "0210000000000734"
+      "id": "02100000000000734"
   },
   {
       "FR": "guerrier abyssal",
@@ -552,7 +552,7 @@
   {
       "FR": "seigneur démoniaque",
       "EN": "demonic overlord",
-      "id": "0310000000000776"
+      "id": "03100000000000776"
   },
   {
       "FR": "nécromécano",
@@ -705,6 +705,11 @@
       "id": "04119003020000056"
   },
   {
+      "FR": "shaman corrompu",
+      "EN": "corrupted shaman",
+      "id": "04113004160000447"
+  },
+  {
       "FR": "parasite démoniaque",
       "EN": "demonic parasite",
       "id": "04111001190000035"
@@ -810,7 +815,7 @@
       "id": "05111000000000112"
   },
   {
-      "FR": "barde exhaltant",
+      "FR": "barde exaltant",
       "EN": "exalting bard",
       "id": "05111012170000114"
   },
@@ -870,7 +875,7 @@
       "id": "05119008000000022"
   },
   {
-      "FR": "sentinelle sylvain",
+      "FR": "sentinelle sylvainne",
       "EN": "sylvan sentinel",
       "id": "05115016000000435"
   },
