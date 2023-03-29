@@ -126,10 +126,17 @@ client.on('interactionCreate', async interaction => {
         });
         if(!msg) return;
 
-        const cardToSearch = msg.value.toLocaleLowerCase();
-        const searchFR = cards.find(card => card['FR']?.toLocaleLowerCase() == cardToSearch);
-        const searchEN = cards.find(card => card['EN']?.toLocaleLowerCase() == cardToSearch);
+        let  cardToSearch = msg.value.toLocaleLowerCase();
+        let  searchFR = cards.find(card => card['FR']?.toLocaleLowerCase() == cardToSearch);
+        let  searchEN = cards.find(card => card['EN']?.toLocaleLowerCase() == cardToSearch);
 
+        if (searchFR === undefined && searchEN === undefined) {
+            
+            cardToSearch = sansAccent(msg.value.toLocaleLowerCase());
+            searchFR = cards.find(card => card['FR']?.toLocaleLowerCase() == cardToSearch);
+            searchEN = cards.find(card => card['EN']?.toLocaleLowerCase() == cardToSearch);
+        }
+        
         if (searchFR === undefined && searchEN === undefined) {
             await interaction.reply(wording.UNKNOWN_CARD[process.env.BOT_LANG]);
             return;
