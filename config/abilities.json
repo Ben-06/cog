@@ -103,7 +103,7 @@
                 "href": "retour_de_flammes.png"
             },
             {
-                "name": "Réanimation",
+                "name": "Maudit",
                 "description": "Lorsque possesseur devrait retourner à l'extrémité droite de la main de son propriétaire, à la place il retourne à l'extrémité gauche.",
                 "href": "maudit.png"
             },
