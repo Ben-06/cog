@@ -1,0 +1,51 @@
+{
+    "types" : {
+        "0" : "champion",
+        "1" : "creature",
+        "2" : "incantation"
+    },
+    "extensions" : {
+        "00" : "Pack d'initiation",
+        "01" : "Félonie",
+        "02" : "Submersion",
+        "03" : "Ebrèchement",
+        "04" : "Déliquescence",
+        "05": "Insaisissable",
+        "06": "Résistance",
+        "11" : "Sournoiserie",
+        "12" : "Belligérance",
+        "13" : "Enlisement",
+        "14" : "Dissension"
+    },
+    "CS" : {
+        "01" : "Aérienne",
+        "02" : "Affûtage",
+        "03" : "Aquatique",
+        "04" : "Berserk",
+        "05" : "Catalyseur",
+        "06" : "Défenseur",
+        "07" : "Dérobade",
+        "08" : "Indestructible",
+        "09" : "Instinct",
+        "10" : "Mercenaire",
+        "11" : "Symbiote",
+        "12" : "Perforation",
+        "13" : "Prix du sang",
+        "14" : "Protection",
+        "15" : "Rage",
+        "16" : "Régénération",
+        "17" : "Splash",
+        "18" : "Sprint",
+        "19" : "Vulnérabilité",
+        "20" : "Retour de flammes",
+        "22" : "Contrordre",
+        "23" : "Lucidité",
+        "24" : "Chantage",
+        "25" : "Immolation",
+        "26" : "Renfort",
+        "27" : "Enchaîner",
+        "28" : "Réanimation"
+    }
+}
+
+    

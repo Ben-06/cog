@@ -1,0 +1,16 @@
+{
+    "wording" : {
+        "UNKNOWN_CS" : {
+            "FR": "Cette capacité n'existe pas.",
+            "EN": "This ability doesn't exists"
+        },
+        "UNKNOWN_CARD": {
+            "FR": "Cette carte n'existe pas.",
+            "EN": "This card doesn't exists"
+        },
+        "IMG_NOT_FOUND" : {
+            "FR": "Impossible de trouver cette image",
+            "EN": "Image not found"
+        }
+    }
+}

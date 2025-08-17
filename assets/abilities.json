@@ -1,0 +1,281 @@
+{
+    "abilities" : {
+        "FR" : 
+        [
+            {
+                "name": "Aérienne",
+                "description": "Si *possesseur* est dans la Ligne du haut, il ne peut pas attaquer les Créatures adverses. Il attaque directement la Forteresse adverse, en ignorant les Créatures adverses. Octroyer aussi la capacité spéciale Rage au *possesseur* qui est sur la Ligne du haut n'a aucun effet. Octroyer aussi la capacité spéciale Défenseur au *possesseur* qui est sur la Ligne du haut l'empêcherait d'attaquer aussi bien les Créatures que la Forteresse adverse.",
+                "href": "aerienne.png"
+            },
+            {
+                "name": "Affûtage",
+                "description": "Lorsque le *possesseur* inflige assez de Blessures pour détruire une Créature, chaque Blessure excédentaire est infligée à la Forteresse adverse. Si plusieurs Créatures sont détruites par une même attaque (grâce à Splash ou Perforation par exemple), les Blessures excédentaires sont infligées en une seule fois à la Forteresse adverse. *possesseur* n'a aucun effet sur une Créature ayant la capacité spéciale Protection, puisqu'en réduisant la source de Blessures à 0, il n'y a pas de dégâts excédentaires.",
+                "href": "affutage.png"
+            },
+            {
+                "name": "Aquatique",
+                "description": "Tant que *possesseur* est adjacent à un Pont, il inflige le double de Blessures. Si *possesseur* bénéficie de la capacité spéciale Sprint, le bonus d'attaque octroyé par le Sprint sera aussi doublé.",
+                "href": "aquatique.png"
+            },
+            {
+                "name": "Berserk",
+                "description": "Chaque fois que *possesseur* attaque et détruit au moins une Créature adverse, il attaque une nouvelle fois. Résolvez toutes les attaques du *possesseur* avant de résoudre les attaques et effets des prochaines Créatures. Après avoir détruit la dernière Créature adverse de sa Ligne, comme il doit attaquer de nouveau, il attaque la Forteresse adverse (sauf s'il attaque lors de son tour d'arrivée en jeu grâce à la capacité spéciale Rage).",
+                "href": "berserk.png"
+            },
+            {
+                "name": "Catalyseur",
+                "description": "Si *possesseur* est en jeu lors de votre Phase 1, gagnez +2 Mana ce tour. Il n'y a pas de limite au nombre de Mana qu'un joueur peut obtenir lors de la Phase 1 : Régénération du mana.",
+                "href": "catalyseur.png"
+            },
+            {
+                "name": "Défenseur",
+                "description": "*possesseur* peut attaquer les Créatures adverses, mais ne peut pas attaquer la Forteresse adverse. Cette capacité spéciale est un malus. En contrepartie, *possesseur* est intrinsèquement plus puissant que les autres cartes ayant le même coût de mana.",
+                "href": "defenseur.png"
+            },
+            {
+                "name": "Dérobade",
+                "description": "Après que *possesseur* a subi au moins 1 Blessure sans être détruit, déplacez-le à l'emplacement le plus éloigné du Pont dans sa Ligne. Si c'est une Créature qui a attaqué *possesseur*, l'effet de la capacité spéciale Dérobade se déclenche une fois que la Créature qui l'a attaqué a terminé de résoudre toutes ses attaques. La capacité spéciale Dérobade se déclenche avant la capacité spéciale Instinct.",
+                "href": "derobade.png"
+            },
+            {
+                "name": "Indestructible",
+                "description": "*possesseur* ne subit pas les effets et les Blessures provenant des Incantations (il peut tout de même être ciblé).",
+                "href": "indestructible.png"
+            },
+            {
+                "name": "Instinct",
+                "description": "Après que *possesseur* a subi au moins 1 Blessure d'une Créature sans être détruit, il attaque la Créature adverse se trouvant le plus près du Pont dans sa Ligne une fois que la Créature qui l'a attaqué a terminé de résoudre toutes ses attaques. S'il n'y a pas de Créature adverse, *possesseur* attaque la Forteresse adverse. La capacité spéciale Instinct se déclenche après la capacité spéciale Dérobade.",
+                "href": "instinct.png"
+            },
+            {
+                "name": "Mercenaire",
+                "description": "Lorsque *possesseur* devrait retourner dans la main de son propriétaire, à la place il retourne à l'extrémité droite de la main de son adversaire (ou au-dessus de la pioche IA en partie Solo). Cette capacité spéciale est un malus. En contrepartie *possesseur* est intrinsèquement plus puissant que les autres cartes ayant le même coût de mana.",
+                "href": "mercenaire.png"
+            },
+            {
+                "name": "Symbiote",
+                "description": "Lorsque *possesseur* est posé, il peut être placé par-dessus une autre Créature de son Royaume déjà présente en jeu. La VA, les PV et les Capacités spéciales des deux Créatures se cumulent tant qu’elles sont en jeu. Lorsqu’elles sont détruites, les deux cartes remontent dans la main de leur propriétaire, en commençant par remonter *possesseur*. *possesseur* peut aussi être posé en jeu comme une Créature indépendante. *possesseur* ne peut pas être placé par-dessus une autre Créature ayant déjà la capacité spéciale Symbiote. Avec Symbiote, la Vulnérabilité ne se cumule pas avec la VA de l'autre créature, ignorez la VA indiquée et appliquez seulement la Vulnérabilité.",
+                "href": "parasite.png"
+            },
+            {
+                "name": "Perforation",
+                "description": "*possesseur* inflige ses Blessures à la Créature ciblée ET à la Créature située derrière elle, dans la même Ligne. Cet effet est appliqué uniquement sur des Créatures, jamais sur la Forteresse adverse. Les Blessures d'une attaque avec plusieurs cibles se résolvent simultanément.",
+                "href": "perforation.png"
+            },
+            {
+                "name": "Prix du sang",
+                "description": "Si vous n'avez pas assez de Mana pour payer l'intégralité du coût de *possesseur*, dépensez l'intégralité de votre Mana restant, et pour chaque Mana manquant, subissez une Blessure en décalant votre Forteresse d'un emplacement vers la droite dans votre main. Les Blessures ainsi subies sont infligées une à une.",
+                "href": "prix_du_sang.png"
+            },
+            {
+                "name": "Protection",
+                "description": "Lors de chaque tour, réduit à 0 la première source de Blessures dont *possesseur* est la cible. Est considéré comme une source de Blessures n'importe quelle Créature ou Incantation infligeant au moins 1 Blessure. Les effets de cette source de Blessures sont tout de même déclenchés (Splash, Perforation, etc.) et sont infligés normalement aux autres Créatures.",
+                "href": "protection.png"
+            },
+            {
+                "name": "Rage",
+                "description": "*possesseur* peut attaquer des Créatures adverses pendant le tour où il est posé en jeu. Cet effet ne permet pas d'attaquer la Forteresse adverse pendant le tour où *possesseur* est posé. S'il n'y a aucune Créature adverse à attaquer le tour où *possesseur* est posé, la capacité spéciale Rage est sans effet.",
+                "href": "rage.png"
+            },
+            {
+                "name": "Régénération",
+                "description": "Chaque fois que *possesseur* inflige des Blessures à une cible, décalez la Forteresse de son propriétaire d'un emplacement vers la gauche dans sa main. Si le Fort doit être décalé vers la gauche et qu'il est déjà à l'extrémité gauche de la main de son propriétaire, le Fort est alors pivoté afin que le Bastion soit à l'endroit, puis déplacé jusqu'à être la deuxième carte la plus à droite de la main de son propriétaire.",
+                "href": "regeneration.png"
+            },
+            {
+                "name": "Splash",
+                "description": "*possesseur* inflige ses Blessures à la Créature ciblée ET à la Créature située à la même place dans la Ligne voisine. Cet effet est appliqué uniquement sur des Créatures, jamais sur la Forteresse adverse. Les Blessures d'une attaque avec plusieurs cibles se résolvent simultanément.",
+                "href": "splash.png"
+            },
+            {
+                "name": "Sprint",
+                "description": "Chaque fois que *possesseur* attaque, déplacez-le jusqu'à ce qu'il soit le plus proche de la carte Pont. Pour ce tour, *possesseur* inflige +X Blessures, où X est égal au nombre de Créatures par-dessus lesquelles il s'est déplacé. Il n'attaque qu'une seule fois mais sa VA est modifiée jusqu'à la fin de la Phase 3 : Assaut.",
+                "href": "sprint.png"
+            },
+            {
+                "name": "Vulnérabilité",
+                "description": "La VA de *possesseur* inflige X Blessures à une Créature adverse ou à la Forteresse adverse, où X est égal aux PV de la cible -1. Si *possesseur* attaque plusieurs cibles (grâce à Splash ou Perforation par exemple), cet effet agit sur toutes les cibles de l'attaque. Cette Capacité spéciale ne détruit pas la cible mais l'affaiblit. Mais associée avec les Capacités spéciales Aquatique ou Sprint, *possesseur* peut détruire n'importe quelle cible en une seule attaque. Si *possesseur* attaque la Forteresse adverse, cela la déplace juste avant la carte à l'extrémité droite de sa main, sans changer son orientation (le Bastion reste orienté en Bastion).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Retour de flammes",
+                "description": "Lorsque possesseur est joué, infligez à la créature adverse la plus proche sur la même ligne autant de blessures que le nombre de cartes situées dans votre main à gauche de votre forteresse.",
+                "href": "retour_de_flammes.png"
+            },
+            {
+                "name": "Maudit",
+                "description": "Lorsque possesseur devrait retourner à l'extrémité droite de la main de son propriétaire, à la place il retourne à l'extrémité gauche.",
+                "href": "maudit.png"
+            },
+            {
+                "name": "Contrordre",
+                "description": "Lorsque possesseur est joué, déplacez la carte de créature ou incantation la plus à gauche de la main de son propriétaire à l'extrémité droite.",
+                "href": "contrordre.png"
+            },
+            {
+                "name": "Lucidité",
+                "description": "Si possesseur est la carte de créature ou d’incantation la plus à gauche de la main, elle coûte 2 de mana de moins.",
+                "href": "lucidite.png"
+            },
+            {
+                "name": "Chantage",
+                "description": " tant que possesseur est en jeu, la carte la plus à droite de vos cartes disponibles en main ne peut plus être jouée (ne peut pas être inférieur à 1)",
+                "href": "chantage.png"
+            },
+            {
+                "name": "Immolation",
+                "description": "Tant que possesseur est en jeu, à chaque fois qu'un joueur joue une carte sur la même ligne, il subit 1 blessure sur sa forteresse.",
+                "href": "immolation.png"
+            },
+            {
+                "name": "Renfort",
+                "description": "Lorsque possesseur retourne dans la main de son propriétaire, jouez immédiatement sur la même ligne, sans payer son coût en mana, la première créature disponible de votre main la plus à gauche qui possède un coût de Mana de 4 ou moins et qui ne possède pas la capacité Renfort.",
+                "href": "renfort.png"
+            },
+            {
+                "name": "Enchaîner",
+                "description": "Lorsque possesseur est joué, récupérez la créature ou incantation la plus à gauche de la main de votre adversaire. Révélez-là et placez-la, face cachée, sous possesseur. Lorsque possesseur est détruit, la carte face cachée remonte dans la main de son propriétaire.",
+                "href": "enchainer.png"
+            }
+
+        ],
+        "EN" : 
+        [
+            {
+                "name": "Aerial",
+                "description": "If the *owner* is in the upper lane, it cannot attack enemy Creatures. It directly attacks the enemy Stronghold, ignoring enemy Creatures. Additionally granting the Rage Special Ability to the *owner* in the upper lane has no effect. Additionally granting the Defender Special Ability to the *owner* in the upper lane would prevent it from attacking Creatures as well as the enemy Stronghold.",
+                "href": "aerienne.png"
+            },
+            {
+                "name": "Sharpening",
+                "description": "When the *owner* deals enough Damage to destroy a Creature, any excess Damage is dealt to the enemy Stronghold. If more than one Creature is destroyed by a single attack (i.e. with Splash or Perforation),excess Damage is dealt to the enemy Stronghold in a single instance. The *owner* has no effect on a Creature with the Protection Special Ability, as reducing the Damage source to 0 generates no excess Damage.",
+                "href": "affutage.png"
+            },
+            {
+                "name": "Aquatic",
+                "description": "As long as the *owner* is adjacent to a Bridge, it deals double Damage. If the *owner* has the Sprint Special Ability, the attack bonus granted by Sprint will also be doubled.",
+                "href": "aquatique.png"
+            },
+            {
+                "name": "Berserk",
+                "description": "Each time the *owner* attacks and destroys at least one enemy Creature, it attacks again. Resolve all the attacks of the *owner* before resolving the attacks and effects of the next Creatures. After destroying the last enemy Creature in its lane, because it must attack again, it attacks the enemy Stronghold (unless it attacks during the turn it entered play thanks to the Rage Special Ability).",
+                "href": "berserk.png"
+            },
+            {
+                "name": "Catalyst",
+                "description": "If the *owner* is in play during your Phase 1, gain +2 Mana this turn. There is no limit to the amount of Mana a player can gain during Phase 1: Mana Regeneration.",
+                "href": "catalyseur.png"
+            },
+            {
+                "name": "Defender",
+                "description": "The *owner* can attack enemy Creatures but cannot attack the enemy Stronghold. This Special Ability is a malus. The *owner* is inherently stronger than other cards with the same Mana cost to compensate.",
+                "href": "defenseur.png"
+            },
+            {
+                "name": "Vanish",
+                "description": "After the *owner* has suffered at least 1 Damage without being destroyed, move it to the furthest position away from the Bridge in its lane. If the *owner* was attacked by a Creature, Vanish triggers after the attacking Creature has finished and resolved each one of its attacks. Vanish triggers before the Instinct Special Ability.",
+                "href": "derobade.png"
+            },
+            {
+                "name": "Indestructible",
+                "description": "The *owner* does not suffer Damage or effects from Incantations (it can still be targeted).",
+                "href": "indestructible.png"
+            },
+            {
+                "name": "Instinct",
+                "description": "After the *owner* has suffered at least 1 Damage from a Creature without being destroyed, it attacks the Creature closest  to the Bridge in its lane, after each of the attacks of the Creature attacking it are resolved. If there is no enemy Creature, the *owner* attacks the enemy Stronghold. The Instinct Special Ability activates after the Vanish Special Ability.",
+                "href": "instinct.png"
+            },
+            {
+                "name": "Mercenaire",
+                "description": "When the *owner* should return to its owner's hand, it returns to the rightmost position in the enemy's hand instead (or on top of the AI Deck in Solo play). This Ability is a malus. The *owner* is inherently more powerful than other cards with the same mana cost to compensate.",
+                "href": "mercenaire.png"
+            },
+            {
+                "name": "Symbiote",
+                "description": "When the *owner* enters play, it can be placed above another Creature already in play in its Kingdom. The VA, HP and Special Abilities of both Creatures stack as long as they remain in play. When destroyed, both cards are returned to their owner's hand, starting with the *owner*. The *owner* can also enter play as an independent Creature. The *owner* cannot be placed above another Creature that already has the Symbiote Special Ability. Symbiote doesn't stack Vulnerability with the other Creature's AV. Ignore the indicated VA, only applying Vulnerability.",
+                "href": "parasite.png"
+            },
+            {
+                "name": "Perforation",
+                "description": "The *owner* deals its Damage to the target Creature AND to the Creature located behind it in the same lane. This effect only applies to Creatures, never to the enemy Stronghold. Damage from an attack with more than one target is resolved as a single instance.",
+                "href": "perforation.png"
+            },
+            {
+                "name": "Price of Blood",
+                "description": "If you do not have enough Mana to pay for the *owner*'s full cost, spend all your remaining Mana, then for each missing Mana, suffer one Damage by shifting your Stronghold one position to the right in your hand. Damage suffered this way is dealt in instances of 1.",
+                "href": "prix_du_sang.png"
+            },
+            {
+                "name": "Protection",
+                "description": "During your turn, reduce the first source of Damage targeting the *owner* to 0. Sources of Damage include any Creature or Incantation dealing at least 1 Damage. Effects from sources of Damage are still triggered (Splash, Perforation, etc.) and dealt to other Creatures as normal.",
+                "href": "protection.png"
+            },
+            {
+                "name": "Rage",
+                "description": "The *owner* can attack enemy Creatures during the turn it enters play. This effect does not allow the *owner* to attack the enemy Stronghold the turn it enters play. If no enemy Creature can be attacked the turn the *owner* enters play, the Rage Special Ability has no effect.",
+                "href": "rage.png"
+            },
+            {
+                "name": "Regeneration",
+                "description": "Each time the *owner* deals Damage to a target, shift its owner's Stronghold one position to the left in their hand. If the Fort should shift left while it is already in the leftmost position in its owner's hand, the Fort is then rotated so the Bastion is side up, then moved to the second rightmost position in its owner's hand.",
+                "href": "regeneration.png"
+            },
+            {
+                "name": "Splash",
+                "description": "The *owner* deals its Damage to the target Creature AND to the Creature in the same position in the neighbouring lane. This effect only applies to Creatures, never to the enemy Stronghold. Damage dealt to more than one target is resolved as a single instance.",
+                "href": "splash.png"
+            },
+            {
+                "name": "Sprint",
+                "description": "Each time the *owner* attacks, move it until it is adjacent to the Bridge card in the same lane. This turn, the *owner* deals +X Damage, where X = the number of Creatures it moved over. It only attacks once, but its AV is modified until the end of Phase 3: Assault.",
+                "href": "sprint.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Blackmail",
+                "description": "Blackmail: As long as the possessor is in play, the rightmost card of your available cards in hand can no longer be played (cannot be less than 1 card).",
+                "href": "maudit.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Lucidity",
+                "description": "If the owner is the leftmost Creature or Incantation card in its owner's hand, it costs 2 less Mana.",
+                "href": "lucidite.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            },
+            {
+                "name": "Vulnerability",
+                "description": "The *owner*'s AV deals X Damage to an enemy Creature or Stronghold, where X = the target's HP -1. If the *owner* attacks more than one target (i.e. with Splash or Perforation), the effects applies to each target. This Special Ability weakens the target rather than destroying it. Paired with Special Abilities such as Sprint or Aquatic, the *owner* can destroy any target in a single attack. If the *owner* attacks the enemy Stronghold, it is shifted to the second rightmost position in the enemy's hand, without changing its side (i.e. the Bastion would remain side up).",
+                "href": "vulnerabilite.png"
+            }
+        ]
+    }
+}
