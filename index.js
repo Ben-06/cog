@@ -5,14 +5,14 @@ if (process.env.NODE_ENV !== 'production') {
 // Require the necessary discord.js classes
 const { Client, GatewayIntentBits, AttachmentBuilder, EmbedBuilder} = require('discord.js');
 const channel = process.env.channel;
-const {delay, turns} = require('./config/config.json');
-const {extensions} = require('./config/types.json');
-const {cards} = require ('./config/cards.json');
-const {abilities} = require ('./config/abilities.json');
+const {delay, turns} = require('./assets/config.json');
+const {extensions} = require('./assets/types.json');
+const {cards} = require ('./assets/cards.json');
+const {abilities} = require ('./assets/abilities.json');
 const abilities_loc = abilities[process.env.BOT_LANG];
 const Game = require('./src/Game');
 const fs = require('fs');
-const {wording} = require('./config/wording.json');
+const {wording} = require('./assets/wording.json');
 var game = null;
 
 
@@ -142,7 +142,7 @@ client.on('interactionCreate', async interaction => {
             return;
         }
         try{
-            var file = new AttachmentBuilder(`./card_img/${searchFR === undefined ? 'EN' : 'FR'}/${cardToSearch.replace(/\s/g,'-')}.png`, { name: `${cardToSearch}.png` });
+            var file = new AttachmentBuilder(`./assets/card_img/${searchFR === undefined ? 'EN' : 'FR'}/${cardToSearch.replace(/\s/g,'-')}.png`, { name: `${cardToSearch}.png` });
             await interaction.reply({ files: [file] });
         }
         catch(e){
@@ -167,7 +167,7 @@ client.on('interactionCreate', async interaction => {
         ability.name = sansAccent(ability.name);
 
         var re = / /gi;
-        const cs_png = new AttachmentBuilder("./cs_img/" + ability.href);
+    const cs_png = new AttachmentBuilder("./assets/cs_img/" + ability.href);
         const CSEmbed = new EmbedBuilder()
             .setTitle(ability.name)
             .setDescription(ability.description)

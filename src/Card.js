@@ -2,8 +2,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
 
-const {cards} = require('./../config/cards.json');
-const {types, extensions, CS} = require('./../config/types.json');
+const {cards} = require('./../assets/cards.json');
+const {types, extensions, CS} = require('./../assets/types.json');
 var cards_list = new Array();
 class Card {
 
@@ -49,7 +49,7 @@ class Card {
         this.attack = id[14];
         this.hp = id[15] != 0 ? id[15] : 0; 
         this.mana = id[16];
-        this.image = `./card_img/${process.env.BOT_LANG}/${this.name.replace(' ','-')}.png`;
+    this.image = `./assets/card_img/${process.env.BOT_LANG}/${this.name.toLocaleLowerCase().replace(' ','-')}.png`;
         this.cs = new Array();
         
         //CS list building

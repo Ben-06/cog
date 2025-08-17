@@ -1,7 +1,7 @@
 const sharp = require('sharp');
 const fs = require('fs');
 const { AttachmentBuilder } = require('discord.js');
-const {maxPoints} = require('../config/config.json');
+const {maxPoints} = require('../assets/config.json');
 const Card = require('./Card.js');
 const MESSAGE_COLORS = new Array(0xff0000,0xDD521E,0xDD781E,0xDDC01E,0xDDD41E,0xD4DD1E,0xC6DA21,0xAADA21,0x9CDA21,0x91DA21,0x00FF00);
 
@@ -112,7 +112,6 @@ class Game {
     //build the next tip for the current card
     newIndice(){
         let message  = null;
-        console.log(this.nbIndices, this.indices);
         const tip = this.indices.shift();
         const tipNumber = this.nbIndices - this.indices.length;
         const tipName = '** '+ (tipNumber == 1 ? '1er' : (tipNumber == this.nbIndices-1) ? 'dernier' : tipNumber+'e' )+' indice : **';
