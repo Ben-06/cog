@@ -210,7 +210,8 @@ class Game {
             // Vérifier si c'était le dernier indice (après l'appel à newIndice)
             if (this.end_turn) {
                 // C'était le dernier indice, attendre puis gérer la fin
-                this.currentTimer = setTimeout(() => this.handleNoWinner(), this.speed);
+                // Stocker le timer pour pouvoir l'annuler
+                this.noWinnerTimeout = setTimeout(() => this.handleNoWinner(), this.speed);
             } else {
                 // Programmer le prochain indice
                 this.currentTimer = setTimeout(() => this.sendNextIndice(), this.speed);
@@ -239,7 +240,11 @@ class Game {
             clearTimeout(this.currentTimer);
             this.currentTimer = null;
         }
-        
+        // Annuler le timer de "no winner" si il existe
+        if (this.noWinnerTimeout) {
+            clearTimeout(this.noWinnerTimeout);
+            this.noWinnerTimeout = null;
+        }
         this.end_turn = true;
         await this.channel.send({ content: `Bravo <@${userId}> ! La bonne réponse était **${this.crd.name}**.` });
         // Stocker l'ID utilisateur avec le score au lieu du username

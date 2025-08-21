@@ -47,8 +47,13 @@ module.exports = {
     logger.info('[guess] Nouvelle partie lancée.');
     await interaction.reply({ embeds: [scoresEmbed] });
 
-    // Démarrer le jeu
-    await game.startGame(interaction.channel);
+    // Message de pré-démarrage
+    await interaction.followUp('Démarrage de la partie dans 15s !');
+
+    // Attendre 15 secondes avant de démarrer la partie
+    setTimeout(async () => {
+      await game.startGame(interaction.channel);
+    }, 15000);
   },
   getGameInstance() {
     return game;
