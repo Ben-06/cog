@@ -1,10 +1,7 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
 
-const {cards} = require('./../assets/cards.json');
-const {types, extensions, CS} = require('./../assets/types.json');
-var cards_list = new Array();
+const cardsData = require('../assets/cards.json').cards;
+const { types, extensions, CS } = require('../assets/types.json');
+
 class Card {
 
 
@@ -15,27 +12,23 @@ class Card {
     ensuite le 0 ou 1 c'est si c'est aura ou pas
     ex: lieutenant : 1140000000000000313
     */
+
     constructor(extension) {
-
-        Object.assign(cards_list, cards);
-
-        if(extension){
-            cards_list = cards.filter(obj => {
-                return obj.id.startsWith(extension);
-              })
-        }
-
+        // Filtre la liste selon l'extension si précisé
+        this.cards_list = extension
+            ? cardsData.filter(obj => obj.id.startsWith(extension))
+            : [...cardsData];
     }
 
+
     pickCard(){
-
-        let rand = Math.floor(Math.random() * (cards_list.length));
-
-        this.name = cards_list[rand][process.env.BOT_LANG];
-
-        this.buildCard(cards_list[rand].id);
-
-        cards_list.splice(rand,1);
+        if (this.cards_list.length === 0) return null;
+        let rand = Math.floor(Math.random() * this.cards_list.length);
+        const cardData = this.cards_list[rand];
+        this.name = cardData[process.env.BOT_LANG];
+        this.buildCard(cardData.id);
+        this.cards_list.splice(rand,1);
+        return this;
     }
 
 
@@ -43,13 +36,12 @@ class Card {
     //                            2200000000000101
     //format is extension-type-CS-aura?-CS-CS-CS-CS-atq-hp-mana
     buildCard = function(id){
-
         this.extension= extensions[id.substring(0,2)];
         this.type = types[id[2]];
         this.attack = id[14];
         this.hp = id[15] != 0 ? id[15] : 0; 
         this.mana = id[16];
-    this.image = `./assets/card_img/${process.env.BOT_LANG}/${this.name.toLocaleLowerCase().replace(' ','-')}.png`;
+        this.image = `./assets/card_img/${process.env.BOT_LANG}/${this.name.toLocaleLowerCase().replace(' ','-')}.png`;
         this.cs = new Array();
         
         //CS list building

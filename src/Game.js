@@ -1,43 +1,11 @@
-const sharp = require('sharp');
 const fs = require('fs');
+const logger = require('../utils/logger');
 const { AttachmentBuilder } = require('discord.js');
-const {maxPoints} = require('../assets/config.json');
-const Card = require('./Card.js');
+const ConfigService = require('../services/ConfigService');
+const Card = require('./Card');
+const { levenshteinDistance, cropImage } = require('../utils/utils');
+const maxPoints = ConfigService.getValue('maxPoints');
 const MESSAGE_COLORS = new Array(0xff0000,0xDD521E,0xDD781E,0xDDC01E,0xDDD41E,0xD4DD1E,0xC6DA21,0xAADA21,0x9CDA21,0x91DA21,0x00FF00);
-
-const levenshteinDistance = (str1 = '', str2 = '') => {
-    
-    str1 = str1.normalize("NFD").replace(/\p{Diacritic}/gu, "");
-    str2 = str2.normalize("NFD").replace(/\p{Diacritic}/gu, "");
-
-    const track = Array(str2.length + 1).fill(null).map(() =>
-    Array(str1.length + 1).fill(null));
-    for (let i = 0; i <= str1.length; i += 1) {
-       track[0][i] = i;
-    }
-    for (let j = 0; j <= str2.length; j += 1) {
-       track[j][0] = j;
-    }
-    for (let j = 1; j <= str2.length; j += 1) {
-       for (let i = 1; i <= str1.length; i += 1) {
-          const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
-          track[j][i] = Math.min(
-             track[j][i - 1] + 1, // deletion
-             track[j - 1][i] + 1, // insertion
-             track[j - 1][i - 1] + indicator, // substitution
-          );
-       }
-    }
-    return track[str2.length][str1.length];
- };
-
- const cropImage = async(img, dest) => {
-        try{
-            const crop = await sharp(img).extract({ width: 290, height: 290, left: 80, top: 90 }).toFile(dest)
-            return dest;
-        }
-        catch(err) { return null; };
- }
 
 class Game {
 
@@ -46,11 +14,19 @@ class Game {
         this.max_turn = duree;
         this.speed=speed;
         this.scores = {};
-        this.crd = new Card(extension);
-        this.crd.pickCard();
+        logger.info(`[Game] Nouvelle partie : ${extension ? `Extension : ${extension}` : 'Aucune extension spécifiée'}`);
+        logger.info(`[Game] Vitesse : ${speed}ms, Durée : ${duree} tours`);
+        // Créer une seule instance de Card pour toute la partie
+        this.cardPicker = new Card(extension);
+        const card = this.cardPicker.pickCard();
+        this.crd = card;
+        logger.info(`[Game] Carte sélectionnée : ${this.crd ? this.crd.name : 'Aucune'}`);
         this.extension = extension;
         this.wrong = {};
         this.end_turn = false;
+        this.channel = null; // Canal Discord pour envoyer les messages
+        this.gameActive = false;
+        this.currentTimer = null; // Timer actuel pour pouvoir l'annuler
     }
 
     //build the liste of tips in random order (exept the last one)
@@ -66,7 +42,7 @@ class Game {
             sortedIndices.push("mes points de vie sont de " + this.crd.hp);
         
         //if no CS
-        if(this.crd.cs.length == 0){
+        if(this.crd.cs?.length == 0){
             sortedIndices.push(" je ne possède pas de CS");
         } else {
             this.crd.cs.forEach(cs => {
@@ -179,16 +155,208 @@ class Game {
 
         if(this.turn < this.max_turn) {
             //next turn
-            this.crd.pickCard();
-            this.turn=this.turn + 1;
-            this.wrong = {};
-            this.end_turn = false;
-            await this.buildIndicesList();
+            // Réutiliser la même instance de Card pour éviter les doublons
+            const card = this.cardPicker.pickCard();
+            if (!card) {
+                // Plus de cartes disponibles, terminer le jeu
+                logger.info(`[Game] Plus de cartes disponibles, fin de partie anticipée`);
+                this.turn = -1;
+                this.gameActive = false;
+            } else {
+                this.crd = card;
+                this.turn=this.turn + 1;
+                this.wrong = {};
+                this.end_turn = false;
+                await this.buildIndicesList();
+            }
         } else {
             this.turn = -1;
+            this.gameActive = false;
         }
 
         return points;
+    }
+
+    // Démarre le jeu avec le canal Discord
+    async startGame(channel) {
+        this.channel = channel;
+        this.gameActive = true;
+        await this.buildIndicesList();
+        await this.startRound();
+    }
+
+    // Démarre une nouvelle manche
+    async startRound() {
+        if (!this.gameActive) return;
+        
+        // Annuler le timer précédent s'il existe
+        if (this.currentTimer) {
+            clearTimeout(this.currentTimer);
+            this.currentTimer = null;
+        }
+        
+        await this.channel.send(`Devinez cette carte !  (${this.turn}/${this.max_turn})`);
+        this.currentTimer = setTimeout(() => this.sendNextIndice(), this.speed);
+    }
+
+    // Boucle récursive pour envoyer les indices
+    async sendNextIndice() {
+        if (!this.gameActive || this.end_turn) return;
+        
+        if (this.indices && this.indices.length > 0) {
+            const indiceMsg = this.newIndice();
+            await this.channel.send(indiceMsg);
+            
+            // Vérifier si c'était le dernier indice (après l'appel à newIndice)
+            if (this.end_turn) {
+                // C'était le dernier indice, attendre puis gérer la fin
+                this.currentTimer = setTimeout(() => this.handleNoWinner(), this.speed);
+            } else {
+                // Programmer le prochain indice
+                this.currentTimer = setTimeout(() => this.sendNextIndice(), this.speed);
+            }
+        }
+    }
+
+    // Gère le cas où personne n'a trouvé
+    async handleNoWinner() {
+        this.end_turn = true;
+        await this.channel.send(`Personne n'a trouvé, dommage ! La réponse était **${this.crd.name}**`);
+        
+        if (fs.existsSync(this.crd.image)) {
+            const file = new AttachmentBuilder(this.crd.image, { name: `${this.crd.name}.png` });
+            await this.channel.send({ files: [file] });
+        }
+        
+        await this.goodResponse();
+        await this.showScoresAndContinue();
+    }
+
+    // Gère une bonne réponse
+    async handleGoodResponse(winner, userId) {
+        // Annuler immédiatement le timer d'indices en cours
+        if (this.currentTimer) {
+            clearTimeout(this.currentTimer);
+            this.currentTimer = null;
+        }
+        
+        this.end_turn = true;
+        await this.channel.send({ content: `Bravo <@${userId}> ! La bonne réponse était **${this.crd.name}**.` });
+        // Stocker l'ID utilisateur avec le score au lieu du username
+        await this.goodResponse(userId);
+        await this.showScoresAndContinue();
+    }
+
+    // Affiche les scores et continue le jeu
+    async showScoresAndContinue() {
+        const scores = this.getScores();
+        
+        // Vérifier si c'est la fin de la partie
+        if (this.turn === -1) {
+            await this.showFinalResults();
+            return;
+        }
+        
+        if (scores.length > 0) {
+            const guild = this.channel.guild;
+            const fieldsWithNames = await Promise.all(scores.map(async field => {
+                let displayName = field.name; // Par défaut, utiliser l'ID/username
+                if (guild) {
+                    try {
+                        // field.name contient maintenant l'ID utilisateur
+                        const member = await guild.members.fetch(field.name).catch(() => null);
+                        if (member) displayName = member.displayName;
+                    } catch (err) {
+                        logger.error(`[showScoresAndContinue] Erreur lors de la récupération du membre: ${err}`);
+                    }
+                }
+                return { ...field, name: displayName };
+            }));
+            
+            setTimeout(async () => {
+                await this.channel.send({ embeds: [{
+                    color: 0x00ff00,
+                    title: 'Rappel des scores',
+                    description: 'Voici le classement actuel :',
+                    fields: fieldsWithNames
+                }] });
+                
+                // Continuer le jeu si il reste des tours
+                if (this.turn !== -1) {
+                    this.currentTimer = setTimeout(() => this.startRound(), this.speed);
+                }
+            }, 2000);
+        } else if (this.turn !== -1) {
+            // Pas de scores à afficher mais le jeu continue
+            this.currentTimer = setTimeout(() => this.startRound(), this.speed);
+        }
+    }
+
+    // Affiche les résultats finaux avec félicitations au vainqueur
+    async showFinalResults() {
+        const scores = this.getScores();
+        if (scores.length === 0) {
+            await this.channel.send({ embeds: [{
+                color: 0xff0000,
+                title: '🏁 Fin de partie !',
+                description: 'Aucun joueur n\'a marqué de points. Essayez de nouveau !'
+            }] });
+            return;
+        }
+
+        const guild = this.channel.guild;
+        const fieldsWithNames = await Promise.all(scores.map(async (field, index) => {
+            let userId = field.name; // field.name contient maintenant l'ID utilisateur
+            let displayName = field.name; // Par défaut, utiliser l'ID
+            
+            if (guild) {
+                try {
+                    // field.name contient maintenant l'ID utilisateur
+                    const member = await guild.members.fetch(field.name).catch(() => null);
+                    if (member) {
+                        displayName = member.displayName;
+                        userId = member.user.id;
+                    }
+                } catch (err) {
+                    logger.error(`[showFinalResults] Erreur lors de la récupération du membre: ${err}`);
+                }
+            }
+            
+            // Ajouter les médailles pour le podium
+            let medal = '';
+            if (index === 0) medal = '🥇 ';
+            else if (index === 1) medal = '🥈 ';
+            else if (index === 2) medal = '🥉 ';
+            else medal = `${index + 1}. `;
+            
+            return { 
+                ...field, 
+                name: `${medal}${displayName}`,
+                displayName: displayName, // Pseudo sans médaille
+                userId: userId // Garder l'ID pour les mentions
+            };
+        }));
+
+        // Message de félicitations au vainqueur
+        const winner = fieldsWithNames[0];
+        let congratsMessage = '';
+        if (winner) {
+            congratsMessage = `🎉 Félicitations ${winner.displayName} ! 🎉\nVous remportez cette partie avec **${winner.value} points** !`;
+        }
+
+        await this.channel.send({ embeds: [{
+            color: 0xffd700, // Couleur or
+            title: '🏁 Classement final',
+            description: congratsMessage,
+            fields: fieldsWithNames.map(field => ({
+                name: field.name,
+                value: `${field.value} points`,
+                inline: true
+            })),
+            footer: {
+                text: `Partie terminée • ${this.max_turn} tours joués`
+            }
+        }] });
     }
 
     //build embed with scores sorted

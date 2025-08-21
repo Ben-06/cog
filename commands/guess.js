@@ -1,0 +1,56 @@
+// commands/guess.js
+const Game = require('../src/Game');
+const logger = require('../utils/logger');
+const ConfigService = require('../services/ConfigService');
+const { extensions } = require('../assets/types.json');
+
+let game = null;
+
+module.exports = {
+  name: 'guess',
+  description: 'Lance une nouvelle partie de devinette de cartes',
+  async execute(interaction) {
+    // Récupération des options directement ici
+    const delay = ConfigService.getValue('delay');
+    const turns = ConfigService.getValue('turns');
+    let extension = interaction.options.getString('extension');
+    let speed = parseInt(interaction.options.getString('vitesse'),10) || delay;
+    let duration = parseInt(interaction.options.getString('durée'),10) || turns;
+
+    if (game && game.turn !== -1) {
+      logger.info('[guess] Partie déjà en cours.');
+      await interaction.reply('Une partie est déjà en cours.');
+      return;
+    }
+    
+    game = new Game(extension, speed, duration);
+
+    const scoresEmbed = {
+      color: 0x0099ff,
+      title: 'Nouvelle partie !',
+      fields: [
+        {
+          name: "Essayez de deviner les cartes avec les indices que je vais vous donner",
+          value: "Moins vous avez besoin d'indices pour trouver, plus vous marquez de points. Attention, chaque mauvaise réponse réduira les points marqués si vous trouvez finalement la bonne !"
+        },
+        {
+          name: "Configuration :",
+          value: (game.extension ? "Extension : " + extensions[game.extension] + " - " : "") + "Tours : " + game.max_turn + " - " + "Délai : " + (game.speed / 1000) + "s"
+        },
+        {
+          name: "Pour répondre, placez un ! devant votre proposition",
+          value: "exemple : !parasite"
+        }
+      ]
+    };
+
+    logger.info('[guess] Nouvelle partie lancée.');
+    await interaction.reply({ embeds: [scoresEmbed] });
+
+    // Démarrer le jeu
+    await game.startGame(interaction.channel);
+  },
+  getGameInstance() {
+    return game;
+  }
+};
