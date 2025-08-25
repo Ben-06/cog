@@ -251,6 +251,13 @@ class Game {
         }
         this.end_turn = true;
         await this.channel.send({ content: `Bravo <@${userId}> ! La bonne réponse était **${this.crd.name}**.` });
+        
+        // Afficher l'image de la carte
+        if (fs.existsSync(this.crd.image)) {
+            const file = new AttachmentBuilder(this.crd.image, { name: `${this.crd.name}.png` });
+            await this.channel.send({ files: [file] });
+        }
+        
         // Stocker l'ID utilisateur avec le score au lieu du username
         await this.goodResponse(userId);
         await this.showScoresAndContinue();
