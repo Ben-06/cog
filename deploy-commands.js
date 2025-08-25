@@ -2,6 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
 	require('dotenv').config();
 }
 
+const logger = require('./utils/logger');
 const { SlashCommandBuilder, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 
