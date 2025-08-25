@@ -25,7 +25,6 @@ fs.readdirSync(commandsPath).forEach(file => {
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessageReactions] });
 // Connexion du bot Discord
-logger.info(`TOKEN USED : ${process.env.TOKEN}`);
 client.login(process.env.TOKEN);
 
 
