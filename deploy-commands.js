@@ -136,6 +136,8 @@ if(process.env.BOT_LANG === 'FR'){
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
+logger.info(` clientId - guildId : ${process.env.clientId} - ${process.env.guildId}`);
+
 rest.put(Routes.applicationGuildCommands(process.env.clientId, process.env.guildId), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
