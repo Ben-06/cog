@@ -10,6 +10,25 @@ module.exports = {
   name: 'guess',
   description: 'Lance une nouvelle partie de devinette de cartes',
   async execute(interaction) {
+    // Vérifier que la commande est exécutée dans le bon canal
+    const allowedChannelId = process.env.CHANNEL;
+    if (!allowedChannelId) {
+      logger.error('[guess] Variable d\'environnement CHANNEL non définie');
+      await interaction.reply({ 
+        content: 'Configuration du canal non définie. Contactez un administrateur.', 
+        ephemeral: true 
+      });
+      return;
+    }
+    
+    if (interaction.channelId !== allowedChannelId) {
+      await interaction.reply({ 
+        content: 'Cette commande ne peut être utilisée que dans le canal de jeu désigné.', 
+        ephemeral: true 
+      });
+      return;
+    }
+
     // Récupération des options directement ici
     const delay = ConfigService.getValue('delay');
     const turns = ConfigService.getValue('turns');
