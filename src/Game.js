@@ -164,6 +164,7 @@ class Game {
                 this.gameActive = false;
             } else {
                 this.crd = card;
+                logger.info(`[Game] Carte sélectionnée : ${this.crd ? this.crd.name : 'Aucune'}`);
                 this.turn=this.turn + 1;
                 this.wrong = {};
                 this.end_turn = false;
@@ -188,6 +189,9 @@ class Game {
     // Démarre une nouvelle manche
     async startRound() {
         if (!this.gameActive) return;
+        
+        // Réinitialiser l'état de fin de tour
+        this.end_turn = false;
         
         // Annuler le timer précédent s'il existe
         if (this.currentTimer) {
