@@ -137,8 +137,28 @@ if(process.env.BOT_LANG === 'FR'){
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
-logger.info(` clientId - guildId : ${process.env.clientId} - ${process.env.guildId}`);
+logger.info(`Deploying commands with:`);
+logger.info(`- clientId: ${process.env.clientId}`);
+logger.info(`- guildId: ${process.env.guildId}`);
+logger.info(`- TOKEN exists: ${!!process.env.TOKEN}`);
+logger.info(`- TOKEN starts with: ${process.env.TOKEN ? process.env.TOKEN.substring(0, 10) + '...' : 'undefined'}`);
+logger.info(`- Commands count: ${commands.length}`);
 
+// Essayer d'abord les commandes globales si les commandes de serveur échouent
 rest.put(Routes.applicationGuildCommands(process.env.clientId, process.env.guildId), { body: commands })
-	.then(() => console.log('Successfully registered application commands.'))
-	.catch(console.error);
+	.then(() => logger.info('✅ Successfully registered guild commands.'))
+	.catch(err => {
+		logger.error('❌ Error deploying guild commands:', err);
+		if (err.code === 20012) {
+			logger.error('❌ Authorization error - Check:');
+			logger.error('  1. Bot token is correct');
+			logger.error('  2. Bot is invited to the server with applications.commands scope');
+			logger.error('  3. clientId matches your Discord application ID');
+			logger.error('  4. guildId matches your Discord server ID');
+			
+			logger.info('🔄 Trying global commands as fallback...');
+			return rest.put(Routes.applicationCommands(process.env.clientId), { body: commands })
+				.then(() => logger.info('✅ Successfully registered global commands (may take up to 1 hour to appear).'))
+				.catch(globalErr => logger.error('❌ Global commands also failed:', globalErr));
+		}
+	});
