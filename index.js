@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 const { Client, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
 const logger = require('./utils/logger');
+const fastify = require('fastify')({ logger: false });
 
 
 const path = require('path');
@@ -24,12 +25,43 @@ fs.readdirSync(commandsPath).forEach(file => {
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessageReactions] });
+
+// Configuration du serveur Fastify
+fastify.get('/healthcheck', async (request, reply) => {
+    const health = {
+        status: 'ok',
+        timestamp: new Date().toISOString(),
+        discord: {
+            connected: client.readyAt ? true : false,
+            uptime: client.uptime ? Math.floor(client.uptime / 1000) : 0,
+            guilds: client.guilds.cache.size,
+            users: client.users.cache.size
+        }
+    };
+    
+    return health;
+});
+
+// Démarrage du serveur HTTP
+const startServer = async () => {
+    try {
+        const port = process.env.PORT || 3000;
+        await fastify.listen({ port, host: '0.0.0.0' });
+        logger.info(`[HTTP] Serveur Fastify démarré sur le port ${port}`);
+    } catch (err) {
+        logger.error(`[HTTP] Erreur lors du démarrage du serveur: ${err}`);
+        process.exit(1);
+    }
+};
+
 // Connexion du bot Discord
 client.login(process.env.TOKEN);
 
 
 client.once('ready', () => {
 	logger.info('Ready!');
+	// Démarrer le serveur HTTP une fois que le bot est prêt
+	startServer();
 });
 
 // lauching a game
