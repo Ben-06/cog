@@ -61,6 +61,7 @@ client.login(process.env.TOKEN);
 client.once('ready', () => {
 	logger.info('Ready!');
 	// Démarrer le serveur HTTP une fois que le bot est prêt
+  logger.info('sarting server ....');
 	startServer();
 });
 
