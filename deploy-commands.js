@@ -8,7 +8,10 @@ const { REST } = require('@discordjs/rest');
 
 const commands = [];
 
-if(process.env.BOT_LANG === 'FR'){
+const botLang = process.env.BOT_LANG || 'FR';
+logger.info(`BOT_LANG: ${process.env.BOT_LANG} (using: ${botLang})`);
+
+if(botLang === 'FR'){
 	commands.push(
 		new SlashCommandBuilder().setName('guess').setDescription('Essayez de deviner les cartes de Clash of Decks !')
 		.addStringOption(option =>
@@ -72,7 +75,7 @@ if(process.env.BOT_LANG === 'FR'){
 			.setRequired(true)
 		));
 	commands.map(command => command.toJSON());
-} else if(process.env.BOT_LANG === 'EN'){
+} else if(botLang === 'EN'){
 	commands.push(
 		new SlashCommandBuilder().setName('guess').setDescription('Try to guees Clash of Decks cards!')
 		.addStringOption(option =>
@@ -144,21 +147,8 @@ logger.info(`- TOKEN exists: ${!!process.env.TOKEN}`);
 logger.info(`- TOKEN starts with: ${process.env.TOKEN ? process.env.TOKEN.substring(0, 10) + '...' : 'undefined'}`);
 logger.info(`- Commands count: ${commands.length}`);
 
-// Essayer d'abord les commandes globales si les commandes de serveur échouent
-rest.put(Routes.applicationGuildCommands(process.env.clientId, process.env.guildId), { body: commands })
-	.then(() => logger.info('✅ Successfully registered guild commands.'))
-	.catch(err => {
-		logger.error('❌ Error deploying guild commands:', err);
-		if (err.code === 20012) {
-			logger.error('❌ Authorization error - Check:');
-			logger.error('  1. Bot token is correct');
-			logger.error('  2. Bot is invited to the server with applications.commands scope');
-			logger.error('  3. clientId matches your Discord application ID');
-			logger.error('  4. guildId matches your Discord server ID');
-			
-			logger.info('🔄 Trying global commands as fallback...');
-			return rest.put(Routes.applicationCommands(process.env.clientId), { body: commands })
-				.then(() => logger.info('✅ Successfully registered global commands (may take up to 1 hour to appear).'))
-				.catch(globalErr => logger.error('❌ Global commands also failed:', globalErr));
-		}
-	});
+// Force global deployment for testing
+logger.info('🔄 Deploying global commands (may take up to 1 hour to appear)...');
+rest.put(Routes.applicationCommands(process.env.clientId), { body: commands })
+	.then(() => logger.info('✅ Successfully registered global commands.'))
+	.catch(globalErr => logger.error('❌ Global commands failed:', globalErr));
